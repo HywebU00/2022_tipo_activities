@@ -2,8 +2,9 @@ footer {
     box-sizing: border-box;
     @include clearfix;
     text-align: left;
-    font-size: 0.813em;
-    padding: 1em 0;
+    font-size: 0.875em;
+    padding: 2em 0 1em 0;
+    background: darken($primaryColor, 5);
     .container {
         @include gutter;
         >div {
@@ -11,7 +12,7 @@ footer {
         }
         display: flex;
         @include screen('tablet') {
-            flex-wrap:wrap;
+            flex-wrap: wrap;
         }
     }
     a {
@@ -23,80 +24,100 @@ footer {
         }
     }
     .footer_logo {
-        flex:0 1 240px;
+        flex: 0 1 250px;
+        margin-right: 20px;
     }
     .footer_info {
-        flex:1 1 auto;
+        flex: 1 1 auto;
+        @include screen('xs_mobile') {
+            flex-basis: 100%;
+        }
     }
     .footer_icon {
-        flex:0 1 200px;
-        @include screen('tablet') {
-           flex:1 1 100%; 
-           text-align: right;
-       }
-   }
+        flex: 0 1 150px;
+        text-align: right;
+        @include screen('mobile') {
+            flex: 1 1 100%;
+        }
+    }
     // 版權連結
     .footer_link {
         @include li-reset();
         @include clearfix();
         display: flex;
         @include screen('mobile') {
-            flex-direction: column;
+            //flex-direction: column;
+            flex-wrap: wrap;
         }
         li {
-            flex:0 1 auto;
-            margin: 0px 5px 5px 0px;
-            @include screen('mobile') {
-             flex:1 1 100%; 
-         }
-         a {
-            display: block;
-            padding: .5em 1em;
-            background: $primaryColor;
-            color: #FFF;
-            border-radius:4px;
-            text-align: center;
-            transition: all .3s ease-out;
-            &:hover,
-            &:focus {
-                background: darken($primaryColor, 10);
-            }
-        }
-    }
-}
-p {
-    line-height: 1.65em;
-}
-.update,
-.counter {
-    display: inline-block;
-    margin-right: 5px;
-    em {
-        font-style: normal;
-        color: $primaryColor;
-        padding: 0 .5em;
-    }
-}
-.footer_icon {
-    a {
-        display: inline-block;
-        vertical-align: top;
-        position:relative;
-        &:focus {
-            &:after {
+            position: relative;
+            flex: 0 1 auto;
+            margin: 0px 1em 5px 0px;
+            padding-right: 1em;
+            &:before {
                 content: "";
-                width: 100%;
-                height: 100%;
                 position: absolute;
-                top: 0;
-                left: 0;
-                box-shadow: 0px 0px 0px 1px $aHover inset;
-                z-index: 99;
+                right: 0;
+                top: calc(50% - 7px);
+                height: 14px;
+                width: 1px;
+                background: #fff;
+            }
+            &:last-child {
+                &:before {
+                    content: none;
+                }
+            }
+            // @include screen('xs_mobile') {
+            //     flex: 1 1 100%;
+            // }
+            a {
+                display: block;
+                color: #FFF;
+                text-align: center;
+                transition: all .3s ease-out;
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
             }
         }
     }
-    img {
-        max-width: 120px;
+    p {
+        line-height: 1.65em;
+        color: #fff;
     }
-}
+    .update,
+    .counter {
+        display: inline-block;
+        margin-right: 5px;
+        color: #fff;
+        em {
+            font-style: normal;
+            color: #fff;
+            padding: 0 .5em;
+        }
+    }
+    .footer_icon {
+        a {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            &:focus {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: 0px 0px 0px 1px $aHover inset;
+                    z-index: 99;
+                }
+            }
+        }
+        img {
+            max-width: 120px;
+        }
+    }
 }

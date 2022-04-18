@@ -2,8 +2,8 @@
 @import "_variable"; //變數
 // 共通 common
 @import "sass/common/_mixin"; //客製MIXIN
-@import "sass/common/_grid"; //格線 - bootstrap
-@import "sass/common/_grid-flex"; //格線 - flex
+//@import "sass/common/_grid"; //格線 - bootstrap
+//@import "sass/common/_grid-flex"; //格線 - flex
 @import "sass/common/_normalize"; //reset
 @import "sass/common/_typography"; //CP文字排版
 @import "sass/common/_accessibility"; //無障礙關閉js設定
@@ -11,11 +11,11 @@
 // 元件 element
 @import "sass/element/_font"; //文字設定
 @import "sass/element/_language"; //語言選單
+@import "sass/element/_icon"; //圖示
 @import "sass/element/_btn"; //按鈕設定
 @import "sass/element/_breadcrumb"; //麵包屑
 @import "sass/element/_divider"; //分隔線
 @import "sass/element/_image"; //圖片
-@import "sass/element/_icon"; //圖示
 @import "sass/element/_tooltip"; //tooltip
 @import "sass/element/_category"; //資料大類
 @import "sass/element/_tag"; //文章標籤
@@ -24,7 +24,7 @@
 @import "sass/modual/_header"; //header
 @import "sass/modual/_menu";
 @import "sass/modual/_menuSidebar"; //menu
-@import "sass/modual/_megamenu"; //megamenu
+//@import "sass/modual/_megamenu"; //megamenu
 @import "sass/modual/_fixed_sidebar"; //固定側邊欄
 @import "sass/modual/_footer"; //footer
 @import "sass/modual/_fatfooter"; //fatfooter

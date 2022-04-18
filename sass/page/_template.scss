@@ -20,10 +20,11 @@ body {
 
 // 最外圍預設為100%
 .wrapper {
+    background: $color-bg;
     width: 100%;
     margin: 0px auto;
     @include screen('mobile') {
-        background: #FFF;
+        //background: #FFF;
         overflow: hidden;
         overflow-y: auto;
     }
@@ -39,9 +40,277 @@ body {
 .main {
     position: relative;
     margin: 0 auto;
+    padding-top: 104px;
+    @include screen('mobile') {
+        padding-top: 60px;
+    }
+    .container {
+        @include screen('tablet') {
+            padding: 0 15px;
+        }
+    }
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     h2 {
         line-height: 1.25em;
+    }
+}
+
+.sort_btnGrp {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    .sort_dropDown {
+        display: none;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        @include screen('xs_mobile') {
+            overflow-x: auto;
+            justify-content: flex-start;
+            padding: 0;
+        }
+    }
+    .btn-sort {
+        position: relative;
+        font-size: 1.125em;
+        padding: 1em 2.5em;
+        margin: 0 1em;
+        flex-basis: auto;
+        @include btn_setting_nostyle;
+        @include screen('tablet') {
+            margin: 0;
+        }
+        @include screen('mobile') {
+            font-size: 1em;
+            padding: .8em 1em;
+            white-space: nowrap;
+        }
+        &:hover,
+        &.active {
+            color: $color-word2;
+            font-weight: bold;
+        }
+        &.active {
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                height: 5px;
+                background: $lightColor;
+            }
+        }
+    }
+}
+
+.cardsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2em;
+    margin-bottom: 1em;
+    @include screen('tablet') {
+        padding: 0;
+    }
+}
+
+.cardItem {
+    position: relative;
+    display: block;
+    margin: 0 1em 2em 1em;
+    flex-basis: calc(33.3333% - 2em);
+    box-shadow: 1px 2px 5px -1px rgba(0, 0, 0, 0.2);
+    border-radius: $rounded-angle;
+    overflow: hidden;
+    padding: 0 1.5em 1.5em;
+    background: #fff;
+    transition: .2s ease-in;
+    @include screen('tablet') {
+        flex-basis: calc(50% - 2em);
+    }
+    @include screen('mobile') {
+        margin: 0 .5em 1em .5em;
+        flex-basis: calc(50% - 1em);
+    }
+    @include screen('xs_mobile') {
+        margin: 0 0 1em 0;
+        flex-basis: 100%;
+    }
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 1px 5px 10px -1px rgba(0, 0, 0, 0.15);
+    }
+    .cardInfoGrp {
+        display: flex;
+        margin: 0 -1.5em;
+        [class^="cardInfo"] {
+            flex: 1 1 33.33333%;
+            text-align: center;
+            padding: .4em .5em;
+            color: #fff;
+        }
+        // 卡片各類屬性
+        //付費
+        .cardInfo_paid {
+            background: $color-paid;
+        }
+        //免費
+        .cardInfo_free {
+            background: $color-free;
+        }
+        //專利
+        .cardInfo_patent {
+            background: $color-patent;
+        }
+        //商標
+        .cardInfo_trademark {
+            background: $color-trademark;
+        }
+        //著作權
+        .cardInfo_copyright {
+            background: $color-copyright;
+        }
+        //營業秘密
+        .cardInfo_tradeSecret {
+            background: $color-tradeSecret;
+        }
+        //智財權
+        .cardInfo_property {
+            background: $color-property;
+        }
+        //北區
+        .cardInfo_north {
+            background: $color-north;
+        }
+        //中區
+        .cardInfo_central {
+            background: $color-central;
+        }
+        //東區
+        .cardInfo_eastern {
+            background: $color-eastern;
+        }
+        //離島
+        .cardInfo_outlying {
+            background: $color-outlying;
+        }
+        //線上活動
+        .cardInfo_online {
+            background: $color-online;
+        }
+    }
+    .btn-collect {
+        position: absolute;
+        right: 15px;
+        top: 50px;
+    }
+    .activity_date {
+        text-align: center;
+        margin-top: 1.5em;
+        span {
+            display: block;
+        }
+    }
+    .activity_title {
+        padding: 0 .5em;
+        margin: .4em 0 1em 0;
+        font-size: 1.25em;
+        font-weight: bold;
+        color: $color-word2;
+        text-align: center;
+        line-height: 1.5em;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 90px;
+    }
+    .organizer {
+        text-align: center;
+        color: lighten($color-word, 10);
+        font-size: .938em;
+        margin: 1em 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .status {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: 220px;
+        max-width: 100%;
+        padding: .6em;
+        background: $secondaryColor;
+        color: #fff;
+        border-radius: 4px;
+        transition: .2s ease-in;
+        &:hover,
+        &:focus {
+            background: darken($secondaryColor, 5);
+        }
+        &.disable {
+            background: $color-lightgray;
+            color: $color-word;
+            cursor: default;
+        }
+    }
+}
+
+.free_publication {
+    background: #fff;
+    padding: .8em 0;
+    margin-top: 1em;
+    .container {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 1200px) {
+            padding: 0 15px;
+        }
+        @include screen('mobile') {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .title {
+        position: relative;
+        color: $primaryColor;
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url(../images/basic/icon_pen.svg) center no-repeat;
+            background-size: 22px;
+            margin-right: 5px;
+        }
+    }
+    p {
+        color: darken($primaryColor, 5);
+        padding: 0 1.5em;
+        @include screen('mobile') {
+            padding: 0;
+            margin: .5em 0;
+        }
+    }
+    a {
+        flex: 0 0 auto;
+        background: $primaryColor;
+        border-color: $primaryColor;
+        padding: .5em 2em;
+        color: #fff;
+        transition: .2s ease-in;
+        &:hover {
+            background: lighten($primaryColor, 10);
+            border-color: lighten($primaryColor, 10);
+            color: #fff;
+        }
     }
 }
 

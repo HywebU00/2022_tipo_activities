@@ -1,1 +1,4 @@
-<svg id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.9 31.9"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M.11,5.43,5.43.11,16.06,10.75,26.7.11,32,5.43,21.38,16.07,32,26.7,26.7,32,16.07,21.38,5.43,32,.11,26.7,10.75,16.07Z" transform="translate(-0.11 -0.11)"/></svg>
+<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.707107" y1="1" x2="9.16667" y2="9.45956" stroke="white" stroke-linecap="round"/>
+<line x1="0.833374" y1="9.45964" x2="9.29293" y2="1.00008" stroke="white" stroke-linecap="round"/>
+</svg>

@@ -2,33 +2,50 @@
 // 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #0066cc; //主色
-$secondaryColor: #781f79; //輔色
-$lightColor: #fec003; //點綴
-$linkColor: #0066cc; //連結
-$importantColor: #eb0202; //重要
+$primaryColor: #053561; //主色
+$secondaryColor: #D66900; //輔色
+$lightColor: #FA8F13; //點綴
+$linkColor: #779F12; //連結
+$importantColor: #FFE500; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
-$color-blue: #0066cc;
-$color-green: #298729;
-$color-orange: #d04500;
-$color-red: #d30000;
-$color-yellow: #fec003;
-$color-purple: #781f79;
+// $color-blue: #0066cc;
+// $color-green: #298729;
+// $color-orange: #d04500;
+// $color-red: #d30000;
+// $color-yellow: #fec003;
+// $color-purple: #781f79;
 $color-gray: #ccc;
+$color-lightgray: #E5E7E0;
 $color-dark: #333333;
 $color-hr: #666; //hr顏色
-$color-word: #222; //一般字的顏色
+$color-word: #575A6D;
+$color-word2: #333;
 $btn-word: #222; //按鈕字的顏色
+$color-bg: #f2f2f0;
 // 連結顏色
-$aColor: #0066cc;
+$aColor: $primaryColor;
 $aHover: darken($aColor, 10);
 $aFocus:#ff3e4d;
 // 表單focus顏色
-$form-focus: #0066cc; //表單
-$form-btn: #0066cc; //表單
+$form-focus: #39f; //表單
+$form-btn: #39f; //表單
+//卡片屬性顏色
+$color-paid: #3997BF;
+$color-free: darken($color-paid, 10);
+$color-patent: #7A4990;
+$color-trademark: #1F6AAF;
+$color-copyright:#5C8156;
+$color-tradeSecret: darken($color-copyright, 10);
+$color-property:#9d432f;
+$color-north:#D85F38;
+$color-central: #778D00;
+$color-eastern:darken($color-north, 5);
+$color-outlying:darken($color-central, 5);
+$color-online:#67952C;
 //------------------------------------------------------字型--------//
 // 字型設定
-$font-family: Lato,
+$font-family: 'Century Gothic',
+Lato,
 'PingFang TC',
 'Helvetica Neue',
 Helvetica,

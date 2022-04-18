@@ -17,12 +17,12 @@ $btn-radius:.2em;
     // text-shadow:1px 1px 1px RGBA(0,0,0,.3);
     // border-radius: $btn-radius;
     // @include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
-    &:hover{
-        background: darken($btn-bg, 10); // Old browsers
-        border: 1px solid darken($btn-bg, 20);
+    &:hover {
+        background: darken($btn-bg, 5); // Old browsers
+        border: 1px solid darken($btn-bg, 5);
         cursor: pointer;
         color: #FFF;
-        outline:none;
+        outline: none;
         // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
     }
     &:focus {
@@ -30,7 +30,7 @@ $btn-radius:.2em;
         border: 1px solid darken($btn-bg, 20);
         cursor: pointer;
         color: #FFF;
-        outline:none;
+        outline: none;
         box-shadow: 0 0px 0px 2px $aFocus !important;
         // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
     }
@@ -39,6 +39,14 @@ $btn-radius:.2em;
         cursor: pointer;
     }
 }
+
+@mixin btn_setting_nostyle($btn-bg:transparent, $btn-font-color:$color-word) {
+    background: $btn-bg;
+    border: none;
+    color: $btn-font-color;
+    border-radius: 0;
+}
+
 // 按鈕預設陰影
 %btn {
     font-size: $font-size;
@@ -53,78 +61,208 @@ $btn-radius:.2em;
     width: auto;
     padding: $btn-padding;
     min-width: 4em;
-    margin:.25em .1em;
-    
+    margin: .25em .1em;
+    border-radius: .2em;
     i {
         margin-right: .25em;
         margin-left: .25em;
     }
 }
+
 // 按鈕基本樣式
 .btn {
     @extend %btn;
     // box-sizing: border-box;
     @include btn_setting;
-    text-shadow:none;
+    text-shadow: none;
     &:hover,
     &:focus {
         color: $btn-font-color;
         outline: none;
     }
 }
+
 //按鈕顏色
 //@include btn_setting(按鈕顏色,字的顏色);
-.btn-green {
-    // @extend %btn;
-    @include btn_setting($color-green, #FFF);
-}
-.btn-blue {
-    // @extend %btn;
-    @include btn_setting($color-blue, #FFF);
-}
-.btn-yellow {
-    // @extend %btn;
-    @include btn_setting(lighten($color-yellow, 5), #333);
-}
-.btn-orange {
-    // @extend %btn;
-    @include btn_setting(lighten($color-orange, 0), #FFF);
-}
-.btn-red {
-    // @extend %btn;
-    @include btn_setting($color-red, #FFF);
-}
-.btn-purple {
-    // @extend %btn;
-    @include btn_setting(lighten($color-purple, 5), #FFF);
-}
+// .btn-green {
+//     // @extend %btn;
+//     @include btn_setting($color-green, #FFF);
+// }
+// .btn-blue {
+//     // @extend %btn;
+//     @include btn_setting($color-blue, #FFF);
+// }
+// .btn-yellow {
+//     // @extend %btn;
+//     @include btn_setting(lighten($color-yellow, 5), #333);
+// }
+// .btn-orange {
+//     // @extend %btn;
+//     @include btn_setting(lighten($color-orange, 0), #FFF);
+// }
+// .btn-red {
+//     // @extend %btn;
+//     @include btn_setting($color-red, #FFF);
+// }
+// .btn-purple {
+//     // @extend %btn;
+//     @include btn_setting(lighten($color-purple, 5), #FFF);
+// }
 .btn-submit {
     // @extend %btn;
     @include btn_setting(lighten($primaryColor, 5), #FFF);
 }
+
 .btn-reset {
     // @extend %btn;
-    color:lighten($color-word,15);
+    color: lighten($color-word, 15);
 }
+
 .btn-search {
     // @extend %btn;
-    @include btn_setting(lighten($primaryColor, 5), #FFF);
+    position: relative;
+    padding-left: 2.5em;
+    @include btn_setting(lighten($secondaryColor, 0), #FFF);
+    @include hyui_icon('icon_search2');
+    transition: .2s ease-in;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 1em;
+        top: calc(50% - 0.6em);
+        display: block;
+        width: 1.2em;
+        height: 1.2em;
+    }
+    &:hover {
+        transform: translateY(1px);
+    }
 }
+
+.btn-history,
+.btn-fliterSlideDown {
+    position: relative;
+    padding-left: 2.5em;
+    @include btn_setting(lighten($primaryColor, 0), #FFF);
+    transition: .2s ease-in;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 1em;
+        top: calc(50% - 0.6em);
+        display: block;
+        width: 1.2em;
+        height: 1.2em;
+    }
+    &:hover {
+        transform: translateY(1px);
+    }
+}
+
+.btn-history {
+    @include hyui_icon('icon_history2');
+}
+
+.btn-fliterSlideDown {
+    @include hyui_icon('icon_filter2');
+}
+
+//篩選
+.btn-filter {
+    position: relative;
+    text-align: left;
+    padding: .5em .8em;
+    min-width: 160px;
+    display: flex;
+    justify-content: space-between;
+    font-size: .938em;
+    background: transparent;
+    @media screen and (max-width: 374px) {
+        min-width: 140px;
+    }
+    &:hover {
+        background: $color-lightgray;
+        color: $color-word2;
+    }
+    &.active {
+        background: $primaryColor;
+        border-color: $primaryColor;
+        color: #fff;
+        &:hover {
+            padding-right: 2em;
+            &:before {
+                content: "";
+                position: absolute;
+                right: .5em;
+                top: calc(50% - 8px);
+                width: 16px;
+                height: 16px;
+                background: url(../images/icon/icon_close2.svg) center no-repeat;
+                background-size: 10px;
+            }
+        }
+    }
+    .num {
+        margin-left: .5em;
+    }
+}
+
+.btn-collect {
+    font-size: 0em;
+    @include btn_setting_nostyle;
+    width: 28px;
+    height: 28px;
+    background: url(../images/star.svg) center no-repeat;
+    background-size: 24px;
+    &.collected {
+        border: none;
+        box-shadow: none;
+        background: url(../images/star_active.svg) center no-repeat;
+    }
+}
+
+.btn-load {
+    @include btn_setting_nostyle;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    margin-bottom: 1em;
+    //position: relative;
+    transition: .2s ease-in;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 20px;
+        background: url(../images/icon/icon_arrow_down.svg) center no-repeat;
+        background-size: 20px;
+        opacity: .5;
+        margin-top: 5px;
+        transition: .2s ease-in;
+    }
+    &:hover {
+        color: $primaryColor;
+        &:after {
+            transform: translateY(3px);
+            opacity: .7;
+        }
+    }
+}
+
 // 主要按鈕
-.btn-primary{
+.btn-primary {
     background: $primaryColor!important;
     color: #fff !important;
     border: solid 1px $primaryColor!important;
-
     &:hover,
     &:focus {
         background: darken($primaryColor, 10)!important;
         border: solid 1px $primaryColor!important;
-
     }
 }
+
 // 次要按鈕
-.btn-secondary{
+.btn-secondary {
     background: #fff !important;
     color: darken($primaryColor, 15)!important;
     border: solid 1px $primaryColor!important;
@@ -136,14 +274,15 @@ $btn-radius:.2em;
         border: solid 1px #b5deff!important;
     }
 }
+
 // 一般按鈕
-.btn-normal{
+.btn-normal {
     background: #f1f1f1!important;
     color: #65656E !important;
     border: solid 1px #c3c3c3!important;
     text-shadow: none!important;
     &:hover,
-    &:focus{
+    &:focus {
         color: darken(#65656E, 15)!important;
         background: #c3c3c3!important;
         border: solid 1px #c3c3c3!important;
@@ -151,7 +290,7 @@ $btn-radius:.2em;
 }
 
 // 返回
-.btn-back{
+.btn-back {
     background: #555 !important;
     color: #fff !important;
     border: 1px solid #ddd !important;
@@ -162,28 +301,33 @@ $btn-radius:.2em;
     }
 }
 
-.disabled, [disabled] {
+.disabled,
+[disabled] {
     opacity: .5;
     cursor: not-allowed!important;
-    text-shadow:none;
-}
-.readonly, [readonly] {
-    // opacity: .5;
-    cursor: not-allowed!important;
-    text-shadow:none;
+    text-shadow: none;
 }
 
+.readonly,
+[readonly] {
+    // opacity: .5;
+    cursor: not-allowed!important;
+    text-shadow: none;
+}
 
 // 按鈕大小
 .btn-xl {
     font-size: $font-size * 1.5; //24px
 }
+
 .btn-lg {
     font-size: $font-size * 1.25; //20px
 }
+
 .btn-sm {
     font-size: $font-size * .938; //15px
 }
+
 .btn-xs {
     font-size: $font-size * .75; //12px
 }

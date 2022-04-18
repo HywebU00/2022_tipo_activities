@@ -1,12 +1,12 @@
 // 可設定背景顏色
-$sidebar_bgColor: saturate(darken($primaryColor, 18), 20);
+$sidebar_bgColor: saturate($primaryColor, 20);
 // 選色參考：https://sassme.jim-nielsen.com/
 $menuItems: 15;
 // 行動版選單sidebar
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100%;
     width: 100%;
     z-index: 9999;
@@ -16,12 +16,11 @@ $menuItems: 15;
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     box-sizing: border-box;
-
     .menu,
     .megamenu {
         display: block;
     }
-    > .menu_overlay {
+    >.menu_overlay {
         background: RGBA(0, 0, 0, 0.5);
         position: fixed;
         top: 0;
@@ -41,7 +40,7 @@ $menuItems: 15;
         padding: 3em 0;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         height: 100%;
         background: $sidebar_bgColor;
         overflow: hidden;
@@ -53,8 +52,8 @@ $menuItems: 15;
         &.open {
             .menu,
             .megamenu {
-                & > ul {
-                    & > li {
+                &>ul {
+                    &>li {
                         transform: scale(1) translateX(0px);
                         opacity: 1;
                         @for $i from 1 through $menuItems {
@@ -78,8 +77,8 @@ $menuItems: 15;
                 transition: 0.3s $cubic;
                 text-align: left;
             }
-            & > ul {
-                & > li {
+            &>ul {
+                &>li {
                     transform: scale(1.15) translateX(-30px);
                     opacity: 0;
                     transition: transform 0.5s $cubic, opacity 0.6s $cubic;
@@ -97,14 +96,14 @@ $menuItems: 15;
                 li {
                     flex: 1 1 100%;
                     flex-direction: row;
-                    > a {
+                    >a {
                         padding: 0.5em 1em;
                         min-height: 2em;
                         line-height: 2em;
                         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
                     }
                     &.hasChild {
-                        > a {
+                        >a {
                             position: relative;
                             padding: 0.5em 2em 0.5em 1em;
                             color: #fff;
@@ -140,11 +139,10 @@ $menuItems: 15;
                                 padding: 0.5em 1em 0.5em 2em !important;
                                 border: none;
                                 &:hover,
-                                &:focus {
-                                }
+                                &:focus {}
                             }
                             &.hasChild {
-                                > a {
+                                >a {
                                     padding: 0.5em 1em 0.5em 2em !important;
                                     &:after {
                                         top: 0.85em;
@@ -155,8 +153,7 @@ $menuItems: 15;
                                 a {
                                     padding: 0.5em 1em 0.5em 4em !important;
                                     &:hover,
-                                    &:focus {
-                                    }
+                                    &:focus {}
                                     &:after {
                                         display: none;
                                     }
@@ -175,11 +172,14 @@ $menuItems: 15;
         width: 90%;
         ul {
             float: none;
-            overflow: hidden;
+            width: 90%;
+            margin: 1em auto;
             padding: 0;
+            overflow: hidden;
             list-style: none;
-            display: flex;
-            flex-flow: row wrap;
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-bottom: none;
+            border-right: none;
             li {
                 flex-grow: 1;
                 flex-shrink: 1;
@@ -190,17 +190,24 @@ $menuItems: 15;
                     width: 100%;
                 }
                 a {
-                    display: block;
-                    line-height: 1.5em;
-                    padding: 0.25em 0.5em 0.25em 1.1em;
-                    font-size: 0.875em;
-                    color: #fff;
-                    font-weight: normal;
-                    text-decoration: none;
                     position: relative;
+                    display: block;
+                    height: 3em;
+                    line-height: 2em;
+                    padding: .5em 1em;
+                    font-size: 1em;
+                    color: #FFF;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border: 1px solid rgba(255, 255, 255, .5);
+                    box-sizing: border-box;
+                    &:nth-child(odd) {
+                        border-left: none;
+                        border-top: none;
+                    }
                     &:before {
                         position: absolute;
-                        top: 0.75em;
+                        top: calc(50% - 2px);
                         left: 0;
                         content: '';
                         width: 0;
@@ -276,15 +283,24 @@ $menuItems: 15;
         }
         &:before {
             position: absolute;
-            width: 15px;
-            height: 15px;
-            border: 3px solid #eee;
+            width: 16px;
+            height: 16px;
             content: '';
             top: 15px;
             right: 10px;
-            transform: rotate(45deg);
-            border-right: none;
-            border-top: none;
+            //transform: rotate(45deg);
+            background: url(../images/icon/icon_close2.svg) center no-repeat;
+            background-size: 16px;
         }
+    }
+}
+
+//animation
+@keyframes showMenu {
+    0% {
+        left: 20px;
+    }
+    100% {
+        left: 0px;
     }
 }

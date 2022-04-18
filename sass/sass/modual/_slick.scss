@@ -132,10 +132,10 @@
     font-size: 0em;
     line-height: 0em;
     position: absolute;
-    top: 40%;
+    top: 0;
     display: block;
-    width: 40px !important;
-    height: 60px !important;
+    width: 60px !important;
+    height: 100% !important;
     padding: 0 !important;
     min-width: auto;
     z-index: 2;
@@ -144,6 +144,10 @@
     outline: none;
     box-shadow: none;
     transition: .3s ease-out;
+    @include screen('mobile') {
+        width: 40px !important;
+        height: 60px !important;
+    }
     &:hover,
     &:focus {
         border: none !important;
@@ -156,14 +160,18 @@
 /* 上一則 位置 圖片*/
 
 .slick-prev {
-    left: 25px;
-    background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, .5);
+    left: 0;
+    background: url('../images/icon/icon_arrow_left2.svg') center center no-repeat RGBA(0, 0, 0, .15);
     background-size: 30px 30px;
     /* 箭頭 hover及focus 樣式 */
     &:hover,
     &:focus {
-        background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
+        background: url('../images/icon/icon_arrow_left2.svg') center center no-repeat RGBA(0, 0, 0, .35);
         background-size: 30px 30px;
+    }
+    @include screen('mobile') {
+        top: calc(50% - 30px);
+        left: 15px;
     }
 }
 
@@ -171,14 +179,18 @@
 /* 下一則 位置 圖片*/
 
 .slick-next {
-    right: 25px;
-    background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, .5);
+    right: 0;
+    background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .15);
     background-size: 30px 30px;
     /* 箭頭 hover及focus 樣式 */
     &:hover,
     &:focus {
-        background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
+        background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .35);
         background-size: 30px 30px;
+    }
+    @include screen('mobile') {
+        top: calc(50% - 30px);
+        right: 15px;
     }
 }
 
@@ -271,26 +283,110 @@
 // 首頁大圖輪播 
 .mpSlider {
     width: 100%;
-    padding-bottom: 3em;
+    margin-bottom: 2em;
     @include gutter(0);
     .img-container {
-        @include aspect-ratio(5,
-        2); //PC版比例
-        @include screen('mobile') {
-            @include aspect-ratio(5,
-            3); //Mobile版比例
-        }
+        @include aspect-ratio(2,
+        1); //PC版比例
+        // @include screen('mobile') {
+        //     @include aspect-ratio(5,
+        //     3); //Mobile版比例
+        // }
     }
     .slick-prev {
+        //background: url('../images/icon/icon_arrow_left2.svg') center center no-repeat RGBA(0, 0, 0, .15);
+        //background-size: 30px 30px;
         @include screen('mobile') {
-            top: 35%;
-            left: 2%;
+            top: calc(50% - 30px);
+            left: 15px;
         }
     }
     .slick-next {
+        //background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .15);
+        //background-size: 30px 30px;
         @include screen('mobile') {
-            top: 35%;
-            right: 2%;
+            top: calc(50% - 30px);
+            right: 15px;
+        }
+    }
+    .banner_container {
+        >a {
+            display: flex;
+            @include screen('mobile') {
+                flex-direction: column-reverse;
+            }
+        }
+        .wordContent {
+            flex-basis: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1em 1em 1em 2.5em;
+            color: #fff;
+            font-weight: bold;
+            font-size: 2.375em;
+            text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.19);
+            line-height: 1.45em;
+            background: url(../images/banner_patent_bg.jpg) right bottom no-repeat;
+            background-size: cover;
+            @include screen('tablet') {
+                font-size: 2em;
+            }
+            @include screen('mobile') {
+                flex-basis: 144px;
+                padding: 1em;
+                font-size: 1.875em;
+                //height: 140px;
+            }
+            p {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 304px;
+                margin: 0;
+                @include screen('mobile') {
+                    -webkit-line-clamp: 2;
+                    max-height: 84px;
+                }
+            }
+        }
+        .banner_patent {
+            .wordContent {
+                background: url(../images/banner_patent_bg.jpg) right bottom no-repeat;
+                background-size: cover;
+            }
+        }
+        .banner_copyright {
+            .wordContent {
+                background: url(../images/banner_copyright_bg.jpg) right bottom no-repeat;
+                background-size: cover;
+            }
+        }
+        .banner_trademark {
+            .wordContent {
+                background: url(../images/banner_trademark_bg.jpg) right bottom no-repeat;
+                background-size: cover;
+            }
+        }
+        .banner_trade-secret {
+            .wordContent {
+                background: url(../images/banner_trade-secret_bg.jpg) right bottom no-repeat;
+                background-size: cover;
+            }
+        }
+        .banner_tintellectual-property {
+            .wordContent {
+                background: url(../images/banner_intellectual-property_bg.jpg) right bottom no-repeat;
+                background-size: cover;
+            }
+        }
+        .img-container {
+            flex-basis: 55%;
+            @include screen('mobile') {
+                //flex-basis: 100%;
+            }
         }
     }
 }

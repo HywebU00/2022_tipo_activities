@@ -13,11 +13,11 @@ $(function() {
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
-        dots: true,
+        dots: false,
         arrows: true,
         infinite: true,
         speed: 500,
-        autoplay: true,
+        autoplay: false,
         fade: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
@@ -197,4 +197,27 @@ $(function() {
             e.preventDefault();
         });
     });
+
+    $('.btn-filter').click(function() {
+        $(this).toggleClass('active');
+    });
+    $('.btn-collect').click(function() {
+        $(this).toggleClass('collected');
+    });
+
+});
+
+//svg 變色
+jQuery('img.svg').each(function() {
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+    jQuery.get(imgURL, function(data) {
+        var $svg = jQuery(data).find('svg');
+        if (typeof imgID !== 'undefined') { $svg = $svg.attr('id', imgID); }
+        if (typeof imgClass !== 'undefined') { $svg = $svg.attr('class', imgClass + ' replaced-svg'); }
+        $svg = $svg.removeAttr('xmlns:a');
+        $img.replaceWith($svg);
+    }, 'xml');
 });
