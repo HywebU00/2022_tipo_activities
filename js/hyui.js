@@ -384,6 +384,38 @@ $(function() {
         _window.on('scroll', function(event) {
             stickynavBar2();
         });
+    };
+
+    // if (ww < wwMedium) {
+    //     $('.right_block').removeClass('stickySidebar').appendTo($('.center_block'));
+    //     $('.functionBar').after($('.right_block'));
+    // } else {
+    //     $('.right_block').addClass('stickySidebar').appendTo($('.container.has_2-col'));
+    // }
+    // fixed navbar
+    var resizeBarTimer;
+    if ($('.right_block').length > 0) {
+
+        function moveRightBlock() {
+            windowW = _window.outerWidth();
+            if (windowW <= wwMedium) {
+                $('.right_block').removeClass('stickySidebar').appendTo($('.center_block'));
+                $('.functionBar').after($('.right_block'));
+            } else {
+                $('.right_block').addClass('stickySidebar').appendTo($('.container.has_2-col'));
+            }
+        }
+
+        _window.on('scroll', function(event) {
+            moveRightBlock();
+        });
+        _window.on('resize', function(event) {
+            clearTimeout(resizeBarTimer);
+            resizeBarTimer = setTimeout(function() {
+                moveRightBlock();
+            }, 50);
+        });
+        moveRightBlock();
     }
     // if ($('header .megamenu').length > 0) {
     //     var stickyMegamenuTop = Math.floor($('header .megamenu').offset().top),
@@ -521,11 +553,13 @@ $(function() {
         });
     }
 
+    //條件篩選展開
     $('.btn-fliterSlideDown').click(function() {
         $('.search_filter').slideToggle();
     });
     $('.tabs>.tabItem:first-child>a').trigger('click');
     tabSet();
+
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/

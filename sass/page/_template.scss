@@ -202,8 +202,8 @@ body {
     }
     .btn-collect {
         position: absolute;
-        right: 15px;
-        top: 50px;
+        right: 10px;
+        top: 45px;
     }
     .activity_date {
         text-align: center;
@@ -318,38 +318,59 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     >.container {
-        @include gutter(); //gutter 代表左右要留白
-        display: flex;
+        @media screen and (max-width: 1200px) {
+            padding: 0 15px;
+        }
+        &.has_2-col {
+            display: flex;
+            @include screen('tablet') {
+                //flex-direction: column-reverse;
+                //flex-wrap: wrap;
+            }
+        }
     }
     .center_block {
-        flex: none;
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-    .left_block {
-        flex: none;
-        flex-basis: 260px;
-        max-width: 260px;
-        margin-right: 40px;
-        &.hidden {
-            +.center_block {
-                flex: none;
-                flex-basis: 100%;
-                max-width: 100%;
-            }
-        }
-        +.center_block {
-            flex: auto;
-            flex-basis: calc(100% - 300px);
-            max-width: calc(100% - 300px);
-        }
+        flex-grow: 1;
+        flex-basis: calc(100% - 380px);
+        max-width: calc(100% - 380px);
         @include screen('tablet') {
-            display: none;
-            +.center_block {
-                flex: none;
-                flex-basis: 100%;
-                max-width: 100%;
-            }
+            max-width: 100%;
+        }
+    }
+    // .left_block {
+    //     flex: none;
+    //     flex-basis: 260px;
+    //     max-width: 260px;
+    //     margin-right: 40px;
+    //     &.hidden {
+    //         +.center_block {
+    //             flex: none;
+    //             flex-basis: 100%;
+    //             max-width: 100%;
+    //         }
+    //     }
+    // +.center_block {
+    //     flex: auto;
+    //     flex-basis: calc(100% - 300px);
+    //     max-width: calc(100% - 300px);
+    // }
+    // @include screen('tablet') {
+    //     display: none;
+    //     +.center_block {
+    //         flex: none;
+    //         flex-basis: 100%;
+    //         max-width: 100%;
+    //     }
+    // }
+    //}
+    .right_block {
+        flex: 0 0 340px;
+        margin-left: 50px;
+        max-width: 340px;
+        @include screen('tablet') {
+            flex: 0 1 100%;
+            margin-left: 0;
+            max-width: 100%;
         }
     }
     &.small_size {
@@ -357,6 +378,137 @@ body {
     }
     &.large_size {
         font-size: 1.125em;
+    }
+}
+
+.activity_infoCard {
+    border-radius: 10px;
+    padding: 1.5em 1.6em;
+    margin-bottom: 20px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
+    .btn-signup,
+    .btn-gotoSignup,
+    .btn-disabled {
+        width: 100%;
+        margin: .8em 0;
+    }
+    .cost {
+        color: $primaryColor;
+        font-size: 2em;
+        font-weight: bold;
+        margin: .25em 0 1.25em 0;
+    }
+    .countdown {
+        font-size: 1.125em;
+        color: $color-word2;
+        em {
+            font-style: normal;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: darken($primaryColor, 5);
+            padding: 0 5px;
+        }
+    }
+    .deadline {
+        color: lighten($color-word, 10);
+        font-size: .938em;
+    }
+    .cancel {
+        font-size: .938em;
+        color: $color-word2;
+        >a {
+            text-decoration: underline;
+        }
+    }
+    .otherInfo {
+        @include li-reset;
+        border-top: 1px solid rgba($primaryColor, .3);
+        padding-top: .5em;
+        margin-top: .5em;
+        li {
+            position: relative;
+            font-weight: bold;
+            color: lighten($color-word, 10);
+            padding-left: 30px;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: calc(50% - 12px);
+                display: block;
+                width: 24px;
+                height: 24px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.people {
+                &:before {
+                    content: "";
+                    background: url(../images/basic/icon_people.svg) center no-repeat;
+                    background-size: 24px;
+                }
+            }
+            &.hours {
+                &:before {
+                    content: "";
+                    background: url(../images/basic/icon_clock.svg) center no-repeat;
+                    background-size: 24px;
+                }
+            }
+            em {
+                font-style: normal;
+                color: darken($primaryColor, 5);
+            }
+        }
+    }
+}
+
+.activity_quotaCard {
+    background: #FEFFFC;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: .5em 0;
+    margin-bottom: 20px;
+    ul {
+        @include li-reset;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        flex-basis: 50%;
+        text-align: center;
+        margin: .5em 0;
+        padding: .5em 0;
+        &:nth-of-type(2n+1) {
+            border-right: 1px solid rgba($primaryColor, .3);
+        }
+    }
+    .quota,
+    .remaining {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: .25em .5em;
+    }
+    .quota {
+        color: darken($primaryColor, 5);
+    }
+    .remaining {
+        color: $secondaryColor;
+    }
+}
+
+.extra_area {
+    overflow: hidden;
+    padding: 3em 0;
+    .container {
+        @media screen and (max-width: 1200px) {
+            padding: 0 15px;
+        }
+    }
+    .title_h2 {
+        margin-bottom: 2em;
+        text-align: center;
     }
 }
 

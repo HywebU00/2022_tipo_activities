@@ -24,7 +24,7 @@ $btn-word: #222; //按鈕字的顏色
 $color-bg: #f2f2f0;
 // 連結顏色
 $aColor: $primaryColor;
-$aHover: darken($aColor, 10);
+$aHover: lighten($aColor, 10);
 $aFocus:#ff3e4d;
 // 表單focus顏色
 $form-focus: #39f; //表單

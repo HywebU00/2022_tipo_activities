@@ -159,6 +159,26 @@ $btn-radius:.2em;
     }
 }
 
+//我要報名
+.btn-signup {
+    @include btn_setting($secondaryColor, #FFF);
+}
+
+//前往報名網頁
+.btn-gotoSignup {
+    @include btn_setting(lighten($primaryColor, 20), #FFF);
+}
+
+.btn-disabled {
+    @include btn_setting(lighten($color-gray, 10), $color-word);
+    cursor: not-allowed !important;
+    &:hover {
+        color: $color-word;
+        background: lighten($color-gray, 10);
+        border-color: lighten($color-gray, 10);
+    }
+}
+
 .btn-history {
     @include hyui_icon('icon_history2');
 }
@@ -188,7 +208,8 @@ $btn-radius:.2em;
         background: $primaryColor;
         border-color: $primaryColor;
         color: #fff;
-        &:hover {
+        &:hover,
+        &:focus {
             padding-right: 2em;
             &:before {
                 content: "";
@@ -208,16 +229,35 @@ $btn-radius:.2em;
 }
 
 .btn-collect {
+    position: relative;
     font-size: 0em;
     @include btn_setting_nostyle;
-    width: 28px;
-    height: 28px;
-    background: url(../images/star.svg) center no-repeat;
-    background-size: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    &:hover {
+        background: rgba($color-lightgray, .25);
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url(../images/basic/icon_star.svg) no-repeat center;
+        background-size: 24px;
+        opacity: .5;
+    }
     &.collected {
-        border: none;
-        box-shadow: none;
-        background: url(../images/star_active.svg) center no-repeat;
+        &:before {
+            background: url(../images/basic/icon_star_active.svg) no-repeat center;
+            background-size: 24px;
+            opacity: 1;
+        }
+        // border: none;
+        // box-shadow: none;
     }
 }
 

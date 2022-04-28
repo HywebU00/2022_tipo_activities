@@ -1,15 +1,17 @@
 // 自行加入的JS請寫在這裡
 $(function() {
     //sticky sidebar
+
     if ($('.stickySidebar').length > 0) {
         var stickySidebar = new StickySidebar('.stickySidebar', {
-            containerSelector: '.main',
-            topSpacing: 93,
-            bottomSpacing: 0,
-            minWidth: 768,
+            containerSelector: '.has_2-col',
+            topSpacing: 150,
+            bottomSpacing: 50,
+            minWidth: 992,
             resizeSensor: true,
         });
     }
+
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
@@ -60,6 +62,33 @@ $(function() {
             breakpoint: 575,
             settings: {
                 slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
+    $('.cardSlider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: false,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true
             }
@@ -178,6 +207,8 @@ $(function() {
         focusOnSelect: true,
         infinite: true
     });
+
+
 
     // password_toggle
     var passShow = false;

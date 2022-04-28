@@ -135,7 +135,7 @@
     top: 0;
     display: block;
     width: 60px !important;
-    height: 100% !important;
+    height: 60px !important;
     padding: 0 !important;
     min-width: auto;
     z-index: 2;
@@ -146,7 +146,7 @@
     transition: .3s ease-out;
     @include screen('mobile') {
         width: 40px !important;
-        height: 60px !important;
+        //height: 60px !important;
     }
     &:hover,
     &:focus {
@@ -161,6 +161,7 @@
 
 .slick-prev {
     left: 0;
+    top: calc(50% - 30px);
     background: url('../images/icon/icon_arrow_left2.svg') center center no-repeat RGBA(0, 0, 0, .15);
     background-size: 30px 30px;
     /* 箭頭 hover及focus 樣式 */
@@ -170,8 +171,7 @@
         background-size: 30px 30px;
     }
     @include screen('mobile') {
-        top: calc(50% - 30px);
-        left: 15px;
+        left: -15px;
     }
 }
 
@@ -180,6 +180,7 @@
 
 .slick-next {
     right: 0;
+    top: calc(50% - 30px);
     background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .15);
     background-size: 30px 30px;
     /* 箭頭 hover及focus 樣式 */
@@ -189,8 +190,7 @@
         background-size: 30px 30px;
     }
     @include screen('mobile') {
-        top: calc(50% - 30px);
-        right: 15px;
+        right: -15px;
     }
 }
 
@@ -292,6 +292,11 @@
         //     @include aspect-ratio(5,
         //     3); //Mobile版比例
         // }
+    }
+    .slick-prev,
+    .slick-next {
+        top: 0;
+        height: 100% !important;
     }
     .slick-prev {
         //background: url('../images/icon/icon_arrow_left2.svg') center center no-repeat RGBA(0, 0, 0, .15);
