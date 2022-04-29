@@ -512,6 +512,43 @@ body {
     }
 }
 
+*[class^="acTag_"] {
+    font-size: .875em;
+    border-radius: 4px;
+    background: #666;
+    color: #fff;
+    padding: .2em 1em;
+    margin: .25em;
+    min-width: 76px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+//專利
+.acTag_patent {
+    background: $color-patent;
+}
+
+//商標
+.acTag_trademark {
+    background: $color-trademark;
+}
+
+//著作權
+.acTag_copyright {
+    background: $color-copyright;
+}
+
+//營業秘密
+.acTag_tradeSecret {
+    background: $color-tradeSecret;
+}
+
+//智財權
+.acTag_property {
+    background: $color-property;
+}
+
 .hidden {
     display: none;
 }

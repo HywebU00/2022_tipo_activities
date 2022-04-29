@@ -109,42 +109,6 @@ h2.title {
     }
 }
 
-.activity_type {
-    font-size: .875em;
-    border-radius: 4px;
-    background: #666;
-    color: #fff;
-    padding: .1em 1em;
-    margin: .25em;
-    min-width: 76px;
-    text-align: center;
-}
-
-//專利
-.tag_patent {
-    background: $color-patent;
-}
-
-//商標
-.tag_trademark {
-    background: $color-trademark;
-}
-
-//著作權
-.tag_copyright {
-    background: $color-copyright;
-}
-
-//營業秘密
-.tag_tradeSecret {
-    background: $color-tradeSecret;
-}
-
-//智財權
-.tag_property {
-    background: $color-property;
-}
-
 .activity_title {
     font-size: 1.875em;
     color: $color-dark;
