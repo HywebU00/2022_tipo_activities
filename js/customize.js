@@ -236,6 +236,12 @@ $(function() {
         $(this).toggleClass('collected');
     });
 
+    var containerW = $('.innerpage>container').outerWidth(),
+        RightBlockW = $('.right_block').outerWidth();
+    if ($('.innerpage').find('.right_block')) {
+        $('.center_block').css('max-width', containerW - RightBlockW + 40);
+    }
+
 });
 
 //svg 變色

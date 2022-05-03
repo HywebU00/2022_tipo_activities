@@ -123,11 +123,18 @@ h2.title {
         display: flex;
         justify-content: flex-start;
         margin-bottom: 2em;
+        @include screen('mobile') {
+            flex-wrap: wrap;
+        }
         .heading {
             position: relative;
             padding-left: 25px;
             flex: 0 0 180px;
             margin-right: 10px;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                color: $primaryColor;
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -139,6 +146,11 @@ h2.title {
                 background-size: 18px;
             }
         }
+        .content {
+            @include screen('mobile') {
+                padding-left: 25px;
+            }
+        }
     }
 }
 
@@ -148,6 +160,9 @@ h2.title {
     background: #FEFFFC;
     padding: 2em;
     margin-bottom: 20px;
+    @include screen('xs_mobile') {
+        padding: 1em;
+    }
     .title_h4 {
         font-size: 1.125em;
         color: $color-word2;
@@ -165,6 +180,9 @@ h2.title {
             img {
                 height: 50px;
                 margin: 0 45px;
+                @include screen('mobile') {
+                    margin: 0 15px 0 0;
+                }
             }
         }
     }
@@ -183,10 +201,14 @@ h2.title {
             border-radius: 50%;
             overflow: hidden;
             background: url(../images/lecturer_photoBg.png) center no-repeat;
-            background-image: 86px;
+            background-size: 86px;
             margin: 0 30px;
+            @include screen('mobile') {
+                margin: 0 15px 0 0;
+            }
             img {
                 height: 86px;
+                width: auto;
             }
         }
         .lecturer_profile {}
@@ -236,7 +258,8 @@ h2.title {
         box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 3px -2px;
         margin-bottom: 1em;
         @include screen('mobile') {
-            flex-wrap: wrap;
+            flex-direction: column;
+            padding: .5em;
         }
         //border-bottom: solid 1px #eee;
         // &:before {
@@ -254,7 +277,7 @@ h2.title {
         // }
         .file_name {
             line-height: 1.8em;
-            margin: .2em 1em .2em .5em;
+            margin: 0 1em 0 .5em;
             color: $color-word;
             // ~span {
             //     flex: 0 0 auto;
@@ -278,7 +301,8 @@ h2.title {
             font-weight: bold;
             padding: .2em .8em;
             border-radius: 3px;
-            flex-basis: 0 0 auto;
+            flex: 0 0 auto;
+            line-height: 1.8em;
             &:hover,
             &:focus {
                 color: #fff;
@@ -286,7 +310,6 @@ h2.title {
         }
         .file_size {
             color: lighten($color-word, 15);
-            margin: 0.3em 0;
         }
         // $fileType: doc,
         // docx,
@@ -315,6 +338,9 @@ h2.title {
         a {
             display: flex;
             align-items: flex-start;
+            @include screen('mobile') {
+                flex-direction: column;
+            }
             .file_size {
                 color: lighten($color-word, 15);
             }
@@ -510,5 +536,123 @@ h2.title {
         @include screen('mobile') {
             flex: 1 1 calc(100% / 1);
         }
+    }
+}
+
+//cp 右欄卡片
+.activity_infoCard {
+    border-radius: 10px;
+    padding: 1.5em 1.6em;
+    margin-bottom: 20px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
+    .btn-signup,
+    .btn-gotoSignup,
+    .btn-disabled {
+        width: 100%;
+        margin: .8em 0;
+    }
+    .cost {
+        color: $primaryColor;
+        font-size: 2em;
+        font-weight: bold;
+        margin: .25em 0 1.25em 0;
+    }
+    .countdown {
+        font-size: 1.125em;
+        color: $color-word2;
+        em {
+            font-style: normal;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: darken($primaryColor, 5);
+            padding: 0 5px;
+        }
+    }
+    .deadline {
+        color: lighten($color-word, 10);
+        font-size: .938em;
+    }
+    .cancel {
+        font-size: .938em;
+        color: $color-word2;
+        >a {
+            text-decoration: underline;
+        }
+    }
+    .otherInfo {
+        @include li-reset;
+        border-top: 1px solid rgba($primaryColor, .3);
+        padding-top: .5em;
+        margin-top: .5em;
+        li {
+            position: relative;
+            font-weight: bold;
+            color: lighten($color-word, 10);
+            padding-left: 30px;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: calc(50% - 12px);
+                display: block;
+                width: 24px;
+                height: 24px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.people {
+                &:before {
+                    content: "";
+                    background: url(../images/basic/icon_people.svg) center no-repeat;
+                    background-size: 24px;
+                }
+            }
+            &.hours {
+                &:before {
+                    content: "";
+                    background: url(../images/basic/icon_clock.svg) center no-repeat;
+                    background-size: 24px;
+                }
+            }
+            em {
+                font-style: normal;
+                color: darken($primaryColor, 5);
+            }
+        }
+    }
+}
+
+.activity_quotaCard {
+    background: #FEFFFC;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: .5em 0;
+    margin-bottom: 20px;
+    ul {
+        @include li-reset;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        flex-basis: 50%;
+        text-align: center;
+        margin: .5em 0;
+        padding: .5em 0;
+        &:nth-of-type(2n+1) {
+            border-right: 1px solid rgba($primaryColor, .3);
+        }
+    }
+    .quota,
+    .remaining {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: .25em .5em;
+    }
+    .quota {
+        color: darken($primaryColor, 5);
+    }
+    .remaining {
+        color: $secondaryColor;
     }
 }

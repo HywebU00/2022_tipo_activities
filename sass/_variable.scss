@@ -30,8 +30,8 @@ $aFocus:#ff3e4d;
 $form-focus: #39f; //表單
 $form-btn: #39f; //表單
 //卡片屬性顏色
-$color-paid: #3997BF;
-$color-free: darken($color-paid, 10);
+$color-paid: #3997BF; //付費
+$color-free: darken($color-paid, 10); //免費
 $color-patent: #7A4990;
 $color-trademark: #1F6AAF;
 $color-copyright:#5C8156;

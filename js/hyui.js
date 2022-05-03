@@ -399,10 +399,12 @@ $(function() {
         function moveRightBlock() {
             windowW = _window.outerWidth();
             if (windowW <= wwMedium) {
-                $('.right_block').removeClass('stickySidebar').appendTo($('.center_block'));
-                $('.functionBar').after($('.right_block'));
+                $('.right_block').removeClass('stickySidebar');
+                //$('.right_block').removeClass('stickySidebar').appendTo($('.center_block'));
+                //$('.functionBar').after($('.right_block'));
             } else {
-                $('.right_block').addClass('stickySidebar').appendTo($('.container.has_2-col'));
+                $('.right_block').addClass('stickySidebar');
+                //$('.right_block').addClass('stickySidebar').appendTo($('.container.has_2-col'));
             }
         }
 

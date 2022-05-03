@@ -323,17 +323,21 @@ body {
         }
         &.has_2-col {
             display: flex;
-            @include screen('tablet') {
+            @include screen('mobile') {
                 //flex-direction: column-reverse;
-                //flex-wrap: wrap;
+                flex-wrap: wrap;
             }
         }
     }
     .center_block {
         flex-grow: 1;
         flex-basis: calc(100% - 380px);
-        max-width: calc(100% - 380px);
+        //max-width: calc(100% - 380px);
         @include screen('tablet') {
+            flex-basis: calc(100% - 340px);
+            //max-width: calc(100% - 340px);
+        }
+        @include screen('mobile') {
             max-width: 100%;
         }
     }
@@ -365,9 +369,13 @@ body {
     //}
     .right_block {
         flex: 0 0 340px;
-        margin-left: 50px;
+        margin-left: 40px;
         max-width: 340px;
         @include screen('tablet') {
+            flex-basis: 300px;
+            max-width: 300px;
+        }
+        @include screen('mobile') {
             flex: 0 1 100%;
             margin-left: 0;
             max-width: 100%;
@@ -379,125 +387,38 @@ body {
     &.large_size {
         font-size: 1.125em;
     }
-}
-
-.activity_infoCard {
-    border-radius: 10px;
-    padding: 1.5em 1.6em;
-    margin-bottom: 20px;
-    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
-    .btn-signup,
-    .btn-gotoSignup,
-    .btn-disabled {
-        width: 100%;
-        margin: .8em 0;
-    }
-    .cost {
-        color: $primaryColor;
-        font-size: 2em;
-        font-weight: bold;
-        margin: .25em 0 1.25em 0;
-    }
-    .countdown {
-        font-size: 1.125em;
-        color: $color-word2;
-        em {
-            font-style: normal;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: darken($primaryColor, 5);
-            padding: 0 5px;
-        }
-    }
-    .deadline {
-        color: lighten($color-word, 10);
-        font-size: .938em;
-    }
-    .cancel {
-        font-size: .938em;
-        color: $color-word2;
-        >a {
-            text-decoration: underline;
-        }
-    }
-    .otherInfo {
-        @include li-reset;
-        border-top: 1px solid rgba($primaryColor, .3);
-        padding-top: .5em;
-        margin-top: .5em;
-        li {
-            position: relative;
-            font-weight: bold;
-            color: lighten($color-word, 10);
-            padding-left: 30px;
-            &:before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: calc(50% - 12px);
-                display: block;
-                width: 24px;
-                height: 24px;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-            &.people {
-                &:before {
-                    content: "";
-                    background: url(../images/basic/icon_people.svg) center no-repeat;
-                    background-size: 24px;
-                }
-            }
-            &.hours {
-                &:before {
-                    content: "";
-                    background: url(../images/basic/icon_clock.svg) center no-repeat;
-                    background-size: 24px;
-                }
-            }
-            em {
-                font-style: normal;
-                color: darken($primaryColor, 5);
-            }
-        }
-    }
-}
-
-.activity_quotaCard {
-    background: #FEFFFC;
-    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.05), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: .5em 0;
-    margin-bottom: 20px;
-    ul {
-        @include li-reset;
+    .title_h2 {
         display: flex;
-        flex-wrap: wrap;
-    }
-    li {
-        flex-basis: 50%;
-        text-align: center;
-        margin: .5em 0;
-        padding: .5em 0;
-        &:nth-of-type(2n+1) {
-            border-right: 1px solid rgba($primaryColor, .3);
+        align-items: center;
+        font-size: 2em;
+        color: $color-word2;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 32px;
+            background: lighten($secondaryColor, 10);
+            margin-right: 12px;
         }
-    }
-    .quota,
-    .remaining {
-        font-size: 2.5em;
-        font-weight: bold;
-        margin: .25em .5em;
-    }
-    .quota {
-        color: darken($primaryColor, 5);
-    }
-    .remaining {
-        color: $secondaryColor;
     }
 }
 
+//內頁 關鍵字查詢
+.keyword_search {
+    float: right;
+    .form_grp {
+        display: flex;
+        align-items: center;
+    }
+    label {
+        white-space: nowrap;
+    }
+    input[type="text"] {
+        flex-basis: 320px;
+    }
+}
+
+//內頁 額外區塊
 .extra_area {
     overflow: hidden;
     padding: 3em 0;
@@ -512,6 +433,7 @@ body {
     }
 }
 
+//活動tag
 *[class^="acTag_"] {
     font-size: .875em;
     border-radius: 4px;
