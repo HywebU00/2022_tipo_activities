@@ -206,12 +206,13 @@
 
 .collectBtn,
 .memberBtn,
-.posteventBtn {
+.postEventBtn {
     border: none;
     padding: .5em 1em;
     display: flex;
     align-items: center;
-    margin-left: .25em;
+    margin: 0 0 0 .5em;
+    border-radius: 0.2em;
     @media screen and (max-width: 1200px) {
         right: 15px;
     }
@@ -235,8 +236,6 @@
     font-size: .938em;
     color: $primaryColor;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
-    margin: 0;
-    border-radius: 0.2em;
     &:hover {
         background: $primaryColor;
         color: #fff;
@@ -247,6 +246,19 @@
     }
     .amount {
         font-family: 'Century Gothic';
+    }
+}
+
+.postEventBtn {
+    background: $secondaryColor;
+    color: #fff;
+    &:hover {
+        background: $primaryColor;
+        color: #fff;
+    }
+    &:before {
+        background: url(../images/basic/icon_star_active.svg) no-repeat center;
+        background-size: contain;
     }
 }
 
