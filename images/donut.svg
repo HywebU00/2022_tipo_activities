@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 560 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.9931,0,0,0.9931,71.587,1.38)">
+        <g transform="matrix(4.16667,0,0,4.16667,230.002,67.9896)">
+            <path d="M0,63.365C-17.498,63.365 -31.682,49.18 -31.682,31.683C-31.682,14.185 -17.498,0.002 0,0.002L0,-16.651C-26.694,-16.651 -48.334,4.989 -48.334,31.683C-48.334,58.377 -26.694,80.016 0,80.016C2.968,80.016 5.867,79.734 8.688,79.222L5.694,62.844C3.846,63.18 1.945,63.365 0,63.365" style="fill:rgb(141,178,203);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(4.16667,0,0,4.16667,431.39,196.691)">
+            <path d="M0,0.795C0,-25.899 -21.64,-47.539 -48.333,-47.539L-48.333,-30.887C-30.837,-30.887 -16.651,-16.703 -16.651,0.795C-16.651,16.347 -27.861,29.273 -42.639,31.956L-39.646,48.334C-17.101,44.24 0,24.521 0,0.795" style="fill:rgb(29,126,174);fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g transform="matrix(1.68776,0,0,1.68776,-20.2865,-41.7596)">
+        <text x="143.57px" y="173.454px" style="font-family:'STHeitiSC-Medium', 'Heiti SC';font-size:15.8px;fill:rgb(35,31,32);">已報名百分比</text>
+    </g>
+    <g transform="matrix(1.17107,0,0,1.17107,37.2504,-69.2701)">
+        <text x="157.093px" y="236.975px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:69.333px;fill:rgb(35,31,32);">54%</text>
+    </g>
+    <g transform="matrix(1,0,0,1,98,0)">
+        <text x="363.925px" y="40.668px" style="font-family:'STHeitiSC-Medium', 'Heiti SC';font-size:21.333px;fill:rgb(35,31,32);">已報名</text>
+        <text x="427.925px" y="40.668px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:21.333px;fill:rgb(35,31,32);">27</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-355.86,331)">
+        <text x="363.925px" y="40.668px" style="font-family:'STHeitiSC-Medium', 'Heiti SC';font-size:21.333px;fill:rgb(35,31,32);">尚餘正取名額</text>
+        <text x="491.925px" y="40.668px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:21.333px;fill:rgb(35,31,32);">23</text>
+    </g>
+    <g transform="matrix(0.441942,-0.441942,0.707107,0.707107,240.984,-79.0652)">
+        <rect x="57" y="280" width="96" height="2" style="fill:rgb(128,128,128);"/>
+    </g>
+    <g transform="matrix(0.441942,-0.441942,0.707107,0.707107,-133.016,168.935)">
+        <rect x="57" y="280" width="96" height="2" style="fill:rgb(128,128,128);"/>
+    </g>
+</svg>

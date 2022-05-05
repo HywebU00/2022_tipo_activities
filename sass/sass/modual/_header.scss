@@ -205,11 +205,13 @@
 }
 
 .collectBtn,
-.memberBtn {
+.memberBtn,
+.posteventBtn {
     border: none;
     padding: .5em 1em;
     display: flex;
     align-items: center;
+    margin-left: .25em;
     @media screen and (max-width: 1200px) {
         right: 15px;
     }
@@ -226,14 +228,15 @@
 }
 
 .collectBtn {
-    position: absolute;
-    right: 10px;
-    bottom: 15px;
+    // position: absolute;
+    // right: 10px;
+    // bottom: 15px;
     background: rgba($linkColor, .3);
     font-size: .938em;
     color: $primaryColor;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     margin: 0;
+    border-radius: 0.2em;
     &:hover {
         background: $primaryColor;
         color: #fff;
@@ -269,15 +272,19 @@
 }
 
 .memberBlock {
+    display: flex;
     position: absolute;
     right: 10px;
-    top: calc(50% - 20px);
+    top: calc(50% - 10px);
     @include screen('mobile') {
         display: none;
     }
     .memberContent {
         display: none;
         margin-top: 3px;
+        position: absolute;
+        top: 100%;
+        width: 100%;
         ul {
             @include li-reset;
             border-radius: 0.25em;

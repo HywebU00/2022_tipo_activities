@@ -1,0 +1,371 @@
+// ＊＊＊「梯次報名資訊列表」 與 「報名詳細內容」＊＊＊
+
+// 自訂顏色變數
+$fontDark:#000;
+$fontColor:#444;
+$fontLight:#777;
+$fontInvert:#fff;
+$statusColor1: #FA8F13;
+$statusColor2: #BCCE45;
+$statusColor3: $primaryColor;
+$statusColor4: #e3e3e3;
+$hilight: #d6ec2f;
+
+// 大區塊寬度設定
+%firstLevelWidth {
+  max-width: $container-max;
+  margin: 0 auto;
+
+  @media screen and (max-width: $container-max + 30){
+    margin-left: 15px; margin-right: 15px;
+  }
+}
+
+////////////////////////////////////////////////
+// ＊共用元件＊ ////////////////////////////////
+////////////////////////////////////////////////
+
+// 與 <button> 元件長相一樣的連結
+.button {
+  display: inline-block;
+  a{
+    display: block; white-space: nowrap;
+    height: 2.8rem; line-height: 2.7; padding: 0 .8em;
+    border: 1px solid #ccc; background: #fff; color: $fontColor;
+    border-radius: 4px;
+    transition: .3s ease-out;
+    &:focus{ box-shadow: $form-focus 0 0 0 2px; border-color: $form-focus;}
+  }
+
+  &.mail a{
+    padding-left: 40px;
+    background-image: url(../images/basic/icon_mail.svg);
+    background-repeat: no-repeat;
+    background-position: 12px .6em;
+    background-size: 24px;
+  }
+}
+
+// 深藍色底的 button，「新增活動」
+.bigButton{ 
+  position: relative; float: right; margin-right: 8px;
+  font-size: 1.25em; line-height: 1;
+  a{ display: block; height: 2.4em; line-height: 2.4;
+    padding: 0 1.1em 0 2.8em;
+    background: $primaryColor; color: #fff; border-radius: 4px;
+    background-image: linear-gradient( lighten($primaryColor, 12%), $primaryColor);
+    transition: .3s;
+    &:focus{box-shadow:#fff 0 0 0 1px, $form-focus 0 0 0 3px;}
+  }
+  &.new{
+    a::before{ content: '＋';position: absolute; left: 1.2em; top: .7em;
+      height: 1em; width: 1em; line-height: .95;
+      background-color: #fff; color: $primaryColor; border-radius: 2px;
+    }
+  }
+}
+
+// 條列表格內的圖示
+.isoIcon{ 
+  $iconSize: 40px;
+
+  display: block;width: $iconSize; margin: 0 auto;
+  &>a{
+    display: block; text-indent: -20em; overflow: hidden;
+    height: $iconSize; width: 100%; border-radius: 50%;
+    background: url(../images/icon_edit.png) no-repeat center center;
+    background-size: 20px; transition: .2s;
+
+    &:hover{ box-shadow: rgba(0,0,0,.3) 0 1px 4px 1px;}
+    &:focus{ box-shadow: $fontColor 0 0 0 2px; }
+  }
+
+  // 編修
+  &.edit>a{ background-image: url(../images/icon_edit.png);}
+}
+
+// 文字短訊息
+.textMsg{
+  em{ display: inline-block; margin: 0 3px; 
+    font-style: normal; font-weight: bold; font-size: 1.125em; line-height: 1rem;
+    color: $fontDark;
+  }
+}
+
+
+
+
+////////////////////////////////////////////////
+// ＊模組＊ ////////////////////////////////////
+////////////////////////////////////////////////
+
+// header 之下，像頁籤的鏈結文字組
+.switch{
+  background-color: #fff; font-size: 1.3em;
+  ul{ list-style: none; margin: 0 auto; padding: 0;
+    width: 75%; max-width: 1000px; text-align: center;
+    display: flex; flex-flow: row nowrap;
+  }
+  li{ margin: 0 3%; padding: 0; flex:1 1 auto;
+    a{ position: relative;
+      display: block; height: 3em; line-height: 3;
+      color: $fontColor; text-decoration: none;
+      &::after{content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 0;
+        background-color: $statusColor2; transition: .15s;
+      }
+      &:hover{color:$fontDark; 
+        &::after{height: 2px;}
+      }
+      &:focus{outline: none; box-shadow: $statusColor2 0 0 0 1px inset;}
+    }
+    &.active{
+      a{ color: #000;
+        &::after{content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+          background-color: $statusColor2;
+        }
+      }
+    }
+  }
+}
+
+// 本區內的查詢，通常只有文字輸入欄位和送出按鈕，水平排列
+.searchBar{ 
+  position: relative;
+  input{border: none; margin: 0; vertical-align: middle; border-radius: 4px; }
+  input[type="text"]{width: 17em; height: 2.8em; padding:0 2.8em 0 .8em;}
+  input[type="button"], input[type="submit"]{ 
+    position: absolute; right: 2px; top: 2px;
+    width: calc(2.8em - 4px); height: calc(2.8em - 4px); padding: 0; margin:0;
+    text-indent: -20em;overflow: hidden;
+    background: url(../images/icon_search.png) no-repeat center center;
+    background-size: 24px;
+    &:hover{ background-color: $color-lightgray;}
+    &:focus{  background-color: $fontColor;}
+  }
+}
+
+
+// 排序方式
+.sorting{
+  .label{display: inline-block; margin-right: 5px;}
+  select{ margin: 0; width: 16em; height: 2.8em; border: none;}
+}
+
+
+// 依狀態顯示（條列左欄的過濾器或次分類）
+.statusFilter{ font-size: 1.125rem;
+  h3{
+    padding:0 1rem; margin: 0; height: 3.8rem; line-height: 2.8;
+    font-size: inherit; color: $fontColor;
+  }
+  ul{ list-style: none; margin: 0; padding: 0; line-height: 1.3;}
+  li{ margin: 0 0 1px; padding: 0;
+    &>a{ position: relative; overflow: hidden;
+      display: block; padding: 1.1em 1.2em 1em;
+      color: $fontColor; background-color: #fff;
+      &::after{content: ''; 
+        position: absolute; left: 0; top: 0; bottom: 0; width: 0; z-index: 8;
+        background-color: $statusColor2; transition: .15s;
+      }
+      &:hover, &:focus{ color: $fontDark; box-shadow: none;
+        &::after{width: 5px;}
+      }
+    }
+    &:first-child>a{ border-top-left-radius: 10px;}
+    &:last-child>a{ border-bottom-left-radius: 10px;}
+
+    &.active{ position: relative; z-index: 9;
+      &::after{content: ''; 
+        position: absolute; right: -5px; top: 0; bottom: 0; width: 7px;
+        background: #fff;
+      }
+      a{box-shadow: rgba(0,0,0,.3) 0 0 4px; color: $fontDark; font-weight: bold;}
+    }
+  }
+}
+
+
+// 模擬 select 動作的下拉選單
+.dropdownItem{ position: relative; z-index: 88;
+ 
+  button{ position: relative; 
+    height: 2.8em; padding: 0 32px 0 .8em; 
+    margin: 0; border-radius: 4px; white-space: nowrap;
+    &::after{content: ''; position: absolute; right: 12px; top: .95em;
+      width: 7px; height: 7px; 
+      border: 2px solid $fontDark; border-left: none; border-top: none;
+      transform: rotate(45deg); transition: .4s;
+    }
+
+    &.up{
+      &::after{transform: rotate(225deg); top: 1.2em;}
+    }
+  }
+
+  ul{ display: none; 
+    position: absolute; left: 0; top: auto; min-width: calc(100% - 4px);
+    list-style: none; margin: 2px auto 0;padding: 0; 
+    background: #fff; border-radius: 4px;
+    box-shadow: rgba(0,0,0,.3) 0 4px 4px -2px;
+    li{ border-bottom: 1px solid #ddd; margin: 0;padding: 2px;
+      &:last-child{border-bottom: none;}
+      a{ display: block; padding: .5em 1em; transition: .2s; border-radius: 3px; color: $fontDark;
+        &:hover, &:focus{ background-color: $hilight; box-shadow: none; }
+      }
+    }
+  }
+}
+// .dropdownItem 群組 ＊排版＊
+.dropdownGroup{ 
+  @extend %firstLevelWidth;
+  position: relative; z-index: 88;
+  display: flex; flex-flow: row wrap;
+  margin-top: 50px; margin-bottom: 50px; padding: 5px 0;
+
+  .dropdownItem{ flex: 0 1 auto; margin: 0 5px 0 1px; }
+}
+
+
+
+
+////////////////////////////////////////////////
+// ＊主要內容＊ ////////////////////////////////
+////////////////////////////////////////////////
+
+// 梯次報名資訊、錄取表格
+.eventList, .listTable{
+  position: relative;
+  clear: both; padding: 50px; margin: 0 5px 0 0;
+  background-color: #fff;box-shadow: rgba(0,0,0,.3) 0 0 4px;
+  border-radius: 0 10px 10px 10px;
+}
+
+
+// 梯次報名資訊
+.eventList{
+  table{ border: none; line-height: 1.5; margin: 0 auto 4.5em; width: 100%;
+    th, td, tr { border: none;}
+    th, td{padding: 1.5em 1em; vertical-align: top;}
+    td{
+      text-align: center;
+      &.alignLeft{text-align: left;}
+      &:first-child{ padding-left: 3px; width: 42%;}
+      &:nth-child(2){ width: 11em;}
+      &:nth-child(3){ width: 6em;}
+      &:nth-child(4){ width: 6em;}
+      &:last-child{ padding-right: 3px;}
+
+      .subject{ display: inline-block; font-size: 1.25em; color: $fontDark;
+        &+time{ display: block; margin: 1em 0 0;
+          font-size: .95em; 
+        }
+      }
+
+      .status{ display: inline-block; height: 2em; line-height: 2;
+        padding: 0 1em; margin: .3em auto;
+        border-radius: 4px; color: $fontColor; white-space: nowrap;
+        &.now{ background-color:$statusColor1; color: $fontInvert;}
+        &.full{ background-color: $statusColor2; color: $fontInvert;}
+        &.closed{ background-color: $statusColor3; color: $fontInvert; }
+        &.waiting{ background-color: $statusColor4; }
+      }
+
+      .percentage, .hitCount{  display: inline-block; color: $fontDark; text-align: left;
+        font-weight: bold; font-size: 1.3rem;
+        font-family: 'Times New Roman', Times, serif;
+        &:after{ content: attr(title); display: block; white-space: nowrap;
+          font-size: .75em; font-weight: normal; font-family: sans-serif; color: $fontLight;
+        }
+      }
+
+      .btnLike{ display: inline-block; margin: .3em 0 0;
+        a{ display: block;white-space: nowrap;
+          height: 2.8em; line-height: 2.8; padding: 0 1.5em;
+          border-radius: 4px; color: $fontColor;
+          box-shadow: rgba(0,0,0,.2) 0 1px 2px 1px;
+          transition: .2s;
+
+          &:hover, &:focus{color: $fontDark; box-shadow: rgba(0,0,0,.2) 0 2px 10px 1px;}
+        }
+      }
+    }
+    caption{ text-align: left; padding: 0 3px .5em;
+      border-bottom: 1px solid $color-gray; color: lighten($color-hr, 20%);
+    }
+  }
+}
+
+
+// 錄取表格
+.listTable{
+  table{
+    td{ text-align: center;}
+  }
+}
+
+
+// 報名情形，圓餅圖與數據
+.statistic{ 
+  @extend %firstLevelWidth;
+  display: flex; flex-flow: row wrap; justify-content: center;
+  padding: 40px;overflow: hidden;  align-items: center;
+  background: #fff; 
+
+  h3{font-size: 1.5rem; flex: 0 0 100%; margin: 0; color: $fontDark;}
+  figure{
+    flex: 0 0 45%; margin: 0 10px 0 0;
+    img{ display: block;}
+  }
+  .numbers{
+    flex: 1 0 45%;
+    display: flex; flex-flow: row wrap;
+    list-style: none; margin: 0; padding: 0;
+    font-size: 4em; line-height: 1.4;text-align: right;
+    li{
+      flex: 0 0 29%; margin: 1.2rem 2%; padding: 0;
+      white-space: nowrap; min-width: 2.5em; 
+      color: $statusColor1; font-weight: bold;
+      &::after{content: attr(title);display: block; 
+        font-size: 1.125rem; color: $fontColor; font-weight: normal; }
+    }
+  }
+}
+
+
+
+
+////////////////////////////////////////////////
+// ＊排版＊ ////////////////////////////////
+////////////////////////////////////////////////
+
+.has_leftSidebar{
+  @extend %firstLevelWidth;
+  position: relative; overflow: hidden;
+  padding-left: 165px; margin-bottom: 2em;
+
+  .statusFilter{position: absolute; left: 5px; top: 0; width: 160px;}
+
+  .mainContent{ margin-bottom: 2em;}
+}
+
+
+// 位於條列上方，水平排列各項功能的容器
+.topFuncBar{
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin: 0 8px 0 50px; padding:4px 0 0; height: 3.8rem;
+  &>*{
+    margin-left: 1em;
+    &:first-child{margin-left: 0;}
+  }
+
+  .textMsg{height: 2.8em; line-height: 2.8;}
+
+  &.flexStart { justify-content: flex-start;
+    .searchBar{flex:1 1 50%;
+      input[type="text"]{ float: right;}
+    }
+  }
+  &.flexEnd { justify-content: flex-end; }
+
+  .dropdownItem{z-index: 80;}
+}

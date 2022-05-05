@@ -3,52 +3,41 @@
     padding: 0;
     display: block;
     text-align: center;
-    font-size: .938em;
+    font-size: 1rem;
+    box-sizing: border-box;
+
     @extend %clearfix; // outline: 1px solid red;
     .form_inline{
         justify-content: center;
     }
     span {
         color: $primaryColor;
-        margin: 0px .5em;
+        margin: 0 .5em;
+    }
+    em{
+        font-weight: bold; font-style: normal; color: $primaryColor;
+        display: inline-block; margin: 0 3px;
     }
     .page {
-        margin: 10px auto;
-        padding: 0;
         display: flex;
-        justify-content:center;
-        flex-wrap:wrap;
-        li {
-            min-width: 40px;
-            height: 40px;
-            margin: 2px;
-            list-style: none;
-            flex:0 0 40px;
-
-            box-sizing: border-box;
-            a {
-                border-radius: 5px;
-                padding: 6px 10px;
-                font-weight: 700;
-                display: block;
-                white-space: nowrap;
-                font-size: 1em;
-                color: $color-word;
-                // @include gradient (#F7F7F7, #EAEAEA, vertical);
-                background: #eee;
-                border: #ccc solid 1px;
+        margin: 10px auto; padding: 0;
+        justify-content:center; list-style: none;
+        flex-wrap:wrap; line-height: 1.2;
+        li { flex:0 0 auto; margin: 4px; padding: 0;
+            a { display: block;  padding: 0;white-space: nowrap;
+                min-width: 2.4em; height: 2.4em; line-height: 2.4; 
+                font-weight: bold;color: $color-word;
+                border-radius: 2em; transition: .2s;
                 &:hover,
                 &:focus {
-                    background: $primaryColor;
-                    color: #fff !important;
-                    border: $primaryColor solid 1px;
+                    box-shadow: $primaryColor 0 0 0 1px inset;
                 }
             }
             &.active {
-                a {
-                    color: #fff !important;
-                    background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                a { color: #fff ;background: $primaryColor;
+                    &:hover, &:focus  {
+                        box-shadow: $primaryColor 0 0 0 2px, #fff 0 0 0 1px inset ;
+                    }
                 }
             }
             %arrow {
@@ -63,18 +52,16 @@
                 border-left: none;
                 border-bottom: none;
             }
-            &.first,
-            &.prev,
-            &.next,
-            &.last {
+            &.first, &.prev, &.next, &.last {
                 a {
                     text-indent: -9999px;
-                    position: relative;
+                    position: relative; background: #fff;
+                    box-shadow: rgba(0,0,0,.3) 0 2px 2px;
                     &:hover, &:focus {
+                        background-color: $primaryColor;
+                        box-shadow: none;
                         &:before, &:after {
-                            border: 2px solid #FFF;
-                            border-left: none;
-                            border-bottom: none;
+                            border-color: #fff;
                         }
                     }
                 }
@@ -160,11 +147,25 @@
             color: $primaryColor;
             text-decoration: none;
         }
+
+        ul{ list-style: none; margin: 0; padding: 0;display: inline; 
+            line-height: 1;
+            li{ display: inline-block; margin: 0 1px; padding: 0;font-weight: bold;
+                a{display: block; padding:2px 4px; border-radius: 3px;
+                    &:hover, &:focus{outline: none;box-shadow: $primaryColor 0 0 0 1px inset; }
+                }
+                &.active{
+                    a{background-color: $primaryColor; color: #fff;
+                        &:hover, &:focus{box-shadow: $primaryColor 0 0 0 2px;}
+                    }
+                }
+            }
+        }
     }
 }
 @include screen('mobile') {
     .pagination .total select.form-control {
-        margin: 0px 0px;
+        margin: 0;
         text-align: center;
     }
 }
