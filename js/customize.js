@@ -208,8 +208,6 @@ $(function() {
         infinite: true
     });
 
-
-
     // password_toggle
     var passShow = false;
     $('.password_toggle').each(function(index, el) {
@@ -230,10 +228,10 @@ $(function() {
     });
 
     $('.btn-filter').click(function() {
-        $(this).toggleClass('active');
+        $(this).stop().toggleClass('active');
     });
     $('.btn-collect').click(function() {
-        $(this).toggleClass('collected');
+        $(this).stop().toggleClass('collected');
     });
 
     var containerW = $('.innerpage>.container').outerWidth(),
@@ -241,6 +239,12 @@ $(function() {
     if ($('.innerpage').find('.right_block')) {
         $('.center_block').css('max-width', containerW - RightBlockW + 40);
     }
+
+    //會員管理
+    $('.memberBlock .memberContent').hide();
+    $('.memberBlock .memberBtn').click(function() {
+        $('.memberBlock .memberContent').stop().slideToggle();
+    })
 
 });
 

@@ -65,6 +65,33 @@ $menuItems: 15;
                 }
             }
         }
+        .collectBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: unset;
+            width: 90%;
+            margin: 0 auto;
+            background: $primaryColor;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .memberBlock {
+            position: unset;
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            ul {
+                background: transparent;
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+            li {
+                border-color: rgba(255, 255, 255, 0.25);
+                a {
+                    color: #fff;
+                }
+            }
+        }
         .menu,
         .megamenu {
             width: 90%;
@@ -172,7 +199,6 @@ $menuItems: 15;
         width: 90%;
         ul {
             float: none;
-            width: 90%;
             margin: 1em auto;
             padding: 0;
             overflow: hidden;

@@ -304,6 +304,7 @@
         @include screen('mobile') {
             top: calc(50% - 30px);
             left: 15px;
+            height: 60px !important;
         }
     }
     .slick-next {
@@ -312,6 +313,7 @@
         @include screen('mobile') {
             top: calc(50% - 30px);
             right: 15px;
+            height: 60px !important;
         }
     }
     .banner_container {
@@ -395,6 +397,8 @@
         }
     }
 }
+
+.cardSlider {}
 
 // slick._scss
 // adSlider

@@ -2,14 +2,16 @@
 .header {
     position: fixed;
     width: 100%;
+    height: 100px;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 999;
     transition: 0.3s ease-out;
     @extend %clearfix;
     @include screen('mobile') {
         position: fixed;
         width: 100%;
+        height: auto;
     }
     &:before {
         position: absolute;
@@ -53,6 +55,10 @@
         overflow: visible;
         position: relative; // menu
         background: url(../images/main_img_bg1.png) bottom left 150px no-repeat;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         @media screen and (max-width: 1200px) {
             padding: 0 15px;
         }
@@ -105,9 +111,8 @@
     h1 {
         float: left;
         width: 300px;
-        height: 70px;
-        margin: -10px 0 5px 0;
-        padding: 2px 60px 2px 0;
+        max-height: 70px;
+        margin: 15px 0;
         box-sizing: border-box;
         a {
             display: inline-block;
@@ -134,12 +139,16 @@
     }
     // 導覽列
     .navigation {
-        @include screen('mobile') {
-            display: none;
-        }
         @extend %clearfix;
         box-sizing: border-box;
         display: flex;
+        max-width: calc(100% - 300px);
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include screen('mobile') {
+            display: none;
+        }
         .navlist {
             flex: 1 1 auto;
             ul {
@@ -170,12 +179,18 @@
                 }
                 a {
                     display: block;
-                    padding: .5em 0.8em;
+                    padding: 0.4em 0.8em;
                     text-decoration: none;
                     @include aSetting;
                 }
             }
         }
+        // &+h1 {
+        //     margin: -10px 0 15px 0;
+        //     @include screen('mobile') {
+        //         margin: 0;
+        //     }
+        // }
         // 字級
         .language {
             flex-grow: 0;
@@ -189,16 +204,10 @@
     }
 }
 
-.collectBtn {
-    position: absolute;
-    right: 0;
-    bottom: 15px;
-    background: rgba($linkColor, .3);
+.collectBtn,
+.memberBtn {
     border: none;
-    font-size: .938em;
-    color: $primaryColor;
     padding: .5em 1em;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     @media screen and (max-width: 1200px) {
@@ -207,23 +216,90 @@
     @include screen('mobile') {
         display: none;
     }
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: .4em;
+    }
+}
+
+.collectBtn {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    background: rgba($linkColor, .3);
+    font-size: .938em;
+    color: $primaryColor;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
     &:hover {
         background: $primaryColor;
         color: #fff;
     }
     &:before {
-        content: "";
-        // position: absolute;
-        // left: .5em;
-        display: inline-block;
-        width: 1.2em;
-        height: 1.2em;
-        margin-right: .4em;
         background: url(../images/basic/icon_star_active.svg) no-repeat center;
         background-size: contain;
     }
     .amount {
         font-family: 'Century Gothic';
+    }
+}
+
+.memberBtn {
+    font-size: 1em;
+    background: $secondaryColor;
+    color: #fff;
+    padding: .5em 1em;
+    margin: 0;
+    &:before {
+        background: url(../images/basic/icon_account.svg) no-repeat center;
+        background-size: contain;
+    }
+    &:after {
+        content: "";
+        display: inline-block;
+        width: .65em;
+        height: .65em;
+        background: url(../images/icon/icon_arrow_down2.svg) no-repeat center;
+        background-size: contain;
+        margin-left: .4em;
+    }
+}
+
+.memberBlock {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 20px);
+    @include screen('mobile') {
+        display: none;
+    }
+    .memberContent {
+        display: none;
+        margin-top: 3px;
+        ul {
+            @include li-reset;
+            border-radius: 0.25em;
+            background: #fff;
+            border: 1px solid $color-lightgray;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+        }
+        li {
+            text-align: center;
+            border-bottom: 1px solid $color-lightgray;
+            &:last-of-type {
+                border-bottom: none;
+            }
+            a {
+                display: block;
+                padding: .5em 1em;
+                @include aSetting_nocolor;
+                &:hover {
+                    background: $color-bg;
+                }
+            }
+        }
     }
 }
 
