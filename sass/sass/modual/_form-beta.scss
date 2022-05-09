@@ -1,10 +1,10 @@
 $form_title_width :150px; // 表單title寬度
 $m-gutter: 4px; // Flex grid system default margin
-@mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:$btn-radius) {
+@mixin formStyle($f_color:$color-word2, $f_border:$color-gray, $f_radius:$btn-radius) {
     color: $f_color;
     font-size: 1em;
     border: 1px solid $f_border;
-    padding: .5em;
+    padding: .6em;
     background: #fff;
     vertical-align: middle;
     margin: .3em;
@@ -244,19 +244,19 @@ select::-ms-expand {
         >.form_grp {
             background: rgba($color-lightgray, .3);
         }
+        >.necessaryBlock {
+            background: rgba($lightColor, .08);
+        }
     }
     .form_grp {
         display: flex;
         flex-wrap: wrap;
-        padding: .5rem .8rem;
+        padding: .8rem 1rem;
         margin-bottom: 10px;
         border-radius: 5px;
         // &:last-child{
         //     border-bottom: transparent;  // 最後一筆不要下虛線
         // }
-        &.necessaryBlock {
-            background: rgba($lightColor, .08);
-        }
         // 閱讀條文
         &.agree {
             border-bottom: none;

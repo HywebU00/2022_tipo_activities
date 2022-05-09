@@ -7,15 +7,18 @@
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    font-size: .813em;
+    font-size: 1em;
     color: grey;
     text-shadow: 0 1px 1px #fff;
     display: block;
     @extend %clearfix;
 }
-.divider,.divider-vertical {
+
+.divider,
+.divider-vertical {
     @extend %divider_setting;
 }
+
 .divider {
     display: table;
     line-height: 1;

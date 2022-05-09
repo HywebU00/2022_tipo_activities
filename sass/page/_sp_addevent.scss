@@ -1,0 +1,94 @@
+//新增活動表單
+.apply_form {
+    padding-bottom: 1.5rem;
+}
+
+.sp_addEvent {
+    .operateGroup {
+        text-align: right;
+        margin-bottom: 1em;
+    }
+}
+
+.hasSaved {
+    text-align: center;
+    color: $secondaryColor;
+    span {
+        display: inline-block;
+        white-space: nowrap;
+        padding-left: 28px;
+        background: url(../images/basic/icon_doublechecked.svg) left center no-repeat;
+        background-size: 24px;
+    }
+}
+
+.btn.view,
+.btn.save,
+.btn.edit {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 40px;
+    padding: 0 1.5em 0 2.8em;
+    margin: .3em 0em .3em .5em;
+    // border: 1px solid #ccc;
+    color: #444;
+    border-radius: .2em;
+    transition: all .5s;
+    position: relative;
+    background: #e0e0e0;
+    text-decoration: none!important;
+    color: $primaryColor;
+    &:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        left: 1em;
+        top: calc(50% - 10px);
+    }
+    &:hover {
+        background: $primaryColor;
+        // border: 1px solid #222;
+        color: #fff;
+    }
+}
+
+.btn.view {
+    &:before {
+        background: url(../images/icon/icon_view2.svg) no-repeat 0 0;
+        background-size: contain;
+    }
+    &:hover {
+        &:before {
+            background-image: url(../images/icon/icon_view.svg);
+        }
+    }
+}
+
+.btn.save {
+    &::before {
+        background: url(../images/icon/icon_save.svg) no-repeat 0 0;
+        background-size: contain;
+    }
+    &:hover {
+        &:before {
+            background-image: url(../images/icon/icon_save2.svg);
+        }
+    }
+}
+
+.btn.edit {
+    color: #fff;
+    background: linear-gradient(180deg, #3269A2 0%, #043460 100%);
+    &::before {
+        background: url(../images/icon/icon_edit2.svg) no-repeat 0 0;
+        background-size: contain;
+    }
+    &:hover {
+        background: linear-gradient(180deg, #043460 0%, #043460 100%);
+    }
+}

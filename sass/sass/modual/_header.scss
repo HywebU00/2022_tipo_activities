@@ -225,7 +225,6 @@
             }
         }
         .memberContent {
-            display: none;
             margin-top: 3px;
             position: absolute;
             top: 100%;
@@ -236,6 +235,7 @@
                 background: #fff;
                 border: 1px solid $color-lightgray;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+                min-width: 100%;
             }
             li {
                 text-align: center;

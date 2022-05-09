@@ -322,8 +322,9 @@ body {
         display: flex;
         justify-content: center;
         counter-reset: step;
-        @include screen('xs_mobile') {
+        @include screen('mobile') {
             flex-wrap: wrap;
+            justify-content: flex-start;
         }
     }
     li {
@@ -331,13 +332,12 @@ body {
         align-items: center;
         position: relative;
         text-align: center;
-        flex-basis: 20%;
         max-width: 250px;
         color: $color-word2;
-        padding: 0 5px;
+        padding: 0 75px 0 5px;
         margin-bottom: .5em;
-        @include screen('tablet') {
-            flex-basis: 33.33333%;
+        @include screen('mobile') {
+            padding: 0 5px;
         }
         &:before {
             counter-increment: step;
@@ -360,9 +360,12 @@ body {
             top: 20px;
             right: 5px;
             height: 1px;
-            width: 38%;
+            width: 60px;
             background: $color-gray;
             z-index: 0;
+            @include screen('mobile') {
+                content: none;
+            }
         }
         &:nth-child(4):after {
             @include screen('xs_mobile') {
