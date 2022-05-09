@@ -187,6 +187,42 @@ $btn-radius:.2em;
     @include hyui_icon('icon_filter2');
 }
 
+//新增、編輯
+.btn-add,
+.btn-edit {
+    position: relative;
+    padding-left: 2.5em;
+    transition: .2s ease-in;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 1em;
+        top: calc(50% - 0.6em);
+        display: block;
+        width: 1.2em;
+        height: 1.2em;
+    }
+    &:hover {
+        transform: translateY(1px);
+    }
+}
+
+//新增
+.btn-add {
+    @include hyui_icon('icon_add');
+}
+
+//編輯
+.btn-edit {
+    @include hyui_icon('icon_edit');
+    &:focus,
+    &.active {
+        background-color: $primaryColor;
+        color: #fff;
+        @include hyui_icon('icon_edit2');
+    }
+}
+
 //篩選
 .btn-filter {
     position: relative;

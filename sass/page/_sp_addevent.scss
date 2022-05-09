@@ -1,6 +1,9 @@
 //新增活動表單
 .apply_form {
     padding-bottom: 1.5rem;
+    .btn-add {
+        float: right;
+    }
 }
 
 .sp_addEvent {
@@ -24,7 +27,7 @@
 
 .btn.view,
 .btn.save,
-.btn.edit {
+.btn.nextStep {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -81,14 +84,21 @@
     }
 }
 
-.btn.edit {
+.btn.nextStep {
     color: #fff;
     background: linear-gradient(180deg, #3269A2 0%, #043460 100%);
     &::before {
-        background: url(../images/icon/icon_edit2.svg) no-repeat 0 0;
+        background: url(../images/basic/icon_magic.svg) no-repeat 0 0;
         background-size: contain;
     }
     &:hover {
         background: linear-gradient(180deg, #043460 0%, #043460 100%);
+    }
+}
+
+.editBtn_grp {
+    margin-bottom: 1rem;
+    a.btn {
+        display: inline-block;
     }
 }
