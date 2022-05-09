@@ -100,5 +100,60 @@
     margin-bottom: 1rem;
     a.btn {
         display: inline-block;
+        transition: .2s ease-in;
+        &:hover {
+            background-color: $primaryColor;
+            color: #fff;
+        }
+        &.active {
+            color: #fff;
+            padding-right: 2.5em;
+            background: $primaryColor url(../images/icon_edit_w.png) right 1em center no-repeat;
+            background-size: 14px;
+        }
+    }
+}
+
+.formGroup {
+    position: relative;
+    .btn-add {
+        float: none;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+}
+
+.photoBlock {
+    position: relative;
+    height: 230px;
+    width: calc(100% - .6em);
+    margin: .3em;
+    border-radius: 4px;
+    border: 1px solid $color-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        .edit_grp {
+            display: flex;
+        }
+    }
+    .edit_grp {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+    }
+    .lecturer_photo {
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: $color-gray url(../images/lecturer_photoBg.png) center no-repeat;
+        text-align: center;
+        >img {
+            width: 200px;
+            object-fit: contain;
+        }
     }
 }
