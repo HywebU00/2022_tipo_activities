@@ -85,17 +85,17 @@ a.send:before {
 }
 
 a.upload:before {
-    background: url(../images/basic/icon_upload.png) no-repeat 0 0;
+    background: url(../images/icon/icon_upload.svg) no-repeat 0 0;
     background-size: contain;
 }
 
 a.refresh:before {
-    background: url(../images/basic/icon_refresh.png) no-repeat 0 0;
+    background: url(../images/icon/icon_refresh.svg) no-repeat 0 0;
     background-size: contain;
 }
 
 a.play:before {
-    background: url(../images/basic/icon_play.png) no-repeat 0 0;
+    background: url(../images/icon/icon_play.svg) no-repeat 0 0;
     background-size: contain;
 }
 
@@ -655,4 +655,8 @@ h3.arrowTitle {
         transform: rotate(45deg);
         z-index: 10;
     }
+}
+
+.necessaryBlock {
+    background: #fdf6f4;
 }

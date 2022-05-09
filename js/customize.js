@@ -241,11 +241,40 @@ $(function() {
     }
 
     //會員管理
-    $('.memberBlock .memberContent').hide();
-    $('.memberBlock .memberBtn').click(function() {
-        $('.memberBlock .memberContent').stop().slideToggle();
-    })
+    // $('.memberBlock .memberContent').hide();
+    // $('.memberBlock .memberBtn').click(function() {
+    //     $('.memberBlock .memberContent').stop().slideToggle();
+    // })
 
+
+    var _dropdownItem = $('.dropdownItem');
+    _dropdownItem.each(function() {
+        let _this = $(this);
+        let _button = _this.find('button');
+        let _optionList = _this.find('ul');
+        let _options = _optionList.find('li');
+        const speed = 250;
+
+        _button.click(function() {
+            if (_optionList.is(':visible')) {
+                optionSlideup();
+
+            } else {
+                _optionList.slideDown(speed);
+                $(this).addClass('up');
+            }
+        })
+
+        _options.click(optionSlideup);
+        _optionList.mouseleave(optionSlideup);
+        _options.filter(':last-child').focusout(optionSlideup);
+
+        function optionSlideup() {
+            _optionList.slideUp(speed);
+            _button.removeClass('up');
+        }
+
+    });
 });
 
 //svg 變色

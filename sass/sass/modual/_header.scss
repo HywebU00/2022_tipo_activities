@@ -202,6 +202,58 @@
             align-self: center;
         }
     }
+    .memberBlock {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 10px);
+        @include screen('mobile') {
+            display: none;
+        }
+        .memberBtn {
+            font-size: 1em;
+            background: $secondaryColor;
+            height: 2.6em;
+            color: #fff;
+            margin: 0;
+            &:before {
+                background: url(../images/basic/icon_account.svg) no-repeat center;
+                background-size: contain;
+            }
+            &:after {
+                border-color: #fff;
+            }
+        }
+        .memberContent {
+            display: none;
+            margin-top: 3px;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            ul {
+                @include li-reset;
+                border-radius: 0.25em;
+                background: #fff;
+                border: 1px solid $color-lightgray;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+            }
+            li {
+                text-align: center;
+                border-bottom: 1px solid $color-lightgray;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                a {
+                    display: block;
+                    padding: .5em 1em;
+                    @include aSetting_nocolor;
+                    &:hover {
+                        background: $color-bg;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .collectBtn,
@@ -259,66 +311,6 @@
     &:before {
         background: url(../images/basic/icon_star_active.svg) no-repeat center;
         background-size: contain;
-    }
-}
-
-.memberBtn {
-    font-size: 1em;
-    background: $secondaryColor;
-    color: #fff;
-    padding: .5em 1em;
-    margin: 0;
-    &:before {
-        background: url(../images/basic/icon_account.svg) no-repeat center;
-        background-size: contain;
-    }
-    &:after {
-        content: "";
-        display: inline-block;
-        width: .65em;
-        height: .65em;
-        background: url(../images/icon/icon_arrow_down2.svg) no-repeat center;
-        background-size: contain;
-        margin-left: .4em;
-    }
-}
-
-.memberBlock {
-    display: flex;
-    position: absolute;
-    right: 10px;
-    top: calc(50% - 10px);
-    @include screen('mobile') {
-        display: none;
-    }
-    .memberContent {
-        display: none;
-        margin-top: 3px;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        ul {
-            @include li-reset;
-            border-radius: 0.25em;
-            background: #fff;
-            border: 1px solid $color-lightgray;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-        }
-        li {
-            text-align: center;
-            border-bottom: 1px solid $color-lightgray;
-            &:last-of-type {
-                border-bottom: none;
-            }
-            a {
-                display: block;
-                padding: .5em 1em;
-                @include aSetting_nocolor;
-                &:hover {
-                    background: $color-bg;
-                }
-            }
-        }
     }
 }
 

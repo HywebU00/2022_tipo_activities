@@ -33,7 +33,7 @@
                 <h1>
                     <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
                 </h1>
-                <div class="memberBlock">
+                <div class="memberBlock dropdownItem">
                     <button type="button" class="memberBtn">會員管理</button>
                     <div class="memberContent">
                         <ul>
@@ -53,19 +53,28 @@
         <!-- header End -->
         <!-- main Start -->
         <div id="center" class="main innerpage">
-            <!-- menu Start -->
-            <nav class="menu" role="navigation" aria-label="About page">
+            <nav class="switch">
                 <ul>
-                    <li><a href="#">活動管理</a>
-                        <ul>
+                    <li class="active"><a href="#">活動管理</a>
+                        <!-- <ul>
                             <li><a href="#">活動登錄</a></li>
                             <li><a href="#">報名資訊</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li><a href="#">儀表板</a></li>
                     <li><a href="#">新手指引</a></li>
                 </ul>
             </nav>
+            <!-- menu Start -->
+            <!-- <nav class="menu" role="navigation" aria-label="About page">
+                <ul>
+                    <li><a href="#">活動管理</a>
+
+                    </li>
+                    <li><a href="#">儀表板</a></li>
+                    <li><a href="#">新手指引</a></li>
+                </ul>
+            </nav> -->
             <!-- menu End -->
             <!-- 內頁新增一個classname-->
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
@@ -79,23 +88,101 @@
                     </ul>
                 </div>
                 <section class="sp">
-                    <div class="operate_panel">
+                    <div class="operateGroup">
                         <a href="" class="btn ">預覽活動資訊</a>
                         <button class="btn">儲存草稿</button>
                         <a href="#" class="btn">下一步：編輯報名表</a>
                     </div>
-                    <div class="eventTitle">未命名活動</div>
+                    <div class="event_title">未命名活動</div>
 
                     <!-- 主要內容區 -->
                     <div class="center_block">
                         <div class="process_step">
                             <ul>
-                                <li class="done">活動登錄</li>
+                                <li class="active">活動登錄</li>
                                 <li>編輯報名表</li>
                                 <li>檢視與發佈</li>
                                 <li>正式發布</li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="hasSaved">已儲存所有變更</div>
+                    <h2 class="title_h2">活動資訊</h2>
+                    <p>註:<abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>欄位, 不能為空白。</p>
+                    <div class="apply_form">
+                        <form action="" class="flex-form form_grid">
+                            <div class="shadowOut">
+
+                                <div class="form_grp necessaryBlock">
+                                    <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動名稱</label>
+                                    <div class="form_content">
+                                        <input name="" id="" type="text" placeholder="請輸入活動名稱" class="wauto">
+                                    </div>
+                                </div>
+                                <div class="form_grp necessaryBlock">
+                                    <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動類別</label>
+                                    <div class="form_content" id="fake-legend">
+                                        <div class="radio_grp form_inline">
+                                            <label><input type="radio" name="sampleRadio" value="" checked="">新北市</label>
+                                            <label><input type="radio" name="sampleRadio" value="">專利</label>
+                                            <label><input type="radio" name="sampleRadio" value="">商標</label>
+                                            <label><input type="radio" name="sampleRadio" value="">著作權</label>
+                                            <label><input type="radio" name="sampleRadio" value="">營業秘密</label>
+                                            <label><input type="radio" name="sampleRadio" value="">智財權</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="address" class="form_title" aria-required="true">     
+                                            活動內容</label>
+                                    <div class="form_content">
+                                        <textarea name="" id="address" cols="30" rows="10" placeholder="請輸入活動內容"></textarea>
+                                        <div class="notice">限填2000字</div>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="" class="form_title">活動網址</label>
+                                    <div class="form_content form_inline">
+                                        <input name="text" type="text" value="" placeholder="請輸入活動網址" class="grow">
+                                        <button type="button" class="btn btn-primary">瀏覽網頁</button>
+                                    </div>
+                                </div>
+                                <div class="form_grp">
+                                    <label for="username" class="form_title">參加對象</label>
+                                    <div class="form_content">
+                                        <input type="text" id="username" placeholder="請輸入參加對象" value="">
+                                    </div>
+                                </div>
+                                <div class="form_grp necessaryBlock">
+                                    <div class="form_title">聯絡資訊</div>
+                                    <div class="form_content">
+                                        <div class="form_grp">
+                                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>聯絡人</label>
+                                            <div class="form_content">
+                                                <input name="" type="text" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>聯絡人電話</label>
+                                            <div class="form_content">
+                                                <input name="" type="tel" value="" placeholder="請輸入聯絡人電話">
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="email" class="form_title">聯絡人電子郵件</label>
+                                            <div class="form_content">
+                                                <input name="email" type="email" id="email" placeholder="請輸入聯絡人電子郵件">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn btn-reset">清除重填</button>
+                                <button class="btn btn-submit">下一步</button>
+                            </div>
+                        </form>
                     </div>
                 </section>
             </div>

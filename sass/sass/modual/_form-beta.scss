@@ -230,13 +230,6 @@ select::-ms-expand {
     margin: .5em 0;
     // 表單的線 ----------------------- start
     // border-top: 1px solid #DDD;
-    .form_grp {
-        border-bottom: 1px dashed #DDD;
-        padding: .5em 0;
-        // &:last-child{
-        //     border-bottom: transparent;  // 最後一筆不要下虛線
-        // }
-    }
     &.form_inline {
         border-bottom: 1px dashed #DDD;
         .form_grp {
@@ -247,10 +240,23 @@ select::-ms-expand {
         }
     }
     //  ------------------------------ end
+    .shadowOut {
+        >.form_grp {
+            background: rgba($color-lightgray, .3);
+        }
+    }
     .form_grp {
         display: flex;
-        //overflow: hidden;
         flex-wrap: wrap;
+        padding: .5rem .8rem;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        // &:last-child{
+        //     border-bottom: transparent;  // 最後一筆不要下虛線
+        // }
+        &.necessaryBlock {
+            background: rgba($lightColor, .08);
+        }
         // 閱讀條文
         &.agree {
             border-bottom: none;
@@ -477,7 +483,7 @@ select::-ms-expand {
             border-bottom: none;
             // 調整標題
             .form_title {
-                color: #008175;
+                color: $primaryColor;
             }
             .form_content {
                 flex-shrink: 0;
@@ -1100,7 +1106,6 @@ select::-ms-expand {
         flex: 1 1 auto;
     }
     //---------------------------------------------form setting--------//
-    .form_grp,
     .check_grp,
     .radio_grp,
     .btn_grp,
@@ -1109,7 +1114,7 @@ select::-ms-expand {
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
-        padding: .3em 0;
+        padding: .3em .5em;
         @include screen('mobile') {
             flex-wrap: wrap;
         }
@@ -1240,6 +1245,9 @@ select::-ms-expand {
             margin: .3em;
             padding: .45em 1em;
         }
+    }
+    .grow {
+        flex-grow: 1 !important;
     }
 }
 
