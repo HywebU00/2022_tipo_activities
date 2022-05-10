@@ -546,3 +546,31 @@ body {
 .hidden {
     display: none;
 }
+
+.previewBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $color-red;
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: bold;
+    letter-spacing: .05em;
+    .btn {
+        background: $color-dark;
+        border-color: $color-dark;
+        color: #fff;
+        &:hover {
+            background: darken($color-dark, 10);
+        }
+    }
+    &+header {
+        top: 60px;
+    }
+}

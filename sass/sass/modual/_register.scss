@@ -155,6 +155,9 @@ $hilight: #d6ec2f;
         text-align: center;
         display: flex;
         flex-flow: row nowrap;
+        @include screen('mobile') {
+            width: 100%;
+        }
         >li {
             margin: 0 3%;
             padding: 0;
@@ -575,6 +578,9 @@ $hilight: #d6ec2f;
     figure {
         flex: 0 0 45%;
         margin: 0 10px 0 0;
+        @include screen('mobile') {
+            flex-basis: 100%;
+        }
         img {
             display: block;
         }
@@ -589,6 +595,9 @@ $hilight: #d6ec2f;
         font-size: 4em;
         line-height: 1.4;
         text-align: right;
+        @include screen('mobile') {
+            flex-basis: 100%;
+        }
         li {
             flex: 0 0 29%;
             margin: 1.2rem 2%;
