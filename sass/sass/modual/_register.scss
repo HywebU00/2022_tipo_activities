@@ -93,6 +93,18 @@ $hilight: #d6ec2f;
     display: block;
     width: $iconSize;
     margin: 0 auto;
+    &.edit {
+        >a {
+            background: url(../images/icon_edit.png) no-repeat center center;
+            background-size: 20px;
+        }
+    }
+    &.delete {
+        >a {
+            background: url(../images/icon/icon_trash.svg) no-repeat center center;
+            background-size: 20px;
+        }
+    }
     &>a {
         display: block;
         text-indent: -20em;
@@ -100,8 +112,6 @@ $hilight: #d6ec2f;
         height: $iconSize;
         width: 100%;
         border-radius: 50%;
-        background: url(../images/icon_edit.png) no-repeat center center;
-        background-size: 20px;
         transition: .2s;
         &:hover {
             box-shadow: rgba(0, 0, 0, .3) 0 1px 4px 1px;

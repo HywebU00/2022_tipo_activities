@@ -189,7 +189,10 @@ $btn-radius:.2em;
 
 //新增、編輯
 .btn-add,
-.btn-edit {
+.btn-edit,
+.btn-upload,
+.btn-del,
+.btn-change {
     position: relative;
     padding-left: 2.5em;
     transition: .2s ease-in;
@@ -212,9 +215,20 @@ $btn-radius:.2em;
     @include hyui_icon('icon_add');
 }
 
+.btn-upload {
+    @include hyui_icon('icon_file');
+}
+
+.btn-del {
+    @include hyui_icon('icon_trash');
+}
+
+.btn-change {
+    @include hyui_icon('icon_photo');
+}
+
 //編輯
 .btn-edit {
-    @include hyui_icon('icon_edit');
     &:focus,
     &.active {
         background-color: $primaryColor;
