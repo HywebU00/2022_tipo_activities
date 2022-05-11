@@ -246,6 +246,10 @@ $(function() {
     //     $('.memberBlock .memberContent').stop().slideToggle();
     // })
 
+    //彈性區塊收合
+    $('.show_area').click(function() {
+        $('.drag_area').toggleClass('show');
+    });
 
     var _dropdownItem = $('.dropdownItem');
     _dropdownItem.each(function() {

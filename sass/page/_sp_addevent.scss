@@ -22,7 +22,7 @@
 .sp_addEvent {
     .operateGroup {
         text-align: right;
-        margin-bottom: 1em;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -48,8 +48,15 @@
 }
 
 .hasSaved {
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: calc(50% - 100px);
+    width: 180px;
+    padding: .5em;
     text-align: center;
     color: $secondaryColor;
+    background: rgba(255, 255, 255, .6);
     span {
         display: inline-block;
         white-space: nowrap;
@@ -61,7 +68,8 @@
 
 .btn.view,
 .btn.save,
-.btn.nextStep {
+.btn.nextStep,
+.btn.back {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -69,7 +77,7 @@
     white-space: nowrap;
     line-height: 40px;
     padding: 0 1.5em 0 2.8em;
-    margin: .3em 0em .3em .5em;
+    margin: .25em;
     // border: 1px solid #ccc;
     color: #444;
     border-radius: .2em;
@@ -96,7 +104,7 @@
 
 .btn.view {
     &:before {
-        background: url(../images/icon/icon_view2.svg) no-repeat 0 0;
+        background: url(../images/icon/icon_view2.svg) no-repeat center;
         background-size: contain;
     }
     &:hover {
@@ -108,12 +116,24 @@
 
 .btn.save {
     &::before {
-        background: url(../images/icon/icon_save.svg) no-repeat 0 0;
+        background: url(../images/icon/icon_save.svg) no-repeat center;
         background-size: contain;
     }
     &:hover {
         &:before {
             background-image: url(../images/icon/icon_save2.svg);
+        }
+    }
+}
+
+.btn.back {
+    &::before {
+        background: url(../images/icon/icon_back.svg) no-repeat center;
+        background-size: contain;
+    }
+    &:hover {
+        &:before {
+            background-image: url(../images/icon/icon_back2.svg);
         }
     }
 }
@@ -209,6 +229,87 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+.drag_area {
+    position: fixed;
+    z-index: 9999;
+    top: 25%;
+    right: -400px;
+    padding: 1em 1.5em .5em 1.5em;
+    background: $primaryColor;
+    background-size: 70px;
+    font-size: 1.25em;
+    font-weight: bold;
+    max-width: 400px;
+    color: #fff;
+    line-height: 1.5em;
+    transition: .3s;
+    box-shadow: -1px 2px 5px rgba(0, 0, 0, .3);
+    &.show {
+        right: 0;
+    }
+    .show_area {
+        writing-mode: horizontal-tb;
+        position: absolute;
+        width: 50px;
+        height: auto;
+        top: 0;
+        left: -50px;
+        background: $primaryColor;
+        color: #fff;
+        border-radius: 8px 0 0 8px;
+        margin: 0;
+        border: none;
+        padding: 1em .6em;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        box-shadow: -1px 6px 5px -5px rgba(0, 0, 0, .3);
+    }
+    .drag_items {
+        margin-top: 1em;
+        ul {
+            @include li-reset;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -.5em;
+        }
+        li {
+            flex-basis: 33.33333%;
+            margin-bottom: 1em;
+            a {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                justify-content: center;
+                height: 100px;
+                border-radius: 10px;
+                background: #fff;
+                color: $color-word;
+                padding: .6em;
+                font-size: 1rem;
+                font-weight: normal;
+                margin: 0 .5em;
+                cursor: move;
+                transition: .2s;
+                &:hover,
+                &:focus {
+                    color: $aHover;
+                    transform: translateY(-1px);
+                    box-shadow: 0 3px 8px rgba(0, 0, 0, .5);
+                }
+                >span {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    align-self: flex-end;
+                }
+                img {
+                    max-height: 50px;
+                }
+            }
         }
     }
 }

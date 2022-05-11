@@ -247,6 +247,9 @@ select::-ms-expand {
             padding: .8rem 1em;
             border-radius: 5px;
             overflow: hidden;
+            @include screen('mobile') {
+                padding: .5rem;
+            }
             >.form_grp {
                 margin-bottom: 0;
                 border: none;

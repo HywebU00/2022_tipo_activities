@@ -379,9 +379,9 @@ body {
                 background: $primaryColor;
                 //border-color: lighten($lightColor, 15);
             }
-            &:not(:first-child):after {
-                background: lighten($lightColor, 15);
-            }
+            // &:not(:first-child):after {
+            //     background: lighten($lightColor, 15);
+            // }
         }
     }
 }
