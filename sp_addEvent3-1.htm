@@ -111,8 +111,9 @@
                     <!-- 彈性區塊 -->
                     <div class="drag_area">
                         <button type="button" class="show_area">彈性區塊</button>
-                        <span>需要更多欄位？<br/>請由此拖曳至您想加入的位置</span>
+
                         <div class="drag_items">
+                            <span>需要更多欄位？<br/>請由此拖曳至您想加入的位置</span>
                             <ul>
                                 <li>
                                     <a href="javascript:;">
@@ -194,9 +195,410 @@
                                     </div>
                                 </div>
                                 <div class="shadowOut">
+                                    <!-- 標題與說明 -->
                                     <div class="edit_mode">
-                                        <input type="text" value="未命名標題">
-                                        <input type="text" value="" placeholder="">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="未命名標題">
+                                            <input type="text" value="" placeholder="說明(選填)">
+                                        </div>
+                                        <div class="edit_bottom">
+
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 簡答問題 -->
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="簡答問題">
+                                            <input type="text" value="" placeholder="說明(選填)">
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="form_inline">
+                                                <label for="" class="label_hidden"></label>
+                                                <select name="" id="">
+                                                <option value="" selected>簡答題</option>
+                                                <option value="">詳答題</option>
+                                            </select>
+                                            </div>
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                            <div class="onOffItem">
+                                                <p>必填</p>
+                                                <span class="switchOnOff"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 詳答問題 -->
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="詳答問題">
+                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="form_inline">
+                                                <label for=""></label>
+                                                <select name="" id="">  
+                                                    <option value="">簡答題</option>
+                                                    <option value="" selected>詳答題</option>
+                                                </select>
+                                            </div>
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                            <div class="onOffItem">
+                                                <p>必填</p>
+                                                <span class="switchOnOff"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 單選題問題 -->
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="單選題問題">
+                                            <div class="radio_grp">
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <input type="radio" name="sampleRadio6" value="" checked="">
+                                                    <label class="edit-on-click">選項</label>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <input type="radio" name="sampleRadio6" value="">
+                                                    <label class="edit-on-click">選項</label>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <input type="radio" name="sampleRadio6" value="">
+                                                    <label class="edit-on-click">選項</label>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <input type="radio" name="sampleRadio6" value="">
+                                                    <label class="edit-on-click">新增選項</label>或
+                                                    <a href="" class="add_others">新增「其他」</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="form_inline">
+                                                <label for=""></label>
+                                                <select name="" id="">  
+                                                    <option value="" selected>單選題</option>
+                                                    <option value="">複選題</option>
+                                                    <option value="">下拉選單</option>
+                                                </select>
+                                            </div>
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                            <div class="onOffItem">
+                                                <p>必填</p>
+                                                <span class="switchOnOff"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 複選題問題 -->
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="複選題問題">
+                                            <div class="checkbox_grp">
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <input type="checkbox" name="sampleRadio6" value="" checked="">
+                                                    <label class="edit-on-click">選項</label>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <input type="checkbox" name="sampleRadio6" value="">
+                                                    <label class="edit-on-click">選項</label>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <input type="checkbox" name="sampleRadio6" value="">
+                                                    <label class="edit-on-click">選項</label>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <input type="checkbox" name="sampleRadio6" value="">
+                                                    <label class="edit-on-click">新增選項</label>或
+                                                    <a href="" class="add_others">新增「其他」</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="form_inline">
+                                                <label for=""></label>
+                                                <select name="" id="">  
+                                                    <option value="">單選題</option>
+                                                    <option value="" selected>複選題</option>
+                                                    <option value="">下拉選單</option>
+                                                </select>
+                                            </div>
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                            <div class="onOffItem">
+                                                <p>必填</p>
+                                                <span class="switchOnOff"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 下拉選單問題 -->
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="複選題問題">
+                                            <div class="checkbox_grp">
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <div class="select">
+                                                        <span class="num">1</span>
+                                                        <span class="edit-on-click">選項1</span>
+                                                    </div>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <div class="select">
+                                                        <span class="num">2</span>
+                                                        <span class="edit-on-click">選項2</span>
+                                                    </div>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <a href="javascript:;" class="move"><img src="images/icon/icon_dot.svg" alt=""></a>
+                                                    <div class="select">
+                                                        <span class="num">3</span>
+                                                        <span class="edit-on-click">選項3</span>
+                                                    </div>
+                                                    <a href="javascript:;" class="close"><img src="images/icon/icon_close.svg" alt=""></a>
+                                                </div>
+                                                <div class="optionBlock">
+                                                    <div class="select">
+                                                        <span class="num">4</span>
+                                                        <span class="edit-on-click">新增選項</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="form_inline">
+                                                <label for=""></label>
+                                                <select name="" id="">  
+                                                    <option value="">單選題</option>
+                                                    <option value="">複選題</option>
+                                                    <option value="" selected>下拉選單</option>
+                                                </select>
+                                            </div>
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                            <div class="onOffItem">
+                                                <p>必填</p>
+                                                <span class="switchOnOff"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 日期問題 -->
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="日期問題">
+
+                                            <div class="form_inline">
+                                                <label class="label_hidden">日期</label>
+                                                <input type="date" name="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="form_inline">
+                                                <label for=""></label>
+                                                <select name="" id="">  
+                                                    <option value="" selected>日期</option>
+                                                    <option value="">時間</option>
+                                                </select>
+                                            </div>
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                            <div class="onOffItem">
+                                                <p>必填</p>
+                                                <span class="switchOnOff"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 時間問題 -->
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <input type="text" class="forTitle" value="時間問題">
+                                            <div class="form_inline">
+                                                <label class="label_hidden">時間</label>
+                                                <input type="time" name="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="form_inline">
+                                                <label for=""></label>
+                                                <select name="" id="">  
+                                                    <option value="">日期</option>
+                                                    <option value="" selected>時間</option>
+                                                </select>
+                                            </div>
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+                                            <div class="onOffItem">
+                                                <p>必填</p>
+                                                <span class="switchOnOff"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="edit_mode">
+                                        <button type="button" class="btn btn-move">移動</button>
+                                        <div class="formBlock">
+                                            <div class="forTitle">分隔線</div>
+                                            <hr>
+                                        </div>
+                                        <div class="edit_bottom">
+                                            <div class="isoIcon_grp">
+                                                <div class="isoIcon copy">
+                                                    <a href="javascript:;">複製</a>
+                                                </div>
+                                                <div class="isoIcon delete">
+                                                    <a href="javascript:;">刪除</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- 瀏覽狀態 -->
+                                    <div class="formGroup necessaryBlock">
+                                        <div class="form_grp">
+                                            <label for="phone" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>職業別</label>
+                                            <div class="form_content form_inline">
+                                                <select name="" id="">
+                                                    <option value="">請選擇職業別</option>
+                                                    <option value="">新北市</option>
+                                                    <option value="">桃園市</option>
+                                                    <option value="">新竹市</option>
+                                                    <option value="">...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formGroup necessaryBlock">
+                                        <div class="form_grp">
+                                            <label for="phone" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>手機號碼</label>
+                                            <div class="form_content">
+                                                <input name="phone" id="phone" type="tel" placeholder="輸入單行文字">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formGroup">
+                                        <div class="form_grp">
+                                            <label for="username" class="form_title">所屬單位</label>
+                                            <div class="form_content">
+                                                <input type="text" id="username" placeholder="輸入單行文字" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formGroup necessaryBlock">
+                                        <div class="form_grp">
+                                            <label for="phone" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>餐點</label>
+                                            <div class="form_content">
+                                                <div class="radio_grp form_inline">
+                                                    <label><input type="radio" name="" value="" checked="">葷</label>
+                                                    <label><input type="radio" name="" value="">素</label>
+                                                    <label><input type="radio" name="" value="">不需要餐點</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formGroup necessaryBlock">
+                                        <div class="form_grp">
+                                            <label for="phone" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>餐點</label>
+                                            <div class="form_content">
+                                                <div class="check_grp form_inline">
+                                                    <label><input type="checkbox" name="" value="" checked="">葷</label>
+                                                    <label><input type="checkbox" name="" value="">素</label>
+                                                    <label><input type="checkbox" name="" value="">不需要餐點</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formGroup">
+                                        <div class="form_grp">
+                                            <label for="phone" class="form_title">時間</label>
+                                            <div class="form_content form_inline">
+                                                <input type="time" name="" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formGroup">
+                                        <div class="form_grp">
+                                            <label for="phone" class="form_title">日期</label>
+                                            <div class="form_content form_inline">
+                                                <input type="date" name="" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formGroup">
+                                        <hr>
                                     </div>
                                 </div>
                                 <!-- shadowOut END -->

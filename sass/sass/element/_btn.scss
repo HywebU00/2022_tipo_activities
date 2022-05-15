@@ -192,7 +192,8 @@ $btn-radius:.2em;
 .btn-edit,
 .btn-upload,
 .btn-del,
-.btn-change {
+.btn-change,
+.btn-move {
     position: relative;
     padding-left: 2.5em;
     transition: .2s ease-in;
@@ -225,6 +226,10 @@ $btn-radius:.2em;
 
 .btn-change {
     @include hyui_icon('icon_photo');
+}
+
+.btn-move {
+    @include hyui_icon('icon_move');
 }
 
 //編輯

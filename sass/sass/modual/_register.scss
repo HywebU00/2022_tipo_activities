@@ -87,6 +87,12 @@ $hilight: #d6ec2f;
     }
 }
 
+.isoIcon_grp {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
 // 條列表格內的圖示
 .isoIcon {
     $iconSize: 40px;
@@ -102,6 +108,12 @@ $hilight: #d6ec2f;
     &.delete {
         >a {
             background: url(../images/icon/icon_trash.svg) no-repeat center center;
+            background-size: 20px;
+        }
+    }
+    &.copy {
+        >a {
+            background: url(../images/icon/icon_copy.svg) no-repeat center center;
             background-size: 20px;
         }
     }

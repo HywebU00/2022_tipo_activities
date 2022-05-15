@@ -277,7 +277,11 @@ $(function() {
             _optionList.slideUp(speed);
             _button.removeClass('up');
         }
+    });
 
+    var _switchOnOff = $(".switchOnOff");
+    _switchOnOff.click(function() {
+        $(this).toggleClass("on");
     });
 });
 
@@ -294,4 +298,30 @@ jQuery('img.svg').each(function() {
         $svg = $svg.removeAttr('xmlns:a');
         $img.replaceWith($svg);
     }, 'xml');
+});
+
+$(document).ready(function() {
+    $('.edit-on-click').click(function() {
+        var $text = $(this),
+            $input = $('<input type="text"/>')
+
+        $text.hide()
+            .after($input);
+
+        $input.val($text.html()).show().focus()
+            .keypress(function(e) {
+                var key = e.which
+                if (key == 13) // enter key
+                {
+                    $input.hide();
+                    $text.html($input.val())
+                        .show();
+                    return false;
+                }
+            })
+            .focusout(function() {
+                $input.hide();
+                $text.show();
+            })
+    });
 });
