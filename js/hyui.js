@@ -18,7 +18,7 @@ $(function() {
     /*-----------------------------------*/
     /////// header選單 tab及 fix設定////////
     /*-----------------------------------*/
-    var _menu = $('.menu'),
+    var _menu = $('.switch'),
         _megamenu = $('.megamenu');
     _menu.find('li').has('ul').addClass('hasChild');
     _megamenu.find('li').has('ul').addClass('hasChild');
@@ -368,9 +368,10 @@ $(function() {
         var operateGroupTop = Math.floor($('.operateGroup').offset().top),
             headerH = Math.floor($('header').outerHeight());
 
+
         function stickyoperateGroupr() {
             windowW = _window.outerWidth();
-            if ($(this).scrollTop() > headerH) {
+            if (windowW >= wwSmall && $(this).scrollTop() > headerH) {
                 $('.operateGroup').addClass('sticky');
                 //$('.main').css('padding-top', menuH);
             } else {
