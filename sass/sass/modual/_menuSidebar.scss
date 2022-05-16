@@ -17,7 +17,8 @@ $menuItems: 15;
     -webkit-transform: translate3d(0, 0, 0);
     box-sizing: border-box;
     .menu,
-    .megamenu {
+    .megamenu,
+    .switch {
         display: block;
     }
     >.menu_overlay {
@@ -51,7 +52,8 @@ $menuItems: 15;
         box-sizing: border-box;
         &.open {
             .menu,
-            .megamenu {
+            .megamenu,
+            .switch {
                 &>ul {
                     &>li {
                         transform: scale(1) translateX(0px);
@@ -92,7 +94,8 @@ $menuItems: 15;
             }
         }
         .menu,
-        .megamenu {
+        .megamenu,
+        .switch {
             width: 90%;
             margin: 0 auto 1em;
             a {
@@ -119,6 +122,9 @@ $menuItems: 15;
                 display: flex;
                 animation: showMenu 0.3s $cubic;
                 left: 0;
+                @include screen('mobile') {
+                    flex-wrap: wrap;
+                }
                 li {
                     flex: 1 1 100%;
                     flex-direction: row;
@@ -159,8 +165,8 @@ $menuItems: 15;
                         li {
                             a {
                                 display: block;
-                                min-height: 1.5em;
-                                line-height: 1.5em;
+                                //min-height: 1.5em;
+                                //line-height: 1.5em;
                                 font-weight: normal;
                                 padding: 0.5em 1em 0.5em 2em !important;
                                 border: none;

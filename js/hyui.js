@@ -122,9 +122,9 @@ $(function() {
     _megamenu.clone().prependTo(_mArea);
 
     //_search.clone().prependTo(_body).removeClass('search').addClass('m_search');
-    var liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
-        liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
-        liHasChild_level3 = $('aside .menu ul ul ul').children('li.hasChild'),
+    var liHasChild_level1 = $('aside .switch ul').children('li.hasChild'),
+        liHasChild_level2 = $('aside .switch ul ul').children('li.hasChild'),
+        liHasChild_level3 = $('aside .switch ul ul ul').children('li.hasChild'),
         subMenuWidth = liHasChild.first().children('ul').outerWidth();
     // megamenu
     var liHasChild2_level1 = $('aside .megamenu ul').children('li.hasChild'),

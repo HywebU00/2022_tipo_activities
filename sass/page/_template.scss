@@ -81,8 +81,7 @@ body {
             margin: 0;
         }
         @include screen('mobile') {
-            font-size: 1em;
-            padding: .8em 1em;
+            padding: 1em;
             white-space: nowrap;
         }
         &:hover,
