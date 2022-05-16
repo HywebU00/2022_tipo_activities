@@ -502,7 +502,7 @@ $hilight: #d6ec2f;
 // 模擬 select 動作的下拉選單
 .dropdownItem {
     position: relative;
-    z-index: 88;
+    //z-index: 88;
     button {
         position: relative;
         height: 2.8em;
@@ -533,6 +533,7 @@ $hilight: #d6ec2f;
     ul {
         display: none;
         position: absolute;
+        z-index: 88;
         left: 0;
         top: auto;
         min-width: calc(100% - 2px);
@@ -628,6 +629,7 @@ $hilight: #d6ec2f;
             }
             &:first-child {
                 width: 42%;
+                padding-left: 3px;
             }
             &:nth-child(2) {
                 width: 11em;
@@ -664,15 +666,18 @@ $hilight: #d6ec2f;
                     background-color: $statusColor1;
                     color: $fontInvert;
                 }
-                &.full {
+                &.full,
+                &.draft {
                     background-color: $statusColor2;
                     color: $fontInvert;
                 }
-                &.closed {
+                &.closed,
+                &.finished {
                     background-color: $statusColor3;
                     color: $fontInvert;
                 }
-                &.waiting {
+                &.waiting,
+                &.removed {
                     background-color: $statusColor4;
                 }
             }
