@@ -195,7 +195,7 @@ $btn-radius:.2em;
 .btn-change,
 .btn-move {
     position: relative;
-    padding-left: 2.5em;
+    padding-left: 2.5em !important;
     transition: .2s ease-in;
     &:before {
         content: "";
@@ -234,7 +234,7 @@ $btn-radius:.2em;
 
 //編輯
 .btn-edit {
-    &:focus,
+    @include hyui_icon('icon_edit');
     &.active {
         background-color: $primaryColor;
         color: #fff;

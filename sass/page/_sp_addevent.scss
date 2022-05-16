@@ -240,8 +240,12 @@
     //     }
     // }
     .edit_grp {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 5px 0;
         .btn {
+            flex: 0 1 auto;
             padding: .5em .5em .5em 2em;
             &:before {
                 left: .5em;

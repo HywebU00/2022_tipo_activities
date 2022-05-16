@@ -71,14 +71,12 @@
             <div class="container">
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="#">首頁</a></li>
                         <li><a href="#">活動管理</a></li>
-                        <li>梯次報名資訊</li>
+                        <li>活動登錄</li>
                     </ul>
                 </div>
-
                 <span class="bigButton new"><a href="#">新增活動</a></span>
-                <h2 class="title_h2">梯次報名資訊</h2>
+                <h2 class="title_h2">活動登錄</h2>
             </div>
 
             <div class="has_leftSidebar">
@@ -87,10 +85,15 @@
                     <h3>依狀態顯示</h3>
                     <ul>
                         <li class="active"><a href="#">全部</a></li>
-                        <li><a href="#">報名中</a></li>
-                        <li><a href="#">報名截止</a></li>
-                        <li><a href="#">已額滿</a></li>
-                        <li><a href="#">尚未開放報名</a></li>
+                        <li><a href="#">進行中</a></li>
+                        <li><a href="#">草稿</a></li>
+                        <li><a href="#">已完成</a></li>
+                        <li><a href="#">下架</a></li>
+                    </ul>
+                    <h3>標籤</h3>
+                    <ul>
+                        <li><a href="#">專利活動<span>5</span></a></li>
+                        <li><a href="#">商標培訓<span>8</span></a></li>
                     </ul>
                 </aside>
                 <!-- 主要內容 -->
@@ -103,82 +106,45 @@
                         <div class="sorting">
                             <span class="label">排序方式</span>
                             <select>
-                                <option>活動日期(近至遠)</option>
-                                <option>點閱人次(多至少)</option>
+                                <option>編修日期(新至舊)</option>
+                                <option>編修日期(舊至新)</option>
                             </select>
                         </div>
                     </div>
                     <!-- eventList Start -->
-                    <section class="eventList">
-                        <table>
-                            <caption>2021, 5月 (2)</caption>
+                    <section class="eventList table_list">
+                        <table class="table_hover">
                             <tr>
                                 <td class="alignLeft">
-                                    <span class="subject">110年度大專校院師生研發團隊智權策略工作坊-臺北場</span>
-                                    <time>2021/5/21 10:00~17:00(六)</time>
+                                    <span class="subject">中華民國智慧財產權協會 智權專題系列演講- 商標及實務介紹</span>
+                                    <time>上次編輯：2022/1/20  12:30</time>
                                 </td>
-                                <td><span class="status now">報名中</span></td>
-                                <td><span class="percentage" title="報名佔比">12%</span></td>
-                                <td><span class="hitCount" title="點閱人次">99</span></td>
-                                <td><span class="btnLike"><a href="registration_detail.htm">查看報名資訊</a></span></td>
+                                <td><span class="status now">進行中</span></td>
+                                <td>
+                                    <div class="dropdownItem drop-down">
+                                        <button type="button" class="btn-addTag selected ">套用標籤</button>
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="javascript:;">會員資料</a></li>
+                                                <li><a href="javascript:;">變更密碼</a></li>
+                                                <li><a href="javascript:;">我的範本</a></li>
+                                                <li><a href="javascript:;">登出</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <td>
+                                        <div class="dropdownItem">
+                                            <button type="button" class="btn-edit">編輯</button>
+                                            <ul>
+                                                <li><a href="javascript:;">編輯活動</a></li>
+                                                <li><a href="javascript:;">複製活動</a></li>
+                                                <li><a href="javascript:;">下架</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                             </tr>
 
-                            <tr>
-                                <td class="alignLeft">
-                                    <span class="subject">110年度大專校院師生研發團隊智權策略工作坊-臺南場</span>
-                                    <time>2021/5/7 8:00~17:00(六)</time>
-                                </td>
-                                <td><span class="status full">已額滿</span></td>
-                                <td><span class="percentage" title="報名佔比">100%</span></td>
-                                <td><span class="hitCount" title="點閱人次">5,836</span></td>
-                                <td><span class="btnLike"><a href="registration_detail.htm">查看報名資訊</a></span></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <caption>2021, 4月 (1)</caption>
-                            <tr>
-                                <td class="alignLeft">
-                                    <span class="subject">專利法及商標法部分條文修正草案公聽會</span>
-                                    <time>2021/4/29 10:00~17:00(四)</time>
-                                </td>
-                                <td><span class="status closed">報名截止</span></td>
-                                <td><span class="percentage" title="報名佔比">100%</span></td>
-                                <td><span class="hitCount" title="點閱人次">2,816</span></td>
-                                <td><span class="btnLike"><a href="registration_detail.htm">查看報名資訊</a></span></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <caption>2021, 4月 (1)</caption>
-                            <tr>
-                                <td class="alignLeft">
-                                    <span class="subject">智財權巡迴宣導與說明會</span>
-                                    <time>2020/11/29 10:00~17:00(四)</time>
-                                </td>
-                                <td><span class="status waiting">尚未開放報名</span></td>
-                                <td></td>
-                                <td><span class="hitCount" title="點閱人次">996</span></td>
-                                <td><span class="btnLike"><a href="registration_detail.htm">查看報名資訊</a></span></td>
-                            </tr>
-                            <tr>
-                                <td class="alignLeft">
-                                    <span class="subject">110年度有標法令說明會</span>
-                                    <time>2020/11/19 10:00~17:00(五)</time>
-                                </td>
-                                <td><span class="status closed">報名截止</span></td>
-                                <td><span class="percentage" title="報名佔比">100%</span></td>
-                                <td><span class="hitCount" title="點閱人次">1,026</span></td>
-                                <td><span class="btnLike"><a href="registration_detail.htm">查看報名資訊</a></span></td>
-                            </tr>
-                            <tr>
-                                <td class="alignLeft">
-                                    <span class="subject">大師講堂(四)智慧財產訴訟實務錦囊</span>
-                                    <time>2020/11/3 10:00~17:00(三)</time>
-                                </td>
-                                <td><span class="status closed">報名截止</span></td>
-                                <td></td>
-                                <td><span class="hitCount" title="點閱人次">2,123</span></td>
-                                <td><span class="btnLike"><a href="registration_detail.htm">查看報名資訊</a></span></td>
-                            </tr>
+
                         </table>
                     </section>
                     <!-- eventList End -->

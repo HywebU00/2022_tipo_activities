@@ -283,24 +283,8 @@ $(function() {
     _switchOnOff.click(function() {
         $(this).toggleClass("on");
     });
-});
 
-//svg 變色
-jQuery('img.svg').each(function() {
-    var $img = jQuery(this);
-    var imgID = $img.attr('id');
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-    jQuery.get(imgURL, function(data) {
-        var $svg = jQuery(data).find('svg');
-        if (typeof imgID !== 'undefined') { $svg = $svg.attr('id', imgID); }
-        if (typeof imgClass !== 'undefined') { $svg = $svg.attr('class', imgClass + ' replaced-svg'); }
-        $svg = $svg.removeAttr('xmlns:a');
-        $img.replaceWith($svg);
-    }, 'xml');
-});
-
-$(document).ready(function() {
+    //編輯表單項目
     $('.edit-on-click').click(function() {
         var $text = $(this),
             $input = $('<input type="text"/>')
@@ -324,4 +308,40 @@ $(document).ready(function() {
                 $text.show();
             })
     });
+
+    var statusFilterH = Math.floor($('.statusFilter').outerHeight());
+    $('.eventList').css('min-height', statusFilterH);
+    $('.listTable').css('min-height', statusFilterH);
+
+
+    // $(".drop-down .selected").click(function() {
+    //     $(".drop-down .options ul").toggle();
+    // });
+
+    $(".drop-down .options ul li a").click(function() {
+        var text = $(this).html();
+        $(".drop-down .selected").html(text);
+        $(".drop-down .options ul").hide();
+    });
+
+    // $(document).bind('click', function(e) {
+    //     var $clicked = $(e.target);
+    //     if (!$clicked.parents().hasClass("drop-down"))
+    //         $(".drop-down .options ul").hide();
+    // });
+});
+
+//svg 變色
+jQuery('img.svg').each(function() {
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+    jQuery.get(imgURL, function(data) {
+        var $svg = jQuery(data).find('svg');
+        if (typeof imgID !== 'undefined') { $svg = $svg.attr('id', imgID); }
+        if (typeof imgClass !== 'undefined') { $svg = $svg.attr('class', imgClass + ' replaced-svg'); }
+        $svg = $svg.removeAttr('xmlns:a');
+        $img.replaceWith($svg);
+    }, 'xml');
 });
