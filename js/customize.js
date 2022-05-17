@@ -276,6 +276,8 @@ $(function() {
         function optionSlideup() {
             _optionList.slideUp(speed);
             _button.removeClass('up');
+            _optionList.find('.add_NewTag').parent("li").show();
+            _optionList.find('.newTagForm').hide();
         }
     });
 
