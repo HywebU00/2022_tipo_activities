@@ -542,7 +542,7 @@ $hilight: #d6ec2f;
         padding: 0;
         background: #fff;
         border-radius: 4px;
-        box-shadow: rgba(0, 0, 0, .3) 0 4px 4px -2px;
+        box-shadow: rgba(0, 0, 0, .3) 0 4px 6px -2px;
         li {
             border-bottom: 1px solid #ddd;
             margin: 0;
@@ -590,6 +590,7 @@ $hilight: #d6ec2f;
 ////////////////////////////////////////////////
 // 梯次報名資訊、錄取表格
 .eventList,
+.eventList_2,
 .listTable {
     position: relative;
     clear: both;
@@ -606,7 +607,8 @@ $hilight: #d6ec2f;
 }
 
 // 梯次報名資訊
-.eventList {
+.eventList,
+.eventList_2 {
     table {
         border: none;
         line-height: 1.5;
@@ -624,24 +626,11 @@ $hilight: #d6ec2f;
         }
         td {
             text-align: center;
-            &.alignLeft {
+            @include screen('mobile') {
                 text-align: left;
             }
-            &:first-child {
-                width: 42%;
-                padding-left: 3px;
-            }
-            &:nth-child(2) {
-                width: 11em;
-            }
-            &:nth-child(3) {
-                width: 6em;
-            }
-            &:nth-child(4) {
-                width: 6em;
-            }
-            &:last-child {
-                padding-right: 3px;
+            &.alignLeft {
+                text-align: left;
             }
             .subject {
                 display: inline-block;
@@ -735,6 +724,75 @@ $hilight: #d6ec2f;
                 }
             }
         }
+    }
+}
+
+.eventList {
+    table {
+        td {
+            &:first-child {
+                width: 42%;
+                padding-left: 3px;
+            }
+            &:nth-child(2) {
+                width: 11em;
+            }
+            &:nth-child(3) {
+                width: 6em;
+            }
+            &:nth-child(4) {
+                width: 6em;
+            }
+            &:last-child {
+                padding-right: 3px;
+            }
+        }
+    }
+}
+
+.eventList_2 {
+    .options {
+        ul {
+            min-width: 12.5em;
+        }
+        li {
+            a {
+                text-align: left;
+            }
+        }
+        .newTagForm {
+            text-align: left;
+            padding: 10px;
+            input[type="text"] {
+                margin: 0 0 5px 0;
+            }
+            >button {
+                text-align: center;
+                padding: .25em 1.2em;
+                height: 2.5em;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+    .add_NewTag {
+        color: $aColor;
+        display: flex;
+        align-items: center;
+        &:before {
+            content: "";
+            display: inline-block;
+            margin-right: 5px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: $primaryColor url(../images/icon/icon_add2.svg) center no-repeat;
+            background-size: 8px;
+        }
+    }
+    .newTagForm {
+        display: none;
     }
 }
 

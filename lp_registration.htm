@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>梯次報名列表</title>
+    <title>活動登錄</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                     <!-- eventList Start -->
-                    <section class="eventList table_list">
+                    <section class="eventList_2 table_list">
                         <table class="table_hover">
                             <tr>
                                 <td class="alignLeft">
@@ -122,23 +122,30 @@
                                 <td><span class="status draft">草稿</span></td>
                                 <td>
                                     <div class="dropdownItem drop-down">
-                                        <button type="button" class="btn-addTag selected ">套用標籤</button>
+                                        <button type="button" class="btn-tag selected ">套用標籤</button>
                                         <div class="options">
                                             <ul>
                                                 <li><a href="javascript:;">專利活動</a></li>
                                                 <li><a href="javascript:;">商標培訓</a></li>
-                                                <li><a href="javascript:;">建立新的標籤</a></li>
+                                                <li><a href="javascript:;" class="add_NewTag">建立新的標籤</a></li>
+                                                <li class="newTagForm">
+                                                    <input type="text" value="" placeholder="請輸入新的標籤名稱">
+                                                    <button type="button" class="btn creatLabel">建立</button>
+                                                </li>
                                             </ul>
+
                                         </div>
                                     </div>
                                     <td>
                                         <div class="dropdownItem">
                                             <button type="button" class="btn-edit">編輯</button>
-                                            <ul>
-                                                <li><a href="javascript:;">編輯活動</a></li>
-                                                <li><a href="javascript:;">複製活動</a></li>
-                                                <li><a href="javascript:;">下架</a></li>
-                                            </ul>
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="javascript:;">編輯活動</a></li>
+                                                    <li><a href="javascript:;">複製活動</a></li>
+                                                    <li><a href="javascript:;">刪除活動</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </td>
                             </tr>
@@ -150,25 +157,32 @@
                                 <td><span class="status now">進行中</span></td>
                                 <td>
                                     <div class="dropdownItem drop-down">
-                                        <button type="button" class="btn-addTag selected ">套用標籤</button>
+                                        <button type="button" class="btn-tag selected ">套用標籤</button>
                                         <div class="options">
                                             <ul>
                                                 <li><a href="javascript:;">專利活動</a></li>
                                                 <li><a href="javascript:;">商標培訓</a></li>
-                                                <li><a href="javascript:;">建立新的標籤</a></li>
+                                                <li><a href="javascript:;" class="add_NewTag">建立新的標籤</a></li>
+                                                <li class="newTagForm">
+                                                    <input type="text" value="" placeholder="請輸入新的標籤名稱">
+                                                    <button type="button" class="btn creatLabel">建立</button>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <td>
-                                        <div class="dropdownItem">
-                                            <button type="button" class="btn-edit">編輯</button>
+                                </td>
+                                <td>
+                                    <div class="dropdownItem">
+                                        <button type="button" class="btn-edit">編輯</button>
+                                        <div class="options">
                                             <ul>
                                                 <li><a href="javascript:;">編輯活動</a></li>
                                                 <li><a href="javascript:;">複製活動</a></li>
                                                 <li><a href="javascript:;">下架</a></li>
                                             </ul>
                                         </div>
-                                    </td>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="alignLeft">
@@ -184,6 +198,10 @@
                                                 <li><a href="javascript:;">專利活動</a></li>
                                                 <li><a href="javascript:;">商標培訓</a></li>
                                                 <li><a href="javascript:;" class="add_NewTag">建立新的標籤</a></li>
+                                                <li class="newTagForm">
+                                                    <input type="text" value="" placeholder="請輸入新的標籤名稱">
+                                                    <button type="button" class="btn creatLabel">建立</button>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -191,11 +209,12 @@
                                 <td>
                                     <div class="dropdownItem">
                                         <button type="button" class="btn-edit">編輯</button>
-                                        <ul>
-                                            <li><a href="javascript:;">編輯活動</a></li>
-                                            <li><a href="javascript:;">複製活動</a></li>
-                                            <li><a href="javascript:;">下架</a></li>
-                                        </ul>
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="javascript:;">複製活動</a></li>
+                                                <li><a href="javascript:;">下架</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -213,6 +232,10 @@
                                                 <li><a href="javascript:;">專利活動</a></li>
                                                 <li><a href="javascript:;">商標培訓</a></li>
                                                 <li><a href="javascript:;" class="add_NewTag">建立新的標籤</a></li>
+                                                <li class="newTagForm">
+                                                    <input type="text" value="" placeholder="請輸入新的標籤名稱">
+                                                    <button type="button" class="btn creatLabel">建立</button>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -220,11 +243,12 @@
                                 <td>
                                     <div class="dropdownItem">
                                         <button type="button" class="btn-edit">編輯</button>
-                                        <ul>
-                                            <li><a href="javascript:;">編輯活動</a></li>
-                                            <li><a href="javascript:;">複製活動</a></li>
-                                            <li><a href="javascript:;">下架</a></li>
-                                        </ul>
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="javascript:;">複製活動</a></li>
+                                                <li><a href="javascript:;">公開</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>

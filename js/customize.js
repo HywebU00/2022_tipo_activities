@@ -256,7 +256,7 @@ $(function() {
         let _this = $(this);
         let _button = _this.find('button');
         let _optionList = _this.find('ul');
-        let _options = _optionList.find('li');
+        let _options = _optionList.find('li').children('a');
         const speed = 250;
 
         _button.click(function() {
@@ -269,9 +269,9 @@ $(function() {
             }
         })
 
-        _options.click(optionSlideup);
-        _optionList.mouseleave(optionSlideup);
-        _options.filter(':last-child').focusout(optionSlideup);
+        _options.not('.add_NewTag').click(optionSlideup);
+        //_optionList.mouseleave(optionSlideup);
+        //_options.filter(':last-child').focusout(optionSlideup);
 
         function optionSlideup() {
             _optionList.slideUp(speed);
@@ -318,10 +318,10 @@ $(function() {
     //     $(".drop-down .options ul").toggle();
     // });
 
-    $(".drop-down .options ul li a").click(function() {
+    $(".drop-down .options ul li a").not('.add_NewTag').click(function() {
         var text = $(this).html();
         $(".drop-down .selected").html(text);
-        $(".drop-down .options ul").hide();
+        //$(".drop-down .options ul").hide();
     });
 
     // $(document).bind('click', function(e) {
@@ -329,6 +329,13 @@ $(function() {
     //     if (!$clicked.parents().hasClass("drop-down"))
     //         $(".drop-down .options ul").hide();
     // });
+
+    $(".add_NewTag").click(function() {
+        $(this).parent("li").siblings(".newTagForm").show();
+        $(this).parent("li").hide();
+    });
+
+
 });
 
 //svg 變色
