@@ -434,6 +434,10 @@ select::-ms-expand {
         // @include gutter();
         // form_content內，同時有多組的表單時
         // 詳見：樣式 2
+        &.nowrap {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
         >section {
             // background: pink;
             width: 100%;

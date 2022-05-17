@@ -612,7 +612,6 @@ $hilight: #d6ec2f;
     table {
         border: none;
         line-height: 1.5;
-        margin: 0 auto 4.5em;
         width: 100%;
         th,
         td,
@@ -729,6 +728,7 @@ $hilight: #d6ec2f;
 
 .eventList {
     table {
+        margin: 0 auto 4.5em;
         td {
             &:first-child {
                 width: 42%;
@@ -751,6 +751,12 @@ $hilight: #d6ec2f;
 }
 
 .eventList_2 {
+    table {
+        margin: 0 auto;
+        tr {
+            border-bottom: 1px dashed $color-lightgray;
+        }
+    }
     .options {
         ul {
             min-width: 12.5em;

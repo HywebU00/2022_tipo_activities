@@ -251,6 +251,7 @@ $(function() {
         $('.drag_area').toggleClass('show');
     });
 
+    //點擊按鈕下拉選單
     var _dropdownItem = $('.dropdownItem');
     _dropdownItem.each(function() {
         let _this = $(this);
@@ -281,6 +282,7 @@ $(function() {
         }
     });
 
+    //開關
     var _switchOnOff = $(".switchOnOff");
     _switchOnOff.click(function() {
         $(this).toggleClass("on");
@@ -311,8 +313,10 @@ $(function() {
             })
     });
 
+    //右側主內容區塊高於左側區塊
     var statusFilterH = Math.floor($('.statusFilter').outerHeight());
     $('.eventList').css('min-height', statusFilterH);
+    $('.eventList_2').css('min-height', statusFilterH);
     $('.listTable').css('min-height', statusFilterH);
 
 
