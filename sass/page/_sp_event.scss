@@ -368,7 +368,7 @@ a.deletefile:before {
         width: 100%;
         font-weight: bold;
         color: $primaryColor;
-        font-size: 1.25em;
+        font-size: 1.5em;
         &:before {
             content: "";
             width: 8px;
@@ -657,5 +657,30 @@ h3.arrowTitle {
         top: 7px;
         transform: rotate(45deg);
         z-index: 10;
+    }
+}
+
+.custom_title {
+    margin: 2em 0 1em 0;
+    border-bottom: 3px solid $color-lightgray;
+    .title {
+        position: relative;
+        font-size: 1.25em;
+        font-weight: bold;
+        color: lighten($primaryColor, 10);
+        padding-left: 15px;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: calc(50% - 4px);
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background-color: lighten($primaryColor, 10);
+        }
+    }
+    .description_text {
+        margin: .5em 0;
     }
 }

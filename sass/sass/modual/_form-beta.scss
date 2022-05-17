@@ -1328,6 +1328,9 @@ textarea {
     -webkit-appearance: none; //清除 safari 的預設樣式
     -moz-appearance: none;
     appearance: none;
+    &[readonly] {
+        background: $color-bg;
+    }
     @include screen('mobile') {
         width: 100%;
     }
