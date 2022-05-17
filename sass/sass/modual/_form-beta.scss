@@ -1142,6 +1142,7 @@ select::-ms-expand {
             flex-basis: 100%;
             display: flex;
             align-items: center;
+            margin-bottom: 5px;
             input {
                 &:checked {
                     &~span {
