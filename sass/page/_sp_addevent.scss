@@ -528,11 +528,15 @@
         max-width: $container-max;
         width: 90%;
         border-radius: 10px;
+        cursor: auto;
         .manage_template {
             float: right;
             background-color: $aColor;
             color: #fff;
             transition: .2s;
+            @include screen('xs_mobile') {
+                float: none;
+            }
             &:hover {
                 background: $aHover;
             }
@@ -554,21 +558,34 @@
         flex-basis: calc(25% - 2em);
         box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 6px;
         border-radius: 10px;
-        overflow: hidden;
+        @include screen('tablet') {
+            flex-basis: calc(33.33333% - 2em);
+        }
+        @include screen('mobile') {
+            flex-basis: calc(50% - 2em);
+        }
+        @include screen('xs_mobile') {
+            flex-basis: calc(100% - 2em);
+        }
         >a {
-            display: bolck;
+            display: block;
+            padding: 3px;
             .img-container {
                 @include aspect-ratio(1, 1);
-                img {}
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                img {
+                    object-fit: cover;
+                }
                 &.template_default {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
                     &:after {
                         content: "Default";
                         color: #ccc;
                         font-size: 2.5em;
                         font-weight: bold;
+                        position: absolute;
                     }
                 }
                 &.template_withMeal {
@@ -580,6 +597,7 @@
                 @include aSetting-nocolor;
                 padding: 1em;
                 font-size: 1.125em;
+                text-align: center;
             }
         }
     }
