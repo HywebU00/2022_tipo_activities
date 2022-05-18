@@ -17,6 +17,9 @@
             }
         }
     }
+    hr {
+        border-top: 2px solid $color-lightgray;
+    }
 }
 
 .sp_addEvent {
@@ -516,6 +519,68 @@
             content: "On";
             left: 9px;
             right: auto;
+        }
+    }
+}
+
+.fancybox-content {
+    &.template_modal {
+        max-width: $container-max;
+        width: 90%;
+        border-radius: 10px;
+        .manage_template {
+            float: right;
+            background-color: $aColor;
+            color: #fff;
+            transition: .2s;
+            &:hover {
+                background: $aHover;
+            }
+        }
+    }
+}
+
+.templateGrp {
+    border-top: 2px solid $color-lightgray;
+    padding: 2em 0;
+    ul {
+        @include li-reset;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1em;
+    }
+    li {
+        margin: 0 1em 2em;
+        flex-basis: calc(25% - 2em);
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 6px;
+        border-radius: 10px;
+        overflow: hidden;
+        >a {
+            display: bolck;
+            .img-container {
+                @include aspect-ratio(1, 1);
+                img {}
+                &.template_default {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:after {
+                        content: "Default";
+                        color: #ccc;
+                        font-size: 2.5em;
+                        font-weight: bold;
+                    }
+                }
+                &.template_withMeal {
+                    background: #f1f1f1 url(../images/icon_meal.svg) center no-repeat;
+                    background-size: 100px;
+                }
+            }
+            .caption {
+                @include aSetting-nocolor;
+                padding: 1em;
+                font-size: 1.125em;
+            }
         }
     }
 }
