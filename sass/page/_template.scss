@@ -55,6 +55,17 @@ body {
     }
 }
 
+.main_content {
+    .message {
+        display: block;
+        text-align: center;
+        margin: 50px 0 60px;
+        font-size: 1.125em;
+        font-weight: bold;
+        color: #000;
+    }
+}
+
 .sort_btnGrp {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), inset 1px 2px 4px rgba(0, 0, 0, 0.1);
     background: #fff;

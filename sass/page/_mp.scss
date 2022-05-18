@@ -232,6 +232,14 @@ a.more {
     flex-wrap: wrap;
     justify-content: center;
     margin: 2em 0;
+    &+.message {
+        display: block;
+        text-align: center;
+        margin: 50px 0 60px;
+        font-size: 1.125em;
+        font-weight: bold;
+        color: #000;
+    }
 }
 
 @keyframes spin {
