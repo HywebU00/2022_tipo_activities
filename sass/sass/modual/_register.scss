@@ -772,8 +772,13 @@ $hilight: #d6ec2f;
             min-width: 12.5em;
         }
         li {
+            text-align: left;
             a {
                 text-align: left;
+            }
+            label {
+                min-height: 2.5em;
+                line-height: 2.5em;
             }
         }
         .newTagForm {
