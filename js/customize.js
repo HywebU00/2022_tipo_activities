@@ -342,7 +342,7 @@ $(function() {
     });
 
     $('.filterBar .btn-clean').click(function() {
-        $('.filterBtnGrp').remove();
+        $('.filterBar').remove();
     })
 
 
