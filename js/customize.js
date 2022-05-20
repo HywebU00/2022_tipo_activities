@@ -337,6 +337,10 @@ $(function() {
         $(this).parent("li").hide();
     });
 
+    $('.tag-condition').click(function() {
+        $(this).remove();
+    })
+
 
 });
 
