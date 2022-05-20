@@ -339,6 +339,10 @@ $(function() {
 
     $('.tag-condition').click(function() {
         $(this).remove();
+    });
+
+    $('.filterBar .btn-clean').click(function() {
+        $('.filterBtnGrp').remove();
     })
 
 

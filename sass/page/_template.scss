@@ -470,7 +470,7 @@ body {
         font-size: 1.125em;
     }
     .title_h2 {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         font-size: 2em;
         color: $color-word2;
@@ -487,15 +487,18 @@ body {
 
 //內頁 關鍵字查詢
 .keyword_search {
-    display: flex;
+    margin: 2em 0;
+    float: right;
     .searchBar {
         display: flex;
         align-items: center;
-        width: 600px;
+        width: 400px;
         margin: 0 auto;
     }
     label {
         white-space: nowrap;
+        margin-right: 5px;
+        font-weight: bold;
     }
     input[type="text"] {
         flex: 1 1 auto;
@@ -636,14 +639,22 @@ body {
 
 .filterBar {
     display: flex;
-    margin: 1em 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     align-items: flex-start;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $color-lightgray;
     span {
         white-space: nowrap;
-        display: inline-block;
+        display: block;
+        width: 100%;
+        font-size: 1.17em;
+        font-weight: bold;
+        margin: 1em 0;
     }
     .filterBtnGrp {
-        flex: 1 1 auto;
+        flex: 1 1 calc(100% - 120px);
     }
     .tag-condition {
         position: relative;
