@@ -343,7 +343,26 @@ $(function() {
 
     $('.filterBar .btn-clean').click(function() {
         $('.filterBar').remove();
-    })
+    });
+
+    $(".left_block .filter_grp").each(function() {
+        var _openclose_btn = $(this).children(".openclose_btn");
+        var _filter_content = $(this).children(".filter_content");
+        if (_filter_content.length == 0) {
+            _openclose_btn.hide();
+        } else {
+            function accordion3(e) {
+                if (_filter_content.is(":hidden")) {
+                    _filter_content.slideDown();
+                    _openclose_btn.text("收合").removeClass("close");
+                } else {
+                    _filter_content.slideUp();
+                    _openclose_btn.text("展開").addClass("close");
+                }
+            }
+            _openclose_btn.click(accordion3);
+        }
+    });
 
 
 });

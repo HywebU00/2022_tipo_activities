@@ -448,6 +448,9 @@ body {
                 max-width: 100%;
             }
         }
+        >.title {
+            font-size: 1.25em;
+        }
     }
     .right_block {
         flex: 0 0 340px;
@@ -673,7 +676,7 @@ body {
         white-space: nowrap;
         display: block;
         width: 100%;
-        font-size: 1.17em;
+        font-size: 1.25em;
         font-weight: bold;
         margin: 1em 0;
     }
@@ -687,8 +690,8 @@ body {
         padding: .2em 1.5em .2em .6em;
         border: none;
         transition: .2s;
-        min-width: 108px;
-        font-size: .875em;
+        min-width: 110px;
+        font-size: .938em;
         margin: 0 .25em .5em .25em;
         &:before {
             content: "";
@@ -708,16 +711,89 @@ body {
         padding: .3em 1.2em;
         flex-shrink: 0;
         white-space: nowrap;
-        font-size: .875em;
+        font-size: .938em;
         margin: 0 .25em .5em .25em;
     }
 }
 
 .filter_grp {
+    position: relative;
     background: #fefffc;
     border-radius: 10px;
     margin-bottom: 10px;
-    padding: 1em;
+    padding: 1em 1.2em;
+    .title {
+        margin-bottom: 15px;
+        font-size: 1.125em;
+        font-weight: bold;
+    }
+    .openclose_btn {
+        position: absolute;
+        display: block;
+        font-size: 0;
+        width: 20px;
+        height: 16px;
+        color: #FFF;
+        border: none;
+        position: absolute;
+        right: 1.2rem;
+        top: 1rem;
+        z-index: 90;
+        border-radius: 0;
+        border: none;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid $color-word;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(-45deg);
+            transition: .3s ease-out;
+        }
+        &.close {
+            &::before {
+                transform: rotate(135deg);
+                top: 0;
+            }
+        }
+    }
+}
+
+.filter_content {
+    .check_grp {
+        label {
+            display: block;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+    .datepick {
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            position: absolute;
+            left: .3em;
+            top: 0;
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+        }
+        &:first-child {
+            &:before {
+                content: "從";
+            }
+        }
+        &:last-child {
+            &:before {
+                content: "至";
+            }
+        }
+    }
 }
 
 .history_list {
