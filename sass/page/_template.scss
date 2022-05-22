@@ -405,6 +405,7 @@ body {
         }
         &.has_2-col {
             display: flex;
+            padding-bottom: 2em;
             @include screen('mobile') {
                 //flex-direction: column-reverse;
                 flex-wrap: wrap;
@@ -536,7 +537,6 @@ body {
 //內頁 額外區塊
 .extra_area {
     overflow: hidden;
-    padding: 3em 0;
     .container {
         @media screen and (max-width: 1200px) {
             padding: 0 15px;
