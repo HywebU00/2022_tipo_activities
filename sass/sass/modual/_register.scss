@@ -526,7 +526,7 @@ $hilight: #d6ec2f;
         &.up {
             &::after {
                 transform: rotate(225deg);
-                top: 1.2em;
+                top: calc(50% - 4px);
             }
         }
     }

@@ -820,6 +820,7 @@ body {
     }
 }
 
+//歷史清單
 .history_list {
     ul {
         @include li-reset;
@@ -859,3 +860,6 @@ body {
         }
     }
 }
+
+//我的範本
+.myTemplate {}
