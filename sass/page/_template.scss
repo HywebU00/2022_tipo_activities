@@ -599,6 +599,7 @@ body {
     margin: 2em 0;
     float: right;
     @include screen('mobile') {
+        margin: 1em 0;
         float: none;
     }
     .searchBar {

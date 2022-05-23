@@ -1,6 +1,7 @@
 // for CP page content setting only
 .cp {
-    font-size: 1em * 1.0666666;
+    //font-size: 1em * 1.0666666;
+    font-size: 1em;
     line-height: 1.65em;
     @include screen('xs_mobile') {
         font-size: 1em * 1.2;
@@ -11,24 +12,29 @@
     h2 {
         font-size: 1.75em;
         margin-bottom: 1.25em;
+        color: $color-word2;
     }
     h3 {
         font-size: 1.5em;
+        color: $color-word2;
     }
     h4 {
         font-size: 1.25em;
         margin-top: 0;
         margin-bottom: 1em;
+        color: $color-word2;
     }
     h5 {
         font-size: 1.125em;
         margin-top: 0;
         margin-bottom: 1em;
+        color: $color-word2;
     }
     h6 {
         font-size: 1.125em;
         margin-top: 0;
         margin-bottom: 1em;
+        color: $color-word2;
     }
     p {
         font-size: 1em;

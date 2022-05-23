@@ -181,12 +181,12 @@
 .slick-next {
     right: 0;
     top: calc(50% - 30px);
-    background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .15);
+    background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .35);
     background-size: 30px 30px;
     /* 箭頭 hover及focus 樣式 */
     &:hover,
     &:focus {
-        background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .35);
+        background: url('../images/icon/icon_arrow_right2.svg') center center no-repeat RGBA(0, 0, 0, .55);
         background-size: 30px 30px;
     }
     @include screen('mobile') {
@@ -266,6 +266,9 @@
                 opacity: 1;
                 /* 點 active 的顏色 */
                 background: $aHover;
+                &:before {
+                    background: $aHover;
+                }
                 &:hover {
                     /* 點 active  hover的顏色 */
                     background: #ff3e4d;
