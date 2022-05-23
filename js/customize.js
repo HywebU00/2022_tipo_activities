@@ -337,6 +337,7 @@ $(function() {
         $(this).parent("li").hide();
     });
 
+    //清除設定
     $('.tag-condition').click(function() {
         $(this).remove();
     });
@@ -345,6 +346,7 @@ $(function() {
         $('.filterBar').remove();
     });
 
+    //活動篩選-展開收合功能
     $(".left_block .filter_grp").each(function() {
         var _openclose_btn = $(this).children(".openclose_btn");
         var _filter_content = $(this).children(".filter_content");
@@ -354,15 +356,27 @@ $(function() {
             function accordion3(e) {
                 if (_filter_content.is(":hidden")) {
                     _filter_content.slideDown();
-                    _openclose_btn.text("收合").removeClass("close");
+                    _openclose_btn.text("收合").removeClass("close").addClass("open");
                 } else {
                     _filter_content.slideUp();
-                    _openclose_btn.text("展開").addClass("close");
+                    _openclose_btn.text("展開").removeClass("open").addClass("close");
                 }
+            }
+            if (_openclose_btn.length == 0) {
+                _filter_content.show();
             }
             _openclose_btn.click(accordion3);
         }
+
     });
+
+
+
+    //關閉推播通知
+    $('.push_notification .btn-close').click(function() {
+        $('.push_notification').hide();
+    });
+
 
 
 });

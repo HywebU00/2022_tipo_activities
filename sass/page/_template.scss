@@ -429,6 +429,16 @@ body {
         flex-basis: 260px;
         max-width: 260px;
         margin-right: 40px;
+        @include screen('tablet') {
+            flex-basis: 200px;
+            max-width: 200px;
+            margin-right: 20px;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-right: 0;
+            }
+        }
         &.hidden {
             +.center_block {
                 flex: none;
@@ -440,10 +450,11 @@ body {
             flex: auto;
             flex-basis: calc(100% - 300px);
             max-width: calc(100% - 300px);
-        }
-        @include screen('tablet') {
-            display: none;
-            +.center_block {
+            @include screen('tablet') {
+                flex-basis: calc(100% - 220px);
+                max-width: calc(100% - 220px);
+            }
+            @include screen('mobile') {
                 flex: none;
                 flex-basis: 100%;
                 max-width: 100%;
@@ -489,15 +500,115 @@ body {
     }
 }
 
+//lp 左欄 活動篩選
+.filter_grp {
+    position: relative;
+    background: #fefffc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 1em 1.2em;
+    .title {
+        font-size: 1.125em;
+        font-weight: bold;
+    }
+    .openclose_btn {
+        position: absolute;
+        display: block;
+        font-size: 0;
+        width: 20px;
+        height: 16px;
+        color: #FFF;
+        border: none;
+        position: absolute;
+        right: 1.2rem;
+        top: 1rem;
+        z-index: 90;
+        border-radius: 0;
+        border: none;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid $color-word;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(-45deg);
+            transition: .3s ease-out;
+            @include screen('mobile') {
+                transform: rotate(135deg);
+                top: 0;
+            }
+        }
+        &.open {
+            &::before {
+                transform: rotate(-45deg);
+                top: 6px;
+            }
+        }
+        &.close {
+            &::before {
+                transform: rotate(135deg);
+                top: 0;
+            }
+        }
+    }
+}
+
+.filter_content {
+    margin-top: 15px;
+    @include screen('mobile') {
+        display: none;
+    }
+    .check_grp {
+        label {
+            display: block;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+    .datepick {
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            position: absolute;
+            left: .3em;
+            top: 0;
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+        }
+        &:first-child {
+            &:before {
+                content: "從";
+            }
+        }
+        &:last-child {
+            &:before {
+                content: "至";
+            }
+        }
+    }
+}
+
 //內頁 關鍵字查詢
 .keyword_search {
     margin: 2em 0;
     float: right;
+    @include screen('mobile') {
+        float: none;
+    }
     .searchBar {
         display: flex;
         align-items: center;
         width: 400px;
         margin: 0 auto;
+        @include screen('mobile') {
+            width: 100%;
+        }
     }
     label {
         white-space: nowrap;
@@ -652,18 +763,6 @@ body {
     }
 }
 
-//推播通知
-.push_notification {
-    width: 600px;
-    position: fixed;
-    top: 30%;
-    left: calc(50% - 300px);
-    z-index: 999999;
-    background: #fff;
-    border-radius: 10px;
-    padding: 2em;
-}
-
 .filterBar {
     display: flex;
     margin-bottom: 10px;
@@ -682,6 +781,9 @@ body {
     }
     .filterBtnGrp {
         flex: 1 1 calc(100% - 120px);
+        @include screen('mobile') {
+            flex-basis: 100%;
+        }
     }
     .tag-condition {
         position: relative;
@@ -708,91 +810,12 @@ body {
         }
     }
     .btn-clean {
+        width: 110px;
         padding: .3em 1.2em;
         flex-shrink: 0;
         white-space: nowrap;
         font-size: .938em;
         margin: 0 .25em .5em .25em;
-    }
-}
-
-.filter_grp {
-    position: relative;
-    background: #fefffc;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 1em 1.2em;
-    .title {
-        margin-bottom: 15px;
-        font-size: 1.125em;
-        font-weight: bold;
-    }
-    .openclose_btn {
-        position: absolute;
-        display: block;
-        font-size: 0;
-        width: 20px;
-        height: 16px;
-        color: #FFF;
-        border: none;
-        position: absolute;
-        right: 1.2rem;
-        top: 1rem;
-        z-index: 90;
-        border-radius: 0;
-        border: none;
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 6px;
-            left: 4px;
-            width: 10px;
-            height: 10px;
-            border: 2px solid $color-word;
-            border-left: none;
-            border-bottom: none;
-            transform: rotate(-45deg);
-            transition: .3s ease-out;
-        }
-        &.close {
-            &::before {
-                transform: rotate(135deg);
-                top: 0;
-            }
-        }
-    }
-}
-
-.filter_content {
-    .check_grp {
-        label {
-            display: block;
-            padding: 0;
-            margin-bottom: 10px;
-        }
-    }
-    .datepick {
-        position: relative;
-        padding-left: 25px;
-        &::before {
-            position: absolute;
-            left: .3em;
-            top: 0;
-            height: 100%;
-            display: inline-flex;
-            align-items: center;
-        }
-        &:first-child {
-            &:before {
-                content: "從";
-            }
-        }
-        &:last-child {
-            &:before {
-                content: "至";
-            }
-        }
     }
 }
 

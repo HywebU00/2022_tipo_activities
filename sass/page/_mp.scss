@@ -234,6 +234,52 @@ a.more {
     margin: 2em 0;
 }
 
+//推播通知
+.push_notification {
+    display: flex;
+    align-items: flex-start;
+    width: 600px;
+    position: fixed;
+    top: 30%;
+    left: calc(50% - 300px);
+    z-index: 999999;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+    @include screen('mobile') {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+    @include screen('xs_mobile') {
+        width: 90%;
+        left: 5%;
+    }
+    .logo {
+        width: 100px;
+        height: auto;
+        flex: 0 0 100px;
+        margin-top: 1em;
+        @include screen('mobile') {
+            display: none;
+        }
+        &+.content {
+            margin-left: 10px;
+        }
+    }
+    .check_grp {
+        label {
+            padding-left: 0;
+            margin-bottom: .5em;
+        }
+    }
+    .btn_grp {
+        button {
+            margin: .25em .5em .25em 0;
+        }
+    }
+}
+
 @keyframes spin {
     from {
         transform: rotate(0);
