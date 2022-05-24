@@ -399,13 +399,14 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
+    padding-bottom: 2em;
     >.container {
         @media screen and (max-width: 1200px) {
             padding: 0 15px;
         }
         &.has_2-col {
             display: flex;
-            padding-bottom: 2em;
+            //padding-bottom: 2em;
             @include screen('mobile') {
                 //flex-direction: column-reverse;
                 flex-wrap: wrap;
