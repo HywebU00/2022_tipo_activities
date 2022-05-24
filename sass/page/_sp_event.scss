@@ -9,21 +9,20 @@ h2 {
     }
 }
 
-.sp {
-    .necessary {
-        font-size: .875rem;
-        color: #d00000;
-        padding: 1px 6px;
-        border-radius: 2px;
-        margin: 0 6px 0 0;
-        box-shadow: 0 0 0 1px #d00000 inset;
-    }
-    *[class^="notice_info"],
-    *[class*="notice_error"] {
-        padding: 0 1.5rem;
-        a.close {
-            top: 0.6rem;
-        }
+.necessary {
+    font-size: .875rem;
+    color: #d00000;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin: 0 6px 0 0;
+    box-shadow: 0 0 0 1px #d00000 inset;
+}
+
+*[class^="notice_info"],
+*[class*="notice_error"] {
+    padding: 0 1.5rem;
+    a.close {
+        top: 0.6rem;
     }
 }
 

@@ -959,3 +959,68 @@ body {
         }
     }
 }
+
+//變更密碼
+.password_strength {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: .5em .3em .65em;
+    .strength_label {
+        font-size: .938em;
+        white-space: nowrap;
+        margin-right: 5px;
+    }
+    .strength_line {
+        position: relative;
+        flex: 1 1 auto;
+        display: inline-block;
+        text-align: center;
+        font-size: .8125em;
+        flex-basis: calc(33.33333% - 4px);
+        background: $color-gray;
+        height: 10px;
+        border-radius: 2px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 100%;
+            border-radius: 2px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -24px;
+        }
+        &.weak {
+            &::before {
+                width: 33.33333%;
+                background-color: $color-red;
+            }
+            &::after {
+                content: "弱";
+            }
+        }
+        &.medium {
+            &::before {
+                width: 66.66666%;
+                background-color: $color-yellow;
+            }
+            &::after {
+                content: "中";
+            }
+        }
+        &.strong {
+            &::before {
+                width: 100%;
+                background-color: $color-green;
+            }
+            &::after {
+                content: "強";
+            }
+        }
+    }
+}
