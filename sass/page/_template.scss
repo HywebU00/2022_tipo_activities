@@ -400,6 +400,7 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     padding-bottom: 2em;
+    min-height: calc(100vh - 180px);
     >.container {
         @media screen and (max-width: 1200px) {
             padding: 0 15px;
