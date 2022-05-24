@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>會員登入</title>
+    <title>重設密碼</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -45,7 +45,7 @@
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
 
             <div class="login_container">
-                <h2 class="title">忘記密碼</h2>
+                <h2 class="title">重設密碼</h2>
                 <p>註：<abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>欄位, 不能為空白。</p>
                 <form action="">
                     <div class="flex-form form_grid">
@@ -53,8 +53,28 @@
                             <div class="form_grp">
                                 <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>Email電子信箱</label>
                                 <div class="form_content">
-                                    <input name="" id="" type="email" placeholder="請輸入您的Email電子信箱">
-                                    <div class="notice_info">請填寫正確的電子郵件格式
+                                    <input name="" id="" type="email" placeholder="" value="amylai@tpe.hyweb.com.tw" readonly>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>新密碼</label>
+                                <div class="form_content">
+                                    <div class="labelEffect password_toggle">
+                                        <input name="password" type="password" placeholder="請輸入密碼" value="">
+                                        <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
+                                    </div>
+                                    <div class="notice">密碼長度至少8位，最長12位</div>
+                                    <div class="notice">密碼需由阿拉伯數字0~9或英文字母大小寫A~Z;a~z或特殊符號! @ # $ % ^ & * ( )等三種類別文數字組成, 且各類別都至少要有1位</div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>再次輸入新密碼</label>
+                                <div class="form_content">
+                                    <div class="labelEffect password_toggle">
+                                        <input name="password" type="password" placeholder="再次輸入新密碼" value="">
+                                        <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
+                                    </div>
+                                    <div class="notice_error">您輸入的密碼不相符
                                         <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
                                     </div>
                                 </div>
@@ -72,17 +92,10 @@
                             </div>
                         </div>
                         <div class="btn_grp form_inline">
-                            <button class="btn btn-submit">申請重設密碼</button>
+                            <button class="btn btn-submit">確認重設密碼</button>
                         </div>
                     </div>
                 </form>
-                <div class="login_bottom">
-                    <strong>請注意</strong>
-                    <ul>
-                        <li>請輸入申請會員時所填寫的Email，系統將會發送重設密碼通知至您的信箱。</li>
-                        <li>若您忘記申請時填寫之Email，請聯繋客服協助處理。</li>
-                    </ul>
-                </div>
             </div>
 
         </div>
