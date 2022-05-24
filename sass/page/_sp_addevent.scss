@@ -628,7 +628,8 @@
             ul {
                 min-width: 100px;
                 flex-direction: column;
-                left: 0;
+                left: auto;
+                right: 0;
                 >li {
                     width: 100%;
                     a {

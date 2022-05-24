@@ -862,4 +862,99 @@ body {
 }
 
 //我的範本
-.myTemplate {}
+.myTemplate {
+    .templateGrp {
+        padding: 0;
+    }
+}
+
+//會員登入
+.login_page {
+    background: url(../images/main_img_bg2.png), url(../images/main_img_bg3.png), linear-gradient(180deg, rgba(255, 255, 255, 0) 68%, rgba(255, 255, 255, 0.19) 100%), linear-gradient(90deg, #2A3262 0%, #3C99DD 26.06%, #DDEE69 100%);
+    background-position: left -50px bottom -50px, right -180px top 38px, left, center, right;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 80px);
+    overflow: hidden;
+    +footer {
+        .footer_info {
+            text-align: center;
+            color: #fff;
+            span {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+    }
+    .login_container {
+        margin: 2em auto;
+        max-width: 750px;
+        @include screen('mobile') {
+            padding: 0 15px;
+        }
+        .title {
+            color: #fff;
+            font-size: 2em;
+            text-align: center;
+        }
+        >p {
+            color: #fff;
+        }
+        .shadowOut {
+            margin-bottom: 1em;
+        }
+        .login_bottom {
+            margin-top: 1.5em;
+            color: $primaryColor;
+            padding: .8em 1.5em;
+            background: rgba(255, 255, 255, .25);
+            border-radius: 10px;
+            p {
+                text-align: center;
+            }
+            a {
+                //color: #fff;
+                text-decoration: underline;
+            }
+            i {
+                margin-right: 3px;
+            }
+        }
+    }
+    .necessary {
+        font-size: .875rem;
+        color: #d00000;
+        padding: 1px 6px;
+        border-radius: 2px;
+        margin: 0 6px 0 0;
+        box-shadow: 0 0 0 1px #d00000 inset;
+    }
+    .flex-form {
+        .form_grp {
+            border-bottom: none;
+            .form_title {
+                max-width: 25%;
+                flex-basis: 25%;
+                @include screen('mobile') {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
+            }
+            .form_content {
+                max-width: calc(100% - 25%);
+                flex-basis: calc(100% - 25%);
+                @include screen('mobile') {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
+            }
+        }
+        .btn-submit {
+            background: $secondaryColor;
+            border-color: $secondaryColor;
+            min-width: 300px;
+            &:hover {
+                background: darken($secondaryColor, 5);
+            }
+        }
+    }
+}
