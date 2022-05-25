@@ -321,6 +321,33 @@ $btn-radius:.2em;
     }
 }
 
+.btn-copy {
+    position: relative;
+    font-size: 0em;
+    @include btn_setting_nostyle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba($color-lightgray, .25);
+    &:hover {
+        background: rgba($color-lightgray, .55);
+        &::before {
+            opacity: .8;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url(../images/icon/icon_copy.svg) no-repeat center;
+        background-size: 24px;
+        opacity: .5;
+    }
+}
+
 .btn-load {
     @include btn_setting_nostyle;
     display: block;
