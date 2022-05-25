@@ -29,6 +29,9 @@
     }
     .form_grp {
         float: right;
+        @include screen('mobile') {
+            float: none;
+        }
     }
     .dashboard_container {
         display: flex;
@@ -51,11 +54,19 @@
             flex-basis: 100%;
             display: flex;
             position: relative;
+            @include screen('mobile') {
+                flex-wrap: wrap;
+                padding-top: 4em;
+            }
         }
         .btn-copy {
             position: absolute;
             right: 1.8rem;
             top: 1.5rem;
+            @include screen('mobile') {
+                top: 1rem;
+                right: 1rem;
+            }
         }
         .screenshot {
             flex-basis: 250px;
@@ -63,12 +74,19 @@
             border: 1px solid $color-lightgray;
             padding: 3px;
             border-radius: 4px;
+            @include screen('mobile') {
+                margin: 0 auto;
+            }
             img {
                 width: 100%;
             }
         }
         .infoBlock {
             flex: 1 1 auto;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                margin-top: 2em;
+            }
             .status {
                 display: inline-block;
                 font-size: .938em;
@@ -89,6 +107,10 @@
                 color: $color-word2;
                 margin: 1em 0;
                 min-height: 3em;
+                line-height: 1.5em;
+                @include screen('mobile') {
+                    min-height: auto;
+                }
             }
         }
         .numbers {
@@ -122,6 +144,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @include screen('mobile') {
+                flex-basis: calc(50% - 1rem);
+            }
+            @include screen('xs_mobile') {
+                flex-basis: calc(100% - 1rem);
+            }
         }
         .project_title {
             font-size: 1.125em;
@@ -140,6 +168,9 @@
         .col {
             flex-grow: 1;
             flex-basis: calc(50% - 1rem);
+            @include screen('mobile') {
+                flex-basis: calc(100% - 1rem);
+            }
         }
         .chart_container {
             text-align: center;
@@ -151,10 +182,16 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 margin: 1em 0;
+                @include screen('xs_mobile') {
+                    justify-content: flex-start;
+                }
             }
             .project_title {
                 font-size: 1.125em;
                 color: #444;
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
             }
             .number {
                 color: #4472C4;
