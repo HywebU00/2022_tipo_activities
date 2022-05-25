@@ -172,6 +172,57 @@
                 flex-basis: calc(100% - 1rem);
             }
         }
+        .map {
+            position: relative;
+            text-align: center;
+            img {
+                max-height: 450px;
+            }
+            // .percentage {
+            //     position: absolute;
+            //     font-size: .875rem;
+            //     text-align: left;
+            //     &.northern {
+            //         top: 0;
+            //         right: 0;
+            //     }
+            //     &.central {
+            //         left: 30%;
+            //         top: 30%;
+            //     }
+            //     &.eastern {
+            //         right: 10%;
+            //         top: 50%;
+            //     }
+            //     &.southern {
+            //         left: 25%;
+            //         bottom: 20%;
+            //     }
+            //     &.outlying {
+            //         left: 3%;
+            //         top: 8%;
+            //     }
+            //     
+            // }
+            .percentage {
+                @include li-reset;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 1em;
+                li {
+                    min-width: 100px;
+                }
+                em {
+                    display: block;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: #4472C4;
+                    font-style: normal;
+                    line-height: 1.5em;
+                }
+            }
+        }
         .chart_container {
             text-align: center;
         }

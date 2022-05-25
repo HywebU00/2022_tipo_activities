@@ -201,6 +201,9 @@ body {
         .cardInfo_eastern {
             background: $color-eastern;
         }
+        .cardInfo_southern {
+            background: $color-southern;
+        }
         //離島
         .cardInfo_outlying {
             background: $color-outlying;
@@ -709,6 +712,11 @@ body {
 //中區
 .acTag_central {
     background: $color-central;
+}
+
+//南區
+.acTag_southern {
+    background: $color-southern;
 }
 
 //東區
