@@ -640,3 +640,42 @@
         }
     }
 }
+
+//檢視活動設定
+.view_settings {
+    .setting_state {
+        display: flex;
+        align-items: center;
+        font-size: 1.25em;
+        color: $color-word2;
+        font-weight: bold;
+        margin: 1.5em 0 1em;
+        img {
+            width: 22px;
+            margin: 0 10px;
+        }
+    }
+    .event_ladder {
+        ul {
+            margin: 0 0 1em 0;
+        }
+        li {
+            margin-bottom: .5em;
+            font-size: 1.125em;
+        }
+    }
+}
+
+.add_template {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.25em;
+    color: $color-word2;
+    font-weight: bold;
+    margin: .5em 0;
+    .onOffItem {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
