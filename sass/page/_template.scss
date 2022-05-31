@@ -123,6 +123,9 @@ body {
     @include screen('tablet') {
         padding: 0;
     }
+    &.cardSlider {
+        display: block;
+    }
 }
 
 .cardItem {
