@@ -450,6 +450,7 @@ select::-ms-expand {
         *[class^="notice"] {
             margin: .3em;
             width: calc(100% - .6em);
+            line-height: 1.65em;
             &.inline {
                 width: auto;
             }
@@ -1235,6 +1236,7 @@ select::-ms-expand {
     input[type="search"],
     input[type="time"],
     input[type="date"],
+    input[type="number"],
     .input-i {
         width: auto;
         flex: 0 0 auto;
