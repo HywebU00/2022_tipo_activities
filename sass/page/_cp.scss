@@ -344,6 +344,7 @@ h2.title {
         a {
             display: flex;
             align-items: flex-start;
+            text-decoration: none !important;
             @include screen('mobile') {
                 flex-direction: column;
             }
