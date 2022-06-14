@@ -410,6 +410,31 @@ $hilight: #d6ec2f;
             display: flex;
             flex-wrap: wrap;
         }
+        &.tags {
+            margin: 0 15px 0 0;
+            li {
+                margin-bottom: 10px;
+                &.active {
+                    &::after {
+                        content: none;
+                    }
+                    a {
+                        box-shadow: 0 1px 8px rgba(0, 0, 0, .1);
+                    }
+                }
+                >a {
+                    border-radius: 10px;
+                    padding: .8em 1.2em;
+                    border: 1px solid #eee;
+                    span {
+                        display: inline-block;
+                        margin: 0 8px;
+                        font-weight: normal;
+                        color: lighten($primaryColor, 15);
+                    }
+                }
+            }
+        }
     }
     li {
         margin: 0 0 1px;
@@ -450,11 +475,6 @@ $hilight: #d6ec2f;
                 &::after {
                     width: 5px;
                 }
-            }
-            span {
-                display: inline-block;
-                margin: 0 8px;
-                font-weight: normal;
             }
         }
         &:first-child>a {
