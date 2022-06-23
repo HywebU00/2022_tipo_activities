@@ -230,9 +230,9 @@ $(function() {
     $('.btn-filter').click(function() {
         $(this).stop().toggleClass('active');
     });
-    $('.btn-collect').click(function() {
-        $(this).stop().toggleClass('collected');
-    });
+    // $('.btn-collect').click(function() {
+    //     $(this).stop().toggleClass('collected');
+    // });
 
     var containerW = $('.innerpage>.container').outerWidth(),
         RightBlockW = $('.right_block').outerWidth();

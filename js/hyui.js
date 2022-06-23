@@ -115,7 +115,7 @@ $(function() {
     });
 
     // 先複製過去
-    $('.memberBlock').clone().prependTo(_mArea);
+    //$('.memberBlock').clone().prependTo(_mArea);
     //$('.collectBtn').clone().prependTo(_mArea);
     _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
