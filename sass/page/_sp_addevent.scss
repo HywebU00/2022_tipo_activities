@@ -733,7 +733,8 @@
         transform: rotate(-90deg);
         transition: .2s ease-in;
     }
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $aHover;
         color: #fff;
         &::after {

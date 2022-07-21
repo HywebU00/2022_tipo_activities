@@ -265,13 +265,16 @@ $(function() {
     });
 
 
-
     //關閉推播通知
     $('.push_notification .btn-close').click(function() {
         $('.push_notification').hide();
     });
 
-
+    $(".gotoBatch").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#event_batch").offset().top - 200
+        }, 1000);
+    });
 
 });
 
