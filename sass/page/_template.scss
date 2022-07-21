@@ -505,6 +505,9 @@ body {
             background: lighten($secondaryColor, 10);
             margin-right: 12px;
         }
+        @include screen('xs_mobile') {
+            display: flex;
+        }
     }
 }
 

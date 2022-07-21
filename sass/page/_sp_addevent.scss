@@ -673,6 +673,21 @@
         li {
             margin-bottom: .5em;
             font-size: 1.125em;
+            .preview {
+                display: inline-block;
+                background: #fff;
+                border: 1px solid $color-gray;
+                padding: .45em 1em;
+                font-size: .938rem;
+                border-radius: 5px;
+                color: $color-word;
+                margin: .25em;
+                transition: .2s ease-in;
+                &:hover {
+                    background-color: $primaryColor;
+                    color: #fff;
+                }
+            }
         }
     }
 }
@@ -688,5 +703,41 @@
     .onOffItem {
         font-size: 1rem;
         font-weight: normal;
+    }
+}
+
+//連到批次報名的連結錨點
+.gotoBatch {
+    float: right;
+    margin: 1em 0;
+    font-size: 1.125em;
+    padding: .6em 1.5em .6em 2.5em;
+    background-color: $aColor;
+    color: #fff;
+    position: relative;
+    transition: .2s ease-in;
+    @include screen('xs_mobile') {
+        float: none;
+        margin: 0 0 .5em 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 1.25em;
+        top: calc(50% - 8px);
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url(../images/icon/icon_back2.svg) center no-repeat;
+        background-size: contain;
+        transform: rotate(-90deg);
+        transition: .2s ease-in;
+    }
+    &:hover {
+        background-color: $aHover;
+        color: #fff;
+        &::after {
+            transform: rotate(-90deg) translateX(-2px);
+        }
     }
 }
