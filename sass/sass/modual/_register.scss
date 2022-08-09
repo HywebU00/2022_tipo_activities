@@ -164,6 +164,7 @@ $hilight: #d6ec2f;
 .switch {
     background-color: #fff;
     font-size: 1.25em;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
     @include screen('mobile') {
         display: none;
         background-color: transparent;
