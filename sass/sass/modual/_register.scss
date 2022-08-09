@@ -412,6 +412,9 @@ $hilight: #d6ec2f;
         }
         &.tags {
             margin: 0 15px 0 0;
+            @include screen('mobile') {
+                margin: 0;
+            }
             li {
                 margin-bottom: 10px;
                 &.active {
@@ -420,6 +423,9 @@ $hilight: #d6ec2f;
                     }
                     a {
                         box-shadow: 0 1px 8px rgba(0, 0, 0, .1);
+                        &::after {
+                            width: 6px;
+                        }
                     }
                 }
                 >a {
@@ -440,8 +446,10 @@ $hilight: #d6ec2f;
         margin: 0 0 1px;
         padding: 0;
         @include screen('mobile') {
-            flex: 1 1 auto;
+            flex: 1 1 25%;
             margin: 0 5px 5px 0;
+            border-radius: 10px;
+            overflow: hidden;
         }
         &>a {
             position: relative;
@@ -513,6 +521,9 @@ $hilight: #d6ec2f;
                 @include screen('mobile') {
                     box-shadow: none;
                     text-align: center;
+                }
+                &::after {
+                    width: 6px;
                 }
             }
         }
@@ -623,6 +634,7 @@ $hilight: #d6ec2f;
     @include screen('mobile') {
         padding: 30px 15px;
         border-radius: 10px;
+        margin: 5px 2px;
     }
 }
 
