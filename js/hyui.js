@@ -333,18 +333,19 @@ $(function() {
 
     // fixed navbar
     var resizeNavTimer;
-    if ($('header .menu').length > 0) {
-        var stickyMenuTop = Math.floor($('.menu').offset().top),
-            menuH = Math.floor(_menu.outerHeight());
+    if ($('nav.switch').length > 0) {
+        var headerH = Math.floor($('header').outerHeight()),
+            _switch = $('nav.switch'),
+            switchH = Math.floor(_switch.outerHeight());
 
 
         function stickynavBar() {
             windowW = _window.outerWidth();
-            if (windowW >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
-                $('header .menu').addClass('sticky');
-                $('.main').css('padding-top', menuH);
+            if (windowW >= wwSmall && $(this).scrollTop() > headerH) {
+                $('.switch').addClass('sticky');
+                $('.main').css('padding-top', '60px');
             } else {
-                $('header .menu').removeClass('sticky');
+                $('nav.switch').removeClass('sticky');
                 $('.main').removeAttr('style');
             }
         }
@@ -355,7 +356,7 @@ $(function() {
         _window.on('resize', function(event) {
             clearTimeout(resizeNavTimer);
             resizeNavTimer = setTimeout(function() {
-                stickyMenuTop = Math.floor($('header .menu').offset().top);
+                stickyMenuTop = Math.floor($('nav.switch').offset().top);
                 $('.main').removeAttr('style');
                 stickynavBar();
             }, 200);
@@ -403,15 +404,16 @@ $(function() {
 
     if ($('.stickyNav').length > 0) {
         var _stickyNav = $('.stickyNav'),
+            mastervisionH = Math.floor($('.master_vision').outerHeight()),
             stickyNavH = Math.floor(_stickyNav.outerHeight()),
             stickyNavTop = Math.floor(_stickyNav.offset().top),
             headerH = Math.floor($('header').outerHeight());
 
         function stickynavBar2() {
             windowW = _window.outerWidth();
-            if (windowW >= wwSmall && $(this).scrollTop() > (stickyNavTop - headerH)) {
-                $('.stickyNav').addClass('sticky').css('top', headerH);
-                $('.main').css('padding-top', (stickyNavH + headerH));
+            if (windowW >= wwSmall && $(this).scrollTop() > (mastervisionH + headerH)) {
+                $('.stickyNav').addClass('sticky')
+                $('.main').css('padding-top', stickyNavH);
             } else {
                 $('.stickyNav').removeClass('sticky');
                 $('.main').removeAttr('style');

@@ -40,7 +40,7 @@ body {
 .main {
     position: relative;
     margin: 0 auto;
-    padding-top: 100px;
+    //padding-top: 100px;
     @include screen('mobile') {
         padding-top: 60px;
     }
