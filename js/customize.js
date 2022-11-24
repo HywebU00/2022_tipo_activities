@@ -276,6 +276,10 @@ $(function() {
         }, 1000);
     });
 
+    document.querySelectorAll("a:not(a[href])").forEach(element => {
+        element.setAttribute("tabindex", "0")
+    });
+
 });
 
 //svg 變色
