@@ -9947,7 +9947,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .search_filter li a:hover {
   background-color: #f2f2f0;
 }
-.search_filter li a:focus, .search_filter li a.active {
+.search_filter li a.active {
   background: #053561;
   color: #fff;
 }
