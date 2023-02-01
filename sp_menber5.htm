@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>活動登錄</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -14,148 +15,150 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
-    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
     <!-- hyUI css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon">
-</head>
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
     <div class="wrapper">
-        <!-- header Start -->
-        <header class="header">
-            <div class="container">
-                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
-                <h1>
-                    <a href="index.htm"><img src="images/logo_system.png" alt="網站標題" /></a>
-                </h1>
-                <div class="memberBlock dropdownItem">
-                    <button type="button" class="memberBtn">會員管理</button>
-                    <div class="memberContent">
-                        <ul>
-                            <li><a href="#">會員資料</a></li>
-                            <li><a href="#">變更密碼</a></li>
-                            <li><a href="#">我的範本</a></li>
-                            <li><a href="#">登出</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- noscript -->
-                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
-                </noscript>
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.htm"><img src="images/logo_system.png" alt="網站標題" /></a>
+          </h1>
+          <div class="memberBlock dropdownItem">
+            <button type="button" class="memberBtn">會員管理</button>
+            <div class="memberContent">
+              <ul>
+                <li><a href="#">會員資料</a></li>
+                <li><a href="#">變更密碼</a></li>
+                <li><a href="#">我的範本</a></li>
+                <li><a href="#">登出</a></li>
+              </ul>
             </div>
-        </header>
-        <!-- header End -->
-        <!-- main Start -->
-        <div id="center" class="main innerpage">
-            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+          </div>
 
-            <nav class="switch">
-                <ul>
-                    <li class="active"><a href="#">活動管理</a>
-                        <ul>
-                            <li><a href="#">活動登錄</a></li>
-                            <li><a href="#">報名資訊</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">儀表板</a></li>
-                    <li><a href="#">新手指引</a></li>
-                </ul>
-            </nav>
-
-            <div class="container">
-                <div class="breadcrumb">
-                    <ul>
-                        <li><a href="#">會員管理</a></li>
-                        <li>變更密碼</li>
-                    </ul>
-                </div>
-                <h2 class="title_h2">變更密碼</h2>
-                <p>註：<abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>欄位, 不能為空白。</p>
-                <form action="">
-                    <div class="flex-form form_grid">
-                        <div class="shadowOut">
-                            <div class="formGroup necessaryBlock">
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>新密碼</label>
-                                    <div class="form_content">
-                                        <div class="labelEffect password_toggle">
-                                            <input name="password" type="password" placeholder="請輸入密碼" value="">
-                                            <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
-                                        </div>
-                                        <div class="notice_info">密碼長度至少8位，最長12位</div>
-                                        <div class="notice_info">密碼需由阿拉伯數字0~9或英文字母大小寫A~Z;a~z或特殊符號! @ # $ % ^ & * ( )等三種類別文數字組成, 且各類別都至少要有1位</div>
-                                        <!-- 密碼強度狀態 -->
-                                        <div class="password_strength">
-                                            <div class="strength_label">密碼強度</div>
-                                            <div class="strength_line weak"></div>
-                                        </div>
-                                        <div class="password_strength">
-                                            <div class="strength_label">密碼強度</div>
-                                            <div class="strength_line medium"></div>
-                                        </div>
-                                        <div class="password_strength">
-                                            <div class="strength_label">密碼強度</div>
-                                            <div class="strength_line strong"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="formGroup necessaryBlock">
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>再次輸入新密碼</label>
-                                    <div class="form_content">
-                                        <div class="labelEffect password_toggle">
-                                            <input name="password" type="password" placeholder="再次輸入新密碼" value="">
-                                            <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
-                                        </div>
-                                        <div class="notice_error">您輸入的密碼不相符
-                                            <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn_grp form_inline">
-                            <button class="btn btn-submit">編修存擋</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
         </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div id="center" class="main innerpage">
+        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
 
-        <!-- footer Start-->
-        <footer>
-            <div class="container">
-                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-                <div class="footer_logo">
-                    <img src="images/logo.png" alt="" class="img-responsive">
+        <nav class="switch">
+          <ul>
+            <li class="active">
+              <a href="#">活動管理</a>
+              <ul>
+                <li><a href="#">活動登錄</a></li>
+                <li><a href="#">報名資訊</a></li>
+              </ul>
+            </li>
+            <li><a href="#">儀表板</a></li>
+            <li><a href="#">新手指引</a></li>
+          </ul>
+        </nav>
+
+        <div class="container">
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="#">會員管理</a></li>
+              <li>變更密碼</li>
+            </ul>
+          </div>
+          <h2 class="title_h2">變更密碼</h2>
+          <p>註：<abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>欄位, 不能為空白。</p>
+          <form action="">
+            <div class="flex-form form_grid">
+              <div class="shadowOut">
+                <div class="formGroup necessaryBlock">
+                  <div class="form_grp">
+                    <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>新密碼</label>
+                    <div class="form_content">
+                      <div class="labelEffect password_toggle">
+                        <input name="password" type="password" placeholder="請輸入密碼" value="" />
+                        <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
+                      </div>
+                      <div class="notice_info">密碼長度至少8位，最長12位</div>
+                      <div class="notice_info">密碼需由阿拉伯數字0~9或英文字母大小寫A~Z;a~z或特殊符號! @ # $ % ^ & * ( )等三種類別文數字組成, 且各類別都至少要有1位</div>
+                      <!-- 密碼強度狀態 -->
+                      <div class="password_strength">
+                        <div class="strength_label">密碼強度</div>
+                        <div class="strength_line weak"></div>
+                      </div>
+                      <div class="password_strength">
+                        <div class="strength_label">密碼強度</div>
+                        <div class="strength_line medium"></div>
+                      </div>
+                      <div class="password_strength">
+                        <div class="strength_label">密碼強度</div>
+                        <div class="strength_line strong"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="footer_info">
-                    <ul class="footer_link">
-                        <li><a href="javascript:;">隱私權政策</a></li>
-                        <li><a href="javascript:;">網站安全政策</a></li>
-                        <li><a href="javascript:;">政府網站資料開放宣告</a></li>
-                    </ul>
-                    <p> 地址：10637 臺北市辛亥路2段185號3樓
-                        <br />電話：(02)2738-0007 傳真：(02)2377-9875
-                    </p>
-                    <span class="update">更新日期：<em>2018/01/01</em></span>
-                    <span class="counter">累計瀏覽人次：<em>46476653</em></span>
+                <div class="formGroup necessaryBlock">
+                  <div class="form_grp">
+                    <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>再次輸入新密碼</label>
+                    <div class="form_content">
+                      <div class="labelEffect password_toggle">
+                        <input name="password" type="password" placeholder="再次輸入新密碼" value="" />
+                        <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
+                      </div>
+                      <div class="notice_error">
+                        您輸入的密碼不相符
+                        <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt="" /></a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="footer_icon">
-                    <a target="_blank" href="javascript:;" title="另開視窗">
-                        <img src="images/basic/accessibility.jpg" alt="">
-                    </a>
-                </div>
+              </div>
+              <div class="btn_grp form_inline">
+                <button class="btn btn-submit">編修存擋</button>
+              </div>
             </div>
-        </footer>
-        <!-- footer End -->
+          </form>
+        </div>
+      </div>
+
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="footer_logo">
+            <img src="images/logo.png" alt="" class="img-responsive" />
+          </div>
+          <div class="footer_info">
+            <ul class="footer_link">
+              <li><a href="javascript:;">隱私權政策</a></li>
+              <li><a href="javascript:;">網站安全政策</a></li>
+              <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+            </ul>
+            <p>地址：10637 臺北市辛亥路2段185號3樓 <br />電話：(02)2738-0007 傳真：(02)2377-9875</p>
+            <span class="update">更新日期：<em>2018/01/01</em></span>
+            <span class="counter">累計瀏覽人次：<em>46476653</em></span>
+          </div>
+          <div class="footer_icon">
+            <a target="_blank" href="javascript:;" title="另開視窗">
+              <img src="images/basic/accessibility.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- JQ -->
@@ -174,12 +177,13 @@
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
     <!-- scrolltable -->
     <!-- sticky-sidebar -->
-    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
-    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+    <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
     <!-- fancy -->
-    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
-</body>
+  </body>
+</html>

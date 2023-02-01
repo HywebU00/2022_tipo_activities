@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>網站標題</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -14,261 +15,252 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
-    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
     <!-- hyUI css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon">
-</head>
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
     <div class="wrapper">
-        <!-- header Start -->
-        <header class="header">
-            <div class="container">
-                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
-                <!-- navigation Start -->
-                <nav class="navigation" role="navigation" aria-label="Site">
-                    <!-- 新增div navlist -->
-                    <div class="navlist">
-                        <ul>
-                            <li><a href="#">回首頁</a></li>
-                            <li><a href="#">網站導覽</a></li>
-                            <li><a href="#">智慧財產局</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <!-- navigation End -->
-                <h1>
-                    <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
-                </h1>
-                <div class="memberBlock">
-                    <a class="collectBtn">收藏<span class="amount">(15)</span></a>
-                </div>
-                <!-- noscript -->
-                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
-                </noscript>
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="Site">
+            <!-- 新增div navlist -->
+            <div class="navlist">
+              <ul>
+                <li><a href="#">回首頁</a></li>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">智慧財產局</a></li>
+              </ul>
             </div>
-        </header>
-        <!-- header End -->
-        <!-- main Start -->
-        <div id="center" class="main innerpage">
-            <!-- 內頁新增一個classname-->
-            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-
-            <div class="container">
-                <!-- breadcrumb路徑 -->
-                <div class="breadcrumb">
-                    <ul>
-                        <li><a href="#">首頁</a></li>
-                        <li>歷史活動</li>
-                    </ul>
-                </div>
-
-                <h2 class="title_h2">歷史活動</h2>
-
-                <div class="keyword_search">
-                    <form action="">
-                        <div class="searchBar">
-                            <label for="mustSameAsId">關鍵字</label>
-                            <input name="username" id="mustSameAsId" type="text" placeholder="活動名稱、主辦單位" accesskey="S" title="請輸入文字" aria-label="查詢關鍵字">
-                            <input name="" type="reset" value="清除" class="reset">
-                            <input name="" type="submit" value="查詢">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="container has_2-col">
-                <div class="left_block">
-                    <h3 class="title">活動篩選</h3>
-                    <div class="filter_grp">
-                        <div class="title">活動日期</div>
-                        <div class="filter_content">
-                            <div class="datepick">
-                                <input name="" type="date" value="" class="calendar" placeholder="開始日期">
-                            </div>
-                            <div class="datepick">
-                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter_grp">
-                        <div class="title">活動類別</div>
-                        <button type="button" class="openclose_btn">收合</button>
-                        <div class="filter_content">
-                            <div class="check_grp">
-                                <label>
-                            <input type="checkbox" name="" value="">專利</label>
-                                <label>
-                            <input type="checkbox" name="" value="">商標</label>
-                                <label>
-                            <input type="checkbox" name="" value="">著作權</label>
-                                <label>
-                            <input type="checkbox" name="" value="">商業秘密</label>
-                                <label>
-                            <input type="checkbox" name="" value="">智慧財產權</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter_grp">
-                        <div class="title">活動區域</div>
-                        <button type="button" class="openclose_btn">收合</button>
-                        <div class="filter_content">
-                            <div class="check_grp">
-                                <label>
-                            <input type="checkbox" name="" value="">北區</label>
-                                <label>
-                            <input type="checkbox" name="" value="">中區</label>
-                                <label>
-                            <input type="checkbox" name="" value="">南區</label>
-                                <label>
-                            <input type="checkbox" name="" value="">東區</label>
-                                <label>
-                            <input type="checkbox" name="" value="">離島</label>
-                                <label>
-                                <input type="checkbox" name="" value="">線上活動</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter_grp">
-                        <div class="title">活動費用</div>
-                        <button type="button" class="openclose_btn">收合</button>
-                        <div class="filter_content">
-                            <div class="check_grp">
-                                <label><input type="checkbox" name="" value="">免費</label>
-                                <label><input type="checkbox" name="" value="">付費</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 主要內容區 -->
-                <div class="mainContent center_block">
-                    <div class="filterBar">
-                        <span>已篩選條件</span>
-                        <div class="filterBtnGrp">
-                            <button type="button" class="tag-condition acTag_patent">專利</button>
-                            <button type="button" class="tag-condition acTag_trademark">商標</button>
-                            <button type="button" class="tag-condition acTag_copyright">著作權</button>
-                            <button type="button" class="tag-condition acTag_tradeSecret">營業秘密</button>
-                            <button type="button" class="tag-condition acTag_property">智慧財產權</button>
-                            <button type="button" class="tag-condition acTag_north">北區</button>
-                            <button type="button" class="tag-condition acTag_central">中區</button>
-                            <button type="button" class="tag-condition acTag_eastern">東區</button>
-                            <button type="button" class="tag-condition acTag_outlying">離島</button>
-                            <button type="button" class="tag-condition acTag_online">線上活動</button>
-                            <button type="button" class="tag-condition acTag_paid">付費</button>
-                            <button type="button" class="tag-condition acTag_free">免費</button>
-                        </div>
-                        <button type="button" class="btn btn-clean">清除設定</button>
-                    </div>
-
-                    <div class="topFuncBar flexEnd">
-                        <div class="sorting">
-                            <span class="label">排序方式</span>
-                            <select>
-                                <option>活動日期(近至遠)</option>
-                                <option>點閱人次(多至少)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="history_list">
-                        <ul>
-                            <li>
-                                <div class="tagGrp">
-                                    <span class="acTag_north">北區</span>
-                                    <span class="acTag_patent">專利</span>
-                                    <span class="acTag_free">免費</span>
-                                </div>
-                                <button type="button" class="btn-collect">收藏</button>
-                                <time>111年1月7日16:00(五)~111年1月7日16:30(五)</time>
-                                <div class="eventTitle"><a href="#">淺談專利侵害救濟</a></div>
-                                <div class="organizer">台一國際智慧財產事務所</div>
-                            </li>
-                            <li>
-                                <div class="tagGrp">
-                                    <span class="acTag_north">北區</span>
-                                    <span class="acTag_online ">線上活動</span>
-                                    <span class="acTag_tradeSecret">營業秘密</span>
-                                    <span class="acTag_free">免費</span>
-                                </div>
-                                <button type="button" class="btn-collect">收藏</button>
-                                <time>111年1月7日16:00(五)~111年1月7日16:30(五)</time>
-                                <div class="eventTitle"><a href="#">2021第13屆兩岸專利論壇 (線上論壇)</a></div>
-                                <div class="organizer">中華民國全國工業總會</div>
-                            </li>
-                            <li>
-                                <div class="tagGrp">
-                                    <span class="acTag_online ">線上活動</span>
-                                    <span class="acTag_patent">專利</span>
-                                    <span class="acTag_free">免費</span>
-                                </div>
-                                <button type="button" class="btn-collect">收藏</button>
-                                <time>111年1月7日16:00(五)~111年1月7日16:30(五)</time>
-                                <div class="eventTitle"><a href="#">【網路視訊+實體】美國專利訴訟實務國際研討會-案例爭點論證工作坊</a></div>
-                                <div class="organizer">中華民國全國工業總會</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pagination">
-                        <div class="total"> 共<em>308</em>筆資料，第<em>1/18</em>頁，</div>
-                        <div class="items">每頁顯示
-                            <ul>
-                                <li class="active"><a href="javascript:;">20</a></li>
-                                <li><a href="javascript:;">40</a></li>
-                                <li><a href="javascript:;">60</a></li>
-                            </ul> 筆
-                        </div>
-                        <ul class="page">
-                            <li class="first"><a href="javascript:;">第一頁</a></li>
-                            <li class="prev"><a href="javascript:;">回上一頁</a></li>
-                            <li class="active"><a href="javascript:;">1</a></li>
-                            <li><a href="javascript:;">2</a></li>
-                            <li><a href="javascript:;">3</a></li>
-                            <li><a href="javascript:;">4</a></li>
-                            <li><a href="javascript:;">5</a></li>
-                            <li><a href="javascript:;">6</a></li>
-                            <li><a href="javascript:;">7</a></li>
-                            <li><a href="javascript:;">8</a></li>
-                            <li><a href="javascript:;">9</a></li>
-                            <li><a href="javascript:;">10</a></li>
-                            <li class="next"><a href="javascript:;">下一頁</a></li>
-                            <li class="last"><a href="javascript:;">最後一頁</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          </nav>
+          <!-- navigation End -->
+          <h1>
+            <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+          </h1>
+          <div class="memberBlock">
+            <a class="collectBtn">收藏<span class="amount">(15)</span></a>
+          </div>
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
         </div>
-        <!-- footer Start-->
-        <footer>
-            <div class="container">
-                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-                <div class="footer_logo">
-                    <img src="images/logo.png" alt="" class="img-responsive">
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div id="center" class="main innerpage">
+        <!-- 內頁新增一個classname-->
+        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+
+        <div class="container">
+          <!-- breadcrumb路徑 -->
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li>歷史活動</li>
+            </ul>
+          </div>
+
+          <h2 class="title_h2">歷史活動</h2>
+
+          <div class="keyword_search">
+            <form action="">
+              <div class="searchBar">
+                <label for="mustSameAsId">關鍵字</label>
+                <input name="username" id="mustSameAsId" type="text" placeholder="活動名稱、主辦單位" accesskey="S" title="請輸入文字" aria-label="查詢關鍵字" />
+                <input name="" type="reset" value="清除" class="reset" />
+                <input name="" type="submit" value="查詢" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="container has_2-col">
+          <div class="left_block">
+            <h3 class="title">活動篩選</h3>
+            <div class="filter_grp">
+              <div class="title">活動日期</div>
+              <div class="filter_content">
+                <div class="datepick">
+                  <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
                 </div>
-                <div class="footer_info">
-                    <ul class="footer_link">
-                        <li><a href="javascript:;">隱私權政策</a></li>
-                        <li><a href="javascript:;">網站安全政策</a></li>
-                        <li><a href="javascript:;">政府網站資料開放宣告</a></li>
-                    </ul>
-                    <p> 地址：10637 臺北市辛亥路2段185號3樓
-                        <br />電話：(02)2738-0007 傳真：(02)2377-9875
-                    </p>
-                    <span class="update">更新日期：<em>2018/01/01</em></span>
-                    <span class="counter">累計瀏覽人次：<em>46476653</em></span>
+                <div class="datepick">
+                  <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
                 </div>
-                <div class="footer_icon">
-                    <a target="_blank" href="javascript:;" title="另開視窗">
-                        <img src="images/basic/accessibility.jpg" alt="">
-                    </a>
-                </div>
+              </div>
             </div>
-        </footer>
-        <!-- footer End -->
+            <div class="filter_grp">
+              <div class="title">活動類別</div>
+              <button type="button" class="openclose_btn">收合</button>
+              <div class="filter_content">
+                <div class="check_grp">
+                  <label> <input type="checkbox" name="" value="" />專利</label>
+                  <label> <input type="checkbox" name="" value="" />商標</label>
+                  <label> <input type="checkbox" name="" value="" />著作權</label>
+                  <label> <input type="checkbox" name="" value="" />商業秘密</label>
+                  <label> <input type="checkbox" name="" value="" />智慧財產權</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter_grp">
+              <div class="title">活動區域</div>
+              <button type="button" class="openclose_btn">收合</button>
+              <div class="filter_content">
+                <div class="check_grp">
+                  <label> <input type="checkbox" name="" value="" />北區</label>
+                  <label> <input type="checkbox" name="" value="" />中區</label>
+                  <label> <input type="checkbox" name="" value="" />南區</label>
+                  <label> <input type="checkbox" name="" value="" />東區</label>
+                  <label> <input type="checkbox" name="" value="" />離島</label>
+                  <label> <input type="checkbox" name="" value="" />線上活動</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter_grp">
+              <div class="title">活動費用</div>
+              <button type="button" class="openclose_btn">收合</button>
+              <div class="filter_content">
+                <div class="check_grp">
+                  <label><input type="checkbox" name="" value="" />免費</label>
+                  <label><input type="checkbox" name="" value="" />付費</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 主要內容區 -->
+          <div class="mainContent center_block">
+            <div class="filterBar">
+              <span>已篩選條件</span>
+              <div class="filterBtnGrp">
+                <button type="button" class="tag-condition acTag_patent">專利</button>
+                <button type="button" class="tag-condition acTag_trademark">商標</button>
+                <button type="button" class="tag-condition acTag_copyright">著作權</button>
+                <button type="button" class="tag-condition acTag_tradeSecret">營業秘密</button>
+                <button type="button" class="tag-condition acTag_property">智慧財產權</button>
+                <button type="button" class="tag-condition acTag_north">北區</button>
+                <button type="button" class="tag-condition acTag_central">中區</button>
+                <button type="button" class="tag-condition acTag_eastern">東區</button>
+                <button type="button" class="tag-condition acTag_outlying">離島</button>
+                <button type="button" class="tag-condition acTag_online">線上活動</button>
+                <button type="button" class="tag-condition acTag_paid">付費</button>
+                <button type="button" class="tag-condition acTag_free">免費</button>
+              </div>
+              <button type="button" class="btn btn-clean">清除設定</button>
+            </div>
+
+            <div class="topFuncBar flexEnd">
+              <div class="sorting">
+                <span class="label">排序方式</span>
+                <select>
+                  <option>活動日期(近至遠)</option>
+                  <option>點閱人次(多至少)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="history_list">
+              <ul>
+                <li>
+                  <div class="tagGrp">
+                    <span class="acTag_north">北區</span>
+                    <span class="acTag_patent">專利</span>
+                    <span class="acTag_free">免費</span>
+                  </div>
+                  <button type="button" class="btn-collect">收藏</button>
+                  <time>111年1月7日16:00(五)~111年1月7日16:30(五)</time>
+                  <div class="eventTitle"><a href="#">淺談專利侵害救濟</a></div>
+                  <div class="organizer">台一國際智慧財產事務所</div>
+                </li>
+                <li>
+                  <div class="tagGrp">
+                    <span class="acTag_north">北區</span>
+                    <span class="acTag_online">線上活動</span>
+                    <span class="acTag_tradeSecret">營業秘密</span>
+                    <span class="acTag_free">免費</span>
+                  </div>
+                  <button type="button" class="btn-collect">收藏</button>
+                  <time>111年1月7日16:00(五)~111年1月7日16:30(五)</time>
+                  <div class="eventTitle"><a href="#">2021第13屆兩岸專利論壇 (線上論壇)</a></div>
+                  <div class="organizer">中華民國全國工業總會</div>
+                </li>
+                <li>
+                  <div class="tagGrp">
+                    <span class="acTag_online">線上活動</span>
+                    <span class="acTag_patent">專利</span>
+                    <span class="acTag_free">免費</span>
+                  </div>
+                  <button type="button" class="btn-collect">收藏</button>
+                  <time>111年1月7日16:00(五)~111年1月7日16:30(五)</time>
+                  <div class="eventTitle"><a href="#">【網路視訊+實體】美國專利訴訟實務國際研討會-案例爭點論證工作坊</a></div>
+                  <div class="organizer">中華民國全國工業總會</div>
+                </li>
+              </ul>
+            </div>
+            <div class="pagination">
+              <div class="total">共<em>308</em>筆資料，第<em>1/18</em>頁，</div>
+              <div class="items">
+                每頁顯示
+                <ul>
+                  <li class="active"><a href="javascript:;">20</a></li>
+                  <li><a href="javascript:;">40</a></li>
+                  <li><a href="javascript:;">60</a></li>
+                </ul>
+                筆
+              </div>
+              <ul class="page">
+                <li class="first"><a href="javascript:;">第一頁</a></li>
+                <li class="prev"><a href="javascript:;">回上一頁</a></li>
+                <li class="active"><a href="javascript:;">1</a></li>
+                <li><a href="javascript:;">2</a></li>
+                <li><a href="javascript:;">3</a></li>
+                <li><a href="javascript:;">4</a></li>
+                <li><a href="javascript:;">5</a></li>
+                <li><a href="javascript:;">6</a></li>
+                <li><a href="javascript:;">7</a></li>
+                <li><a href="javascript:;">8</a></li>
+                <li><a href="javascript:;">9</a></li>
+                <li><a href="javascript:;">10</a></li>
+                <li class="next"><a href="javascript:;">下一頁</a></li>
+                <li class="last"><a href="javascript:;">最後一頁</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="footer_logo">
+            <img src="images/logo.png" alt="" class="img-responsive" />
+          </div>
+          <div class="footer_info">
+            <ul class="footer_link">
+              <li><a href="javascript:;">隱私權政策</a></li>
+              <li><a href="javascript:;">網站安全政策</a></li>
+              <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+            </ul>
+            <p>地址：10637 臺北市辛亥路2段185號3樓 <br />電話：(02)2738-0007 傳真：(02)2377-9875</p>
+            <span class="update">更新日期：<em>2018/01/01</em></span>
+            <span class="counter">累計瀏覽人次：<em>46476653</em></span>
+          </div>
+          <div class="footer_icon">
+            <a target="_blank" href="javascript:;" title="另開視窗">
+              <img src="images/basic/accessibility.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- JQ -->
@@ -287,12 +279,13 @@
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
     <!-- scrolltable -->
     <!-- sticky-sidebar -->
-    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
-    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+    <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
     <!-- fancy -->
-    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
-</body>
+  </body>
+</html>

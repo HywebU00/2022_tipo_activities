@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>網站標題</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -14,554 +15,541 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
-    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
     <!-- hyUI css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon">
-</head>
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
     <div class="wrapper">
-        <!-- header Start -->
-        <header class="header">
-            <div class="container">
-                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
-                <h1>
-                    <a href="index.htm"><img src="images/logo_system.png" alt="網站標題" /></a>
-                </h1>
-                <div class="memberBlock dropdownItem">
-                    <button type="button" class="memberBtn">會員管理</button>
-                    <div class="memberContent">
-                        <ul>
-                            <li><a href="#">會員資料</a></li>
-                            <li><a href="#">變更密碼</a></li>
-                            <li><a href="#">我的範本</a></li>
-                            <li><a href="#">登出</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- noscript -->
-                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
-                </noscript>
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.htm"><img src="images/logo_system.png" alt="網站標題" /></a>
+          </h1>
+          <div class="memberBlock dropdownItem">
+            <button type="button" class="memberBtn">會員管理</button>
+            <div class="memberContent">
+              <ul>
+                <li><a href="#">會員資料</a></li>
+                <li><a href="#">變更密碼</a></li>
+                <li><a href="#">我的範本</a></li>
+                <li><a href="#">登出</a></li>
+              </ul>
             </div>
-        </header>
-        <!-- header End -->
-        <!-- main Start -->
-        <div id="center" class="main innerpage">
-            <nav class="switch">
-                <ul>
-                    <li class="active"><a href="#">活動管理</a>
-                        <ul>
-                            <li><a href="#">活動登錄</a></li>
-                            <li><a href="#">報名資訊</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">儀表板</a></li>
-                    <li><a href="#">新手指引</a></li>
-                </ul>
-            </nav>
-            <!-- 內頁新增一個classname-->
-            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-            <!-- breadcrumb路徑 -->
-            <div class="container">
-                <div class="breadcrumb">
-                    <ul>
-                        <li><a href="#">活動管理</a></li>
-                        <li><a href="#">活動登錄</a></li>
-                        <li>編輯活動</li>
-                    </ul>
-                </div>
-                <section class="sp sp_addEvent">
-                    <div class="operateGroup">
-                        <a href="" class="btn view">預覽活動資訊</a>
-                        <button class="btn save">儲存草稿</button>
-                        <a href="#" class="btn nextStep">下一步：編輯報名表</a>
-                    </div>
-                    <div class="activity_title">未命名活動</div>
+          </div>
 
-                    <!-- 主要內容區 -->
-                    <div class="center_block">
-                        <div class="process_step">
-                            <ul>
-                                <li class="active">活動登錄</li>
-                                <li>編輯報名表</li>
-                                <li>檢視與發佈</li>
-                                <li>正式發布</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="hasSaved"><span>已儲存所有變更</span></div>
-                    <form action="">
-                        <div class="apply_form">
-                            <div class="flex-form form_grid">
-                                <h2 class="title_h2">活動資訊</h2>
-                                <a href="#" class="gotoBatch btn">活動梯次</a>
-                                <p>註：<abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>欄位, 不能為空白。</p>
-                                <div class="shadowOut">
-                                    <!-- 活動名稱 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動名稱</label>
-                                            <div class="form_content">
-                                                <input name="" id="" type="text" placeholder="請輸入活動名稱">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 活動類別 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動類別</label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input type="radio" name="sampleRadio" value="" checked="">新北市</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">專利</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">商標</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">著作權</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">營業秘密</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">智財權</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 活動內容 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title" aria-required="true">     
-                                            活動內容</label>
-                                            <div class="form_content">
-                                                <textarea name="" id="" cols="30" rows="10" placeholder="請輸入活動內容"></textarea>
-                                                <div class="notice">限填2000字</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 活動網址 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">活動網址</label>
-                                            <div class="form_content form_inline">
-                                                <input name="text" type="text" value="" placeholder="請輸入活動網址" class="grow">
-                                                <button type="button" class="btn btn-primary">瀏覽網頁</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 參加對象 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="username" class="form_title">參加對象</label>
-                                            <div class="form_content">
-                                                <input type="text" id="username" placeholder="請輸入參加對象" value="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 主辦單位 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>主辦單位</div>
-                                            <div class="form_content">
-                                                <div class="flex-col-equal-2 form-column">
-                                                    <div class="form_grp">
-                                                        <label for="inputSample" class="form_title label_hidden">承辦人單位</label>
-                                                        <div class="form_content">
-                                                            <input name="username" id="inputSample" type="text" placeholder="" value="經濟部智慧財產局" readonly>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <label for="inputSample2" class="form_title label_hidden">其他主辦單位</label>
-                                                        <div class="form_content">
-                                                            <input name="username" id="inputSample2" type="text" placeholder="請輸入其他主辦單位">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="notice">主辦單位自動帶入會員單位，不可修改；如有其他主辦單位，請在後方欄位輸入。</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 協辦單位 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="username" class="form_title">協辦單位</label>
-                                            <div class="form_content">
-                                                <input type="text" id="username" placeholder="請輸入協辦單位" value="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 聯絡資訊 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <div class="form_title">聯絡資訊</div>
-                                            <div class="form_content">
-                                                <div class="form_grp">
-                                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>聯絡人</label>
-                                                    <div class="form_content">
-                                                        <input name="" type="text" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>聯絡人電話</label>
-                                                    <div class="form_content">
-                                                        <input name="" type="tel" value="" placeholder="請輸入聯絡人電話">
-                                                    </div>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="email" class="form_title">聯絡人電子郵件</label>
-                                                    <div class="form_content">
-                                                        <input name="email" type="email" id="email" placeholder="請輸入聯絡人電子郵件">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 備註 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title" aria-required="true">     
-                                            備註</label>
-                                            <div class="form_content">
-                                                <textarea name="" id="" cols="30" rows="10" placeholder="請輸入備註"></textarea>
-                                                <div class="notice">限填2000字</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="divider">活動相關設定</div>
-                                    <!-- 活動費用 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <div class="form_title">活動費用</div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value="">免費</label>
-                                                    <label><input name="radioSample" type="radio" value="">付費</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 費用說明 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title" aria-required="true">     
-                                        費用說明</label>
-                                            <div class="form_content">
-                                                <textarea name="" id="" cols="30" rows="10" placeholder="請輸入費用說明"></textarea>
-                                                <div class="notice">限填2000字</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 線上報名功能 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>是否使用本系統線上報名功能？</label>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value="">是</label>
-                                                    <label><input name="radioSample" type="radio" value="">否</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">線上報名網址</label>
-                                            <div class="form_content form_inline">
-                                                <input name="text" type="text" value="" placeholder="請輸入線上報名網址" class="grow">
-                                                <button type="button" class="btn btn-primary">瀏覽網頁</button>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title" aria-required="true">     
-                                            其他報名方式</label>
-                                            <div class="form_content">
-                                                <textarea name="" id="" cols="30" rows="10" placeholder="請輸入其他報名方式"></textarea>
-                                                <div class="notice">限填2000字</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 同一單位最多可報名人數 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <div class="form_title">顯示「同一單位最多可報名人數」</div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value="">否</label>
-                                                    <label><input name="radioSample" type="radio" value="">是，</label>
-                                                    <label>每個單位最多<input type="text">人</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 公務人員終身學習時數 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <div class="form_title">
-                                                是否可認證「公務人員終身學習時數」</div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value="">否</label>
-                                                    <label><input name="radioSample" type="radio" value="">是，</label>
-                                                    <label><input type="number">小時</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 注意事項 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title" aria-required="true">     
-                                        費用說明</label>
-                                            <div class="form_content">
-                                                <textarea name="" id="" cols="30" rows="10" placeholder="請輸入費用說明"></textarea>
-                                                <div class="notice">限填2000字</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 活動梯次 -->
-                                <button type="button" class="btn btn-add">新增梯次</button>
-                                <h2 class="title_h2" id="event_batch">活動梯次</h2>
-                                <div class="editBtn_grp">
-                                    <a href="#" class="btn">梯次1</a>
-                                    <a href="#" class="active btn">梯次2</a>
-                                    <a href="#" class="btn">梯次3</a>
-                                </div>
-                                <div class="shadowOut">
-                                    <!-- 活動梯次名稱 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">活動名稱</label>
-                                            <div class="form_content">
-                                                <input name="" id="" type="text" placeholder="請輸入活動名稱">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 舉辦方式 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>舉辦方式(可複選)</label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="check_grp form_inline">
-                                                    <label><input type="checkbox" name="" value="" checked="">實體</label>
-                                                    <label><input type="checkbox" name="" value="">線上</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動地區</label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input type="radio" name="sampleRadio" value="" checked="">北區</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">中區</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">南區</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">東區</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">離島</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>舉辦地點</label>
-                                            <div class="form_content">
-                                                <input name="" id="" type="text" placeholder="請輸入舉辦地點">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>地址</label>
-                                            <div class="form_content">
-                                                <input name="" id="" type="text" placeholder="請輸入活動地址">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 線上視訊活動網址 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">線上視訊活動網址</label>
-                                            <div class="form_content form_inline">
-                                                <input name="text" type="text" value="" placeholder="請輸入活動網址" class="grow">
-                                                <button type="button" class="btn btn-primary">瀏覽網頁</button>
-                                                <div class="notice_info">
-                                                    線上活動請填，若目前尚無可免填。
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">通行碼</label>
-                                            <div class="form_content">
-                                                <input name="text" type="text" value="" placeholder="請輸入通行碼(如有需要)">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 是否供應餐點 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>是否供應餐點</label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input type="radio" name="sampleRadio" value="">是</label>
-                                                    <label><input type="radio" name="sampleRadio" value="">否</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 講師介紹 -->
-                                    <div class="formGroup">
-                                        <button type="button" class="btn btn-add">新增講師</button>
-                                        <div class="form_title">講師介紹</div>
-                                        <div class="form_grp">
-                                            <div class="form_content form_col-4-8">
-                                                <div class="form_grp">
-                                                    <div class="photoBlock">
-                                                        <div class="lecturer_photo">
-                                                            <img src="images/lecturer_photo_default.jpg" alt="">
-                                                        </div>
-                                                        <div class="edit_grp">
-                                                            <button type="button" class="btn btn-upload">新增圖片</button>
-                                                            <button type="button" class="btn btn-change">變更圖片</button>
-                                                            <button type="button" class="btn btn-del">刪除圖片</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <div class="form_content form_col-6-6">
-                                                        <div class="form_grp">
-                                                            <label for="inputSample" class="label_hidden">講師姓名</label>
-                                                            <input name="username" id="inputSample" type="text" placeholder="講師姓名">
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="inputSample2" class="label_hidden">講師稱謂</label>
-                                                            <input name="username" id="inputSample2" type="text" placeholder="講師稱謂">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form_content form_col-12">
-                                                        <label for="inputSample" class="label_hidden">講師服務單位</label>
-                                                        <input name="" type="text" value="" placeholder="講師服務單位">
-                                                    </div>
-                                                    <div class="form_content form_col-12">
-                                                        <textarea name="" id="" cols="30" rows="10" placeholder="講師簡介"></textarea>
-                                                        <div class="notice">限填500字</div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 梯次活動時間起迄 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <div class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>梯次活動時間起迄</div>
-                                            <div class="form_content">
-                                                <div class="datepick">
-                                                    <input name="" type="date" value="" class="calendar" placeholder="開始日期">
-                                                </div>
-                                                <div class="datepick">
-                                                    <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 開放報名時間起迄 -->
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <div class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>開放報名時間起迄</div>
-                                            <div class="form_content">
-                                                <div class="datepick">
-                                                    <input name="" type="date" value="" class="calendar" placeholder="開始日期">
-                                                </div>
-                                                <div class="datepick">
-                                                    <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="formGroup necessaryBlock">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">活動名額</label>
-                                            <div class="form_content form_col-6-6">
-                                                <div class="form_grp form_inline">
-                                                    <abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>正取<input name="username" id="inputSample" type="text"> 人
-                                                </div>
-                                                <div class="form_grp form_inline">
-                                                    備取
-                                                    <input name="username" id="inputSample" type="text"> 人
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 附件 -->
-                                    <div class="formGroup">
-                                        <div class="form_grp">
-                                            <div class="form_title">附件</div>
-                                            <div class="form_content">
-                                                <div class="form_grp form_inline">
-                                                    <button class="btn btn-upload">上傳檔案</button>
-                                                    <div class="notice_warning inline">限pdf或odt檔案，單一檔案上限為50MB，檔名限制45個字
-                                                    </div>
-                                                </div>
-                                                <div class="file_download">
-                                                    <ul>
-                                                        <li>
-                                                            <a class="file_pdf" href="xxxx.pdf">
-                                                                <span class="file_type">pdf</span>
-                                                                <span class="file_name">採購契約如何約定著作權歸屬_智慧局110線上說明會.pdf</span>
-                                                                <span class="file_size">1.43MB</span>
-                                                            </a>
-                                                            <span class="isoIcon delete"><a href="javascript:;">刪除</a></span>
-                                                        </li>
-                                                        <li>
-                                                            <a class="file_pdf" href="xxxx.pdf">
-                                                                <span class="file_type">pdf</span>
-                                                                <span class="file_name">採購契約如何約定著作權歸屬_智慧局110線上說明會.pdf</span>
-                                                                <span class="file_size">1.43MB</span>
-                                                            </a>
-                                                            <span class="isoIcon delete"><a href="javascript:;">刪除</a></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="btn_grp form_inline">
-                                        <button class="btn btn-del">刪除梯次2</button>
-                                    </div>
-
-                                </div>
-                                <!-- shadowOut END -->
-                            </div>
-                            <!-- 活動梯次 END -->
-                        </div>
-
-                    </form>
-                </section>
-            </div>
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
         </div>
-        <!-- footer Start-->
-        <footer>
-            <div class="container">
-                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-                <div class="footer_logo">
-                    <img src="images/logo.png" alt="" class="img-responsive">
-                </div>
-                <div class="footer_info">
-                    <ul class="footer_link">
-                        <li><a href="javascript:;">隱私權政策</a></li>
-                        <li><a href="javascript:;">網站安全政策</a></li>
-                        <li><a href="javascript:;">政府網站資料開放宣告</a></li>
-                    </ul>
-                    <p> 地址：10637 臺北市辛亥路2段185號3樓
-                        <br />電話：(02)2738-0007 傳真：(02)2377-9875
-                    </p>
-                    <span class="update">更新日期：<em>2018/01/01</em></span>
-                    <span class="counter">累計瀏覽人次：<em>46476653</em></span>
-                </div>
-                <div class="footer_icon">
-                    <a target="_blank" href="javascript:;" title="另開視窗">
-                        <img src="images/basic/accessibility.jpg" alt="">
-                    </a>
-                </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div id="center" class="main innerpage">
+        <nav class="switch">
+          <ul>
+            <li class="active">
+              <a href="#">活動管理</a>
+              <ul>
+                <li><a href="#">活動登錄</a></li>
+                <li><a href="#">報名資訊</a></li>
+              </ul>
+            </li>
+            <li><a href="#">儀表板</a></li>
+            <li><a href="#">新手指引</a></li>
+          </ul>
+        </nav>
+        <!-- 內頁新增一個classname-->
+        <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+        <!-- breadcrumb路徑 -->
+        <div class="container">
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="#">活動管理</a></li>
+              <li><a href="#">活動登錄</a></li>
+              <li>編輯活動</li>
+            </ul>
+          </div>
+          <section class="sp sp_addEvent">
+            <div class="operateGroup">
+              <a href="" class="btn view">預覽活動資訊</a>
+              <button class="btn save">儲存草稿</button>
+              <a href="#" class="btn nextStep">下一步：編輯報名表</a>
             </div>
-        </footer>
-        <!-- footer End -->
+            <div class="activity_title">未命名活動</div>
+
+            <!-- 主要內容區 -->
+            <div class="center_block">
+              <div class="process_step">
+                <ul>
+                  <li class="active">活動登錄</li>
+                  <li>編輯報名表</li>
+                  <li>檢視與發佈</li>
+                  <li>正式發布</li>
+                </ul>
+              </div>
+            </div>
+            <div class="hasSaved"><span>已儲存所有變更</span></div>
+            <form action="">
+              <div class="apply_form">
+                <div class="flex-form form_grid">
+                  <h2 class="title_h2">活動資訊</h2>
+                  <a href="#" class="gotoBatch btn">活動梯次</a>
+                  <p>註：<abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>欄位, 不能為空白。</p>
+                  <div class="shadowOut">
+                    <!-- 活動名稱 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動名稱</label>
+                        <div class="form_content">
+                          <input name="" id="" type="text" placeholder="請輸入活動名稱" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 活動類別 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動類別</label>
+                        <div class="form_content" id="fake-legend">
+                          <div class="radio_grp form_inline">
+                            <label><input type="radio" name="sampleRadio" value="" checked="" />新北市</label>
+                            <label><input type="radio" name="sampleRadio" value="" />專利</label>
+                            <label><input type="radio" name="sampleRadio" value="" />商標</label>
+                            <label><input type="radio" name="sampleRadio" value="" />著作權</label>
+                            <label><input type="radio" name="sampleRadio" value="" />營業秘密</label>
+                            <label><input type="radio" name="sampleRadio" value="" />智財權</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 活動內容 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="" class="form_title" aria-required="true"> 活動內容</label>
+                        <div class="form_content">
+                          <textarea name="" id="" cols="30" rows="10" placeholder="請輸入活動內容"></textarea>
+                          <div class="notice">限填2000字</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 活動網址 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="" class="form_title">活動網址</label>
+                        <div class="form_content form_inline">
+                          <input name="text" type="text" value="" placeholder="請輸入活動網址" class="grow" />
+                          <button type="button" class="btn btn-primary">瀏覽網頁</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 參加對象 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="username" class="form_title">參加對象</label>
+                        <div class="form_content">
+                          <input type="text" id="username" placeholder="請輸入參加對象" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 主辦單位 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>主辦單位</div>
+                        <div class="form_content">
+                          <div class="flex-col-equal-2 form-column">
+                            <div class="form_grp">
+                              <label for="inputSample" class="form_title label_hidden">承辦人單位</label>
+                              <div class="form_content">
+                                <input name="username" id="inputSample" type="text" placeholder="" value="經濟部智慧財產局" readonly />
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="inputSample2" class="form_title label_hidden">其他主辦單位</label>
+                              <div class="form_content">
+                                <input name="username" id="inputSample2" type="text" placeholder="請輸入其他主辦單位" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="notice">主辦單位自動帶入會員單位，不可修改；如有其他主辦單位，請在後方欄位輸入。</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 協辦單位 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="username" class="form_title">協辦單位</label>
+                        <div class="form_content">
+                          <input type="text" id="username" placeholder="請輸入協辦單位" value="" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 聯絡資訊 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <div class="form_title">聯絡資訊</div>
+                        <div class="form_content">
+                          <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>聯絡人</label>
+                            <div class="form_content">
+                              <input name="" type="text" value="" />
+                            </div>
+                          </div>
+                          <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>聯絡人電話</label>
+                            <div class="form_content">
+                              <input name="" type="tel" value="" placeholder="請輸入聯絡人電話" />
+                            </div>
+                          </div>
+                          <div class="form_grp">
+                            <label for="email" class="form_title">聯絡人電子郵件</label>
+                            <div class="form_content">
+                              <input name="email" type="email" id="email" placeholder="請輸入聯絡人電子郵件" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 備註 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="" class="form_title" aria-required="true"> 備註</label>
+                        <div class="form_content">
+                          <textarea name="" id="" cols="30" rows="10" placeholder="請輸入備註"></textarea>
+                          <div class="notice">限填2000字</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider">活動相關設定</div>
+                    <!-- 活動費用 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <div class="form_title">活動費用</div>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline">
+                            <label><input name="radioSample" type="radio" value="" />免費</label>
+                            <label><input name="radioSample" type="radio" value="" />付費</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 費用說明 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="" class="form_title" aria-required="true"> 費用說明</label>
+                        <div class="form_content">
+                          <textarea name="" id="" cols="30" rows="10" placeholder="請輸入費用說明"></textarea>
+                          <div class="notice">限填2000字</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 線上報名功能 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>是否使用本系統線上報名功能？</label>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline">
+                            <label><input name="radioSample" type="radio" value="" />是</label>
+                            <label><input name="radioSample" type="radio" value="" />否</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="" class="form_title">線上報名網址</label>
+                        <div class="form_content form_inline">
+                          <input name="text" type="text" value="" placeholder="請輸入線上報名網址" class="grow" />
+                          <button type="button" class="btn btn-primary">瀏覽網頁</button>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="" class="form_title" aria-required="true"> 其他報名方式</label>
+                        <div class="form_content">
+                          <textarea name="" id="" cols="30" rows="10" placeholder="請輸入其他報名方式"></textarea>
+                          <div class="notice">限填2000字</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 同一單位最多可報名人數 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <div class="form_title">顯示「同一單位最多可報名人數」</div>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline">
+                            <label><input name="radioSample" type="radio" value="" />否</label>
+                            <label><input name="radioSample" type="radio" value="" />是，</label>
+                            <label>每個單位最多<input type="text" />人</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 公務人員終身學習時數 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <div class="form_title">是否可認證「公務人員終身學習時數」</div>
+                        <div class="form_content">
+                          <div class="radio_grp form_inline">
+                            <label><input name="radioSample" type="radio" value="" />否</label>
+                            <label><input name="radioSample" type="radio" value="" />是，</label>
+                            <label><input type="number" />小時</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 注意事項 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="" class="form_title" aria-required="true"> 費用說明</label>
+                        <div class="form_content">
+                          <textarea name="" id="" cols="30" rows="10" placeholder="請輸入費用說明"></textarea>
+                          <div class="notice">限填2000字</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 活動梯次 -->
+                  <button type="button" class="btn btn-add">新增梯次</button>
+                  <h2 class="title_h2" id="event_batch">活動梯次</h2>
+                  <div class="editBtn_grp">
+                    <a href="#" class="btn">梯次1</a>
+                    <a href="#" class="active btn">梯次2</a>
+                    <a href="#" class="btn">梯次3</a>
+                  </div>
+                  <div class="shadowOut">
+                    <!-- 活動梯次名稱 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="" class="form_title">活動名稱</label>
+                        <div class="form_content">
+                          <input name="" id="" type="text" placeholder="請輸入活動名稱" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 舉辦方式 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                        <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>舉辦方式(可複選)</label>
+                        <div class="form_content" id="fake-legend">
+                          <div class="check_grp form_inline">
+                            <label><input type="checkbox" name="" value="" checked="" />實體</label>
+                            <label><input type="checkbox" name="" value="" />線上</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>活動地區</label>
+                        <div class="form_content" id="fake-legend">
+                          <div class="radio_grp form_inline">
+                            <label><input type="radio" name="sampleRadio" value="" checked="" />北區</label>
+                            <label><input type="radio" name="sampleRadio" value="" />中區</label>
+                            <label><input type="radio" name="sampleRadio" value="" />南區</label>
+                            <label><input type="radio" name="sampleRadio" value="" />東區</label>
+                            <label><input type="radio" name="sampleRadio" value="" />離島</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>舉辦地點</label>
+                        <div class="form_content">
+                          <input name="" id="" type="text" placeholder="請輸入舉辦地點" />
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>地址</label>
+                        <div class="form_content">
+                          <input name="" id="" type="text" placeholder="請輸入活動地址" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 線上視訊活動網址 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <label for="" class="form_title">線上視訊活動網址</label>
+                        <div class="form_content form_inline">
+                          <input name="text" type="text" value="" placeholder="請輸入活動網址" class="grow" />
+                          <button type="button" class="btn btn-primary">瀏覽網頁</button>
+                          <div class="notice_info">線上活動請填，若目前尚無可免填。</div>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for="" class="form_title">通行碼</label>
+                        <div class="form_content">
+                          <input name="text" type="text" value="" placeholder="請輸入通行碼(如有需要)" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 是否供應餐點 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <label for="" class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>是否供應餐點</label>
+                        <div class="form_content" id="fake-legend">
+                          <div class="radio_grp form_inline">
+                            <label><input type="radio" name="sampleRadio" value="" />是</label>
+                            <label><input type="radio" name="sampleRadio" value="" />否</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 講師介紹 -->
+                    <div class="formGroup">
+                      <button type="button" class="btn btn-add">新增講師</button>
+                      <div class="form_title">講師介紹</div>
+                      <div class="form_grp">
+                        <div class="form_content form_col-4-8">
+                          <div class="form_grp">
+                            <div class="photoBlock">
+                              <div class="lecturer_photo">
+                                <img src="images/lecturer_photo_default.jpg" alt="" />
+                              </div>
+                              <div class="edit_grp">
+                                <button type="button" class="btn btn-upload">新增圖片</button>
+                                <button type="button" class="btn btn-change">變更圖片</button>
+                                <button type="button" class="btn btn-del">刪除圖片</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form_grp">
+                            <div class="form_content form_col-6-6">
+                              <div class="form_grp">
+                                <label for="inputSample" class="label_hidden">講師姓名</label>
+                                <input name="username" id="inputSample" type="text" placeholder="講師姓名" />
+                              </div>
+                              <div class="form_grp">
+                                <label for="inputSample2" class="label_hidden">講師稱謂</label>
+                                <input name="username" id="inputSample2" type="text" placeholder="講師稱謂" />
+                              </div>
+                            </div>
+                            <div class="form_content form_col-12">
+                              <label for="inputSample" class="label_hidden">講師服務單位</label>
+                              <input name="" type="text" value="" placeholder="講師服務單位" />
+                            </div>
+                            <div class="form_content form_col-12">
+                              <textarea name="" id="" cols="30" rows="10" placeholder="講師簡介"></textarea>
+                              <div class="notice">限填500字</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 梯次活動時間起迄 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <div class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>梯次活動時間起迄</div>
+                        <div class="form_content">
+                          <div class="datepick">
+                            <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                          </div>
+                          <div class="datepick">
+                            <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 開放報名時間起迄 -->
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <div class="form_title"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>開放報名時間起迄</div>
+                        <div class="form_content">
+                          <div class="datepick">
+                            <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                          </div>
+                          <div class="datepick">
+                            <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="formGroup necessaryBlock">
+                      <div class="form_grp">
+                        <label for="" class="form_title">活動名額</label>
+                        <div class="form_content form_col-6-6">
+                          <div class="form_grp form_inline"><abbr class="necessary" title="“為必填欄位,不能為空白。“">必填</abbr>正取<input name="username" id="inputSample" type="text" /> 人</div>
+                          <div class="form_grp form_inline">
+                            備取
+                            <input name="username" id="inputSample" type="text" /> 人
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 附件 -->
+                    <div class="formGroup">
+                      <div class="form_grp">
+                        <div class="form_title">附件</div>
+                        <div class="form_content">
+                          <div class="form_grp form_inline">
+                            <button class="btn btn-upload">上傳檔案</button>
+                            <div class="notice_warning inline">限pdf或odt檔案，單一檔案上限為50MB，檔名限制45個字</div>
+                          </div>
+                          <div class="file_download">
+                            <ul>
+                              <li>
+                                <a class="file_pdf" href="xxxx.pdf">
+                                  <span class="file_type">pdf</span>
+                                  <span class="file_name">採購契約如何約定著作權歸屬_智慧局110線上說明會.pdf</span>
+                                  <span class="file_size">1.43MB</span>
+                                </a>
+                                <span class="isoIcon delete"><a href="javascript:;">刪除</a></span>
+                              </li>
+                              <li>
+                                <a class="file_pdf" href="xxxx.pdf">
+                                  <span class="file_type">pdf</span>
+                                  <span class="file_name">採購契約如何約定著作權歸屬_智慧局110線上說明會.pdf</span>
+                                  <span class="file_size">1.43MB</span>
+                                </a>
+                                <span class="isoIcon delete"><a href="javascript:;">刪除</a></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn_grp form_inline">
+                      <button class="btn btn-del">刪除梯次2</button>
+                    </div>
+                  </div>
+                  <!-- shadowOut END -->
+                </div>
+                <!-- 活動梯次 END -->
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="footer_logo">
+            <img src="images/logo.png" alt="" class="img-responsive" />
+          </div>
+          <div class="footer_info">
+            <ul class="footer_link">
+              <li><a href="javascript:;">隱私權政策</a></li>
+              <li><a href="javascript:;">網站安全政策</a></li>
+              <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+            </ul>
+            <p>地址：10637 臺北市辛亥路2段185號3樓 <br />電話：(02)2738-0007 傳真：(02)2377-9875</p>
+            <span class="update">更新日期：<em>2018/01/01</em></span>
+            <span class="counter">累計瀏覽人次：<em>46476653</em></span>
+          </div>
+          <div class="footer_icon">
+            <a target="_blank" href="javascript:;" title="另開視窗">
+              <img src="images/basic/accessibility.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- JQ -->
@@ -580,12 +568,13 @@
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
     <!-- scrolltable -->
     <!-- sticky-sidebar -->
-    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
-    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+    <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
     <!-- fancy -->
-    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
-</body>
+  </body>
+</html>

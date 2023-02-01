@@ -1,411 +1,412 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>單位名稱切版檔案</title>
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- hyUI -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-        body {
-            background: #053561;
-        }
-        
-        .demo_wrap {
-            max-width: 1000px;
-            margin: 0em auto 1em;
-            padding: 15px 15px 3em;
-            clear: both;
-            color: #fff;
-        }
-        
-        .demo_wrap h1 {
-            display: block;
-            margin: 0px auto;
-            max-width: 300px;
-            float: left;
-            margin-right: 1em
-        }
-        
-        @media screen and (max-width:545px) {
-            .demo_wrap h1 {
-                max-width: 100%;
-                float: none;
-                text-align: center
-            }
-        }
-        
-        .demo_wrap h1 img {
-            width: 300px;
-        }
-        
-        .num {
-            width: 12%;
-        }
-        
-        body {
-            counter-reset: num;
-        }
-        
-        table {
-            margin-bottom: 1em;
-        }
-        
-        table a {
-            color: #fff;
-        }
-        
-        table a:hover {
-            color: #fff;
-        }
-        
-        table caption {
-            text-align: left;
-            font-weight: bold;
-            font-size: 1.25em;
-            padding: .5em 0;
-            color: #ff5050
-        }
-        
-        tbody tr td:first-child:before {
-            counter-increment: num;
-            display: block;
-            text-align: center;
-            content: counters(num, ".") " "
-        }
-        
-        tbody tr td:nth-child(2) {
-            width: 35%
-        }
-        
-        .btn_grp {
-            text-align: right;
-        }
-        
-        @media screen and (max-width:545px) {
-            .btn_grp {
-                text-align: center;
-            }
-        }
-    </style>
-</head>
+      body {
+        background: #053561;
+      }
 
-<body>
+      .demo_wrap {
+        max-width: 1000px;
+        margin: 0em auto 1em;
+        padding: 15px 15px 3em;
+        clear: both;
+        color: #fff;
+      }
+
+      .demo_wrap h1 {
+        display: block;
+        margin: 0px auto;
+        max-width: 300px;
+        float: left;
+        margin-right: 1em;
+      }
+
+      @media screen and (max-width: 545px) {
+        .demo_wrap h1 {
+          max-width: 100%;
+          float: none;
+          text-align: center;
+        }
+      }
+
+      .demo_wrap h1 img {
+        width: 300px;
+      }
+
+      .num {
+        width: 12%;
+      }
+
+      body {
+        counter-reset: num;
+      }
+
+      table {
+        margin-bottom: 1em;
+      }
+
+      table a {
+        color: #fff;
+      }
+
+      table a:hover {
+        color: #fff;
+      }
+
+      table caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: 0.5em 0;
+        color: #ff5050;
+      }
+
+      tbody tr td:first-child:before {
+        counter-increment: num;
+        display: block;
+        text-align: center;
+        content: counters(num, '.') ' ';
+      }
+
+      tbody tr td:nth-child(2) {
+        width: 35%;
+      }
+
+      .btn_grp {
+        text-align: right;
+      }
+
+      @media screen and (max-width: 545px) {
+        .btn_grp {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="demo_wrap">
-        <h1><img src="images/logo.png" alt=""></h1>
-        <div class="btn_grp">
-            <a href="https://github.com/HywebU00/2022_tipo_activities" class="btn" target="_blank">切版檔案請按此下載</a>
-        </div>
-        <hr>
-        <div class="table_wrapper">
-            <!-- hyUI 標準頁面 -->
-            <table>
-                <thead>
-                    <tr>
-                        <th class="num">編號</th>
-                        <th>項目</th>
-                        <th>頁面名稱</th>
-                        <th>檔案名稱</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td><strong>基本頁面</strong></td>
-                        <td>首頁</td>
-                        <td>
-                            <a href="mp.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>首頁-推播訂閱通知</td>
-                        <td>
-                            <a href="mp_2.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>首頁-無資料</td>
-                        <td>
-                            <a href="mp_3.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>lp01 歷史活動</td>
-                        <td>
-                            <a href="lp01.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>lp02 收藏清單</td>
-                        <td>
-                            <a href="lp02.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>cp01 活動資訊</td>
-                        <td>
-                            <a href="cp01.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>cp02 一般內容頁</td>
-                        <td>
-                            <a href="cp02.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>一般導覽</td>
-                        <td>
-                            <a href="sitemap.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>我要報名</strong></td>
-                        <td>step1 個資聲明</td>
-                        <td>
-                            <a href="sp_event1.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step2 Email驗證</td>
-                        <td>
-                            <a href="sp_event2.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step3 報名資料</td>
-                        <td>
-                            <a href="sp_event3.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step3 報名資料-自訂欄位</td>
-                        <td>
-                            <a href="sp_event3_2.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step4 預覽確認</td>
-                        <td>
-                            <a href="sp_event4.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step5 完成報名</td>
-                        <td>
-                            <a href="sp_event5.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>取消報名</strong></td>
-                        <td>step1 取消報名</td>
-                        <td>
-                            <a href="sp_event6.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step2 完成取消報名</td>
-                        <td>
-                            <a href="sp_event7.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>會員登入</strong></td>
-                        <td>會員登入</td>
-                        <td>
-                            <a href="sp_menber1.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>忘記密碼</td>
-                        <td>
-                            <a href="sp_menber2.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>重設密碼</td>
-                        <td>
-                            <a href="sp_menber3.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>會員管理</strong></td>
-                        <td>會員資料</td>
-                        <td>
-                            <a href="sp_menber4.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>變更密碼</td>
-                        <td>
-                            <a href="sp_menber5.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>我的範本</td>
-                        <td>
-                            <a href="sp_menber6.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>活動管理</strong></td>
-                        <td>活動登錄列表</td>
-                        <td>
-                            <a href="lp_registration.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>新增活動</strong></td>
-                        <td>step1 選擇活動範本</td>
-                        <td>
-                            <a href="sp_addEvent1.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step2-1 活動登錄</td>
-                        <td>
-                            <a href="sp_addEvent2-1.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step2-2 預覽活動資訊</td>
-                        <td>
-                            <a href="sp_addEvent2-2.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step3-1 編輯報名表</td>
-                        <td>
-                            <a href="sp_addEvent3-1.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step3-2 預覽報名表</td>
-                        <td>
-                            <a href="sp_addEvent3-2.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step4 檢視與發佈</td>
-                        <td>
-                            <a href="sp_addEvent4.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>step5 正式發佈</td>
-                        <td>
-                            <a href="sp_addEvent5.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>報名資訊管理</strong></td>
-                        <td>梯次報名資訊列表</td>
-                        <td>
-                            <a href="sp_registration_list.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>報名資訊</td>
-                        <td>
-                            <a href="sp_registration_detail.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>報名資訊-寄送通知信</td>
-                        <td>
-                            <a href="sp_registration_mail.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>報名資料編修</td>
-                        <td>
-                            <a href="sp_registration_edit.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>儀表板</strong></td>
-                        <td>儀表板</td>
-                        <td>
-                            <a href="sp_dashboard.htm"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><strong>新手指引</strong></td>
-                        <td>新手指引</td>
-                        <td>
-                            <a href="sp_guide.htm"></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+      <h1><img src="images/logo.png" alt="" /></h1>
+      <div class="btn_grp">
+        <a href="https://github.com/HywebU00/2022_tipo_activities" class="btn" target="_blank">切版檔案請按此下載</a>
+      </div>
+      <hr />
+      <div class="table_wrapper">
+        <!-- hyUI 標準頁面 -->
+        <table>
+          <thead>
+            <tr>
+              <th class="num">編號</th>
+              <th>項目</th>
+              <th>頁面名稱</th>
+              <th>檔案名稱</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td><strong>基本頁面</strong></td>
+              <td>首頁</td>
+              <td>
+                <a href="mp.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>首頁-推播訂閱通知</td>
+              <td>
+                <a href="mp_2.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>首頁-無資料</td>
+              <td>
+                <a href="mp_3.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>lp01 歷史活動</td>
+              <td>
+                <a href="lp01.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>lp02 收藏清單</td>
+              <td>
+                <a href="lp02.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>cp01 活動資訊</td>
+              <td>
+                <a href="cp01.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>cp02 一般內容頁</td>
+              <td>
+                <a href="cp02.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>一般導覽</td>
+              <td>
+                <a href="sitemap.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>我要報名</strong></td>
+              <td>step1 個資聲明</td>
+              <td>
+                <a href="sp_event1.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step2 Email驗證</td>
+              <td>
+                <a href="sp_event2.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step3 報名資料</td>
+              <td>
+                <a href="sp_event3.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step3 報名資料-自訂欄位</td>
+              <td>
+                <a href="sp_event3_2.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step4 預覽確認</td>
+              <td>
+                <a href="sp_event4.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step5 完成報名</td>
+              <td>
+                <a href="sp_event5.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>取消報名</strong></td>
+              <td>step1 取消報名</td>
+              <td>
+                <a href="sp_event6.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step2 完成取消報名</td>
+              <td>
+                <a href="sp_event7.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>會員登入</strong></td>
+              <td>會員登入</td>
+              <td>
+                <a href="sp_menber1.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>忘記密碼</td>
+              <td>
+                <a href="sp_menber2.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>重設密碼</td>
+              <td>
+                <a href="sp_menber3.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>會員管理</strong></td>
+              <td>會員資料</td>
+              <td>
+                <a href="sp_menber4.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>變更密碼</td>
+              <td>
+                <a href="sp_menber5.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>我的範本</td>
+              <td>
+                <a href="sp_menber6.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>活動管理</strong></td>
+              <td>活動登錄列表</td>
+              <td>
+                <a href="lp_registration.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>新增活動</strong></td>
+              <td>step1 選擇活動範本</td>
+              <td>
+                <a href="sp_addEvent1.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step2-1 活動登錄</td>
+              <td>
+                <a href="sp_addEvent2-1.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step2-2 預覽活動資訊</td>
+              <td>
+                <a href="sp_addEvent2-2.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step3-1 編輯報名表</td>
+              <td>
+                <a href="sp_addEvent3-1.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step3-2 預覽報名表</td>
+              <td>
+                <a href="sp_addEvent3-2.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step4 檢視與發佈</td>
+              <td>
+                <a href="sp_addEvent4.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>step5 正式發佈</td>
+              <td>
+                <a href="sp_addEvent5.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>報名資訊管理</strong></td>
+              <td>梯次報名資訊列表</td>
+              <td>
+                <a href="sp_registration_list.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>報名資訊</td>
+              <td>
+                <a href="sp_registration_detail.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>報名資訊-寄送通知信</td>
+              <td>
+                <a href="sp_registration_mail.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>報名資料編修</td>
+              <td>
+                <a href="sp_registration_edit.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>儀表板</strong></td>
+              <td>儀表板</td>
+              <td>
+                <a href="sp_dashboard.htm"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>新手指引</strong></td>
+              <td>新手指引</td>
+              <td>
+                <a href="sp_guide.htm"></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -413,13 +414,14 @@
     <script src="js/hyui.js"></script>
     <script src="js/customize.js"></script>
     <script>
-        $(function() {
-            $('tbody').find('a').each(function(index, el) {
-                var Link = $(this).attr('href');
-                $(this).text(Link);
-            });
-        })
+      $(function () {
+        $('tbody')
+          .find('a')
+          .each(function (index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+          });
+      });
     </script>
-</body>
-
+  </body>
 </html>
